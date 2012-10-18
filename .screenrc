@@ -1,0 +1,47 @@
+# Start message
+startup_message off
+
+# Set hardstatus always on
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %= [Load: %l] | %M %d %0c:%s "
+
+# Set default encoding using utf8
+defutf8 on
+
+# Refresh the display when exiting programs
+altscreen on
+
+# Dynamic title
+shelltitle '$ |bash'
+
+# Disable vbell
+vbell off
+
+# Keboard binding
+# bind Alt`~= to screen0~12
+bindkey "^[`" select 0
+bindkey "^[1" select 1
+bindkey "^[2" select 2
+bindkey "^[3" select 3
+bindkey "^[4" select 4
+bindkey "^[5" select 5
+bindkey "^[6" select 6
+bindkey "^[7" select 7
+bindkey "^[8" select 8
+bindkey "^[9" select 9
+bindkey "^[0" select 10
+bindkey "^[-" select 11
+bindkey "^[=" select 12
+# bind F4 to kill screen window
+bindkey -k k4 kill
+# bind F9 to create a new screen
+bindkey -k k9 screen
+# bind F10 to rename current screen window
+bindkey -k k; title
+# bind F11 to move to previous window
+bindkey -k F1 prev
+# bind F12 to move to next window
+bindkey -k F2 next
+
+# 256 colors mode
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
