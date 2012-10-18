@@ -22,7 +22,6 @@ set backspace=eol,start,indent " Set backspace config
 set ruler " Always show current position
 set showmode " show which mode
 
-set ignorecase " ignore case when searching
 set smartcase
 set hlsearch "Highlight search things
 
@@ -35,12 +34,10 @@ set ve=all " let ctrl + v be more convenient and powerful
 
 set ttymouse=xterm2                     " For using mouse=a with screen
 
-source ~/cscope_maps.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Key Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
-nmap <leader>nt        :NERDTreeToggle<CR>
 nmap <leader>vimrc     :e $MYVIMRC<CR>
 nmap <leader>sorc      :source $MYVIMRC<CR>
 nmap <leader>ff        :ff FufFile
@@ -64,7 +61,6 @@ vnoremap * :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('n')<C
 vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<CR>
 
 " plugins
-noremap <F2> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
@@ -199,17 +195,6 @@ highlight TabLineFill       cterm=bold         ctermbg=darkcyan
 
 map <F5> :tabpre<CR>
 map <F6> :tabnext<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => code block template
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" /**Function****************************************************************
-"    Synopsis     [ ]
-"    Description  [ input:
-"                   output: ]
-"    SideEffects  [ ]
-" **************************************************************************/
-imap <leader>//func /**Function****************************************************************<CR><HOME>   Synopsis     [ ]<CR><HOME>   Description  [ input:<CR><HOME>                  output: ]<CR><HOME>   SideEffects  [ ]<CR><HOME>**************************************************************************/<CR><HOME>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Rename a buffer within Vim and on the disk

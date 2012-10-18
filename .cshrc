@@ -15,30 +15,12 @@ eval `dircolors ~/.dir_colors`
 
 # Aliases
 alias vi 'vim'
-alias setdisplay source ~/script/setdisplay
-alias setversion source ~/script/setversion
-alias openvuedebug setenv VUE_PRINT_DEBUG_MESSAGE
-alias OPTM p4sb -t OPTM -b exec/vue
-alias DBXM p4sb -t DBXM -b exec/vue
-alias editall 'p4 edit * ; p4 edit core/* ; p4 edit gui/*'
 alias findcode 'find . ! -name "*~" | grep ".cpp\|\.h"'
 alias makecscope 'findcode > cscope.files; cscope -bqu;'
 alias grep='grep --color=auto'
+alias ll 'ls -al'
 
 # setenv
-if ( ! $?USER ) then
-        setenv USER `whoami`
-endif
-if ( ! $?HOST ) then
-        setenv HOST `hostname`
-endif
-if ( ! $?DOMAIN ) then
-        setenv DOMAIN `domainname`
-endif
-if ( ! $?UNAME ) then
-    setenv UNAME  `uname`
-endif
 
 # Path
-setenv PATH "~/script/:${PATH}"
 
