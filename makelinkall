@@ -1,0 +1,3 @@
+ ln -s ~/Configure/.cshrc ~/.cshrc
+ ln -s ~/Configure/.vimrc ~/.vimrc
+ ln -s ~/Configure/.screenrc ~/.screenrc
