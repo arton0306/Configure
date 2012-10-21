@@ -40,7 +40,6 @@ set ttymouse=xterm2                     " For using mouse=a with screen
 let mapleader = ","
 nmap <leader>vimrc     :e $MYVIMRC<CR>
 nmap <leader>sorc      :source $MYVIMRC<CR>
-nmap <leader>ff        :ff FufFile
 imap jj                <ESC>
 inoremap {<CR> {<CR><END><CR>}<UP><END>
 
@@ -59,6 +58,9 @@ noremap <F11> :set list!<CR>
 " search multiple line
 vnoremap * :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('n')<CR>
 vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<CR>
+
+" toggle paste mode
+noremap <F5> <ESC>:set paste!<CR>
 
 " plugins
 
@@ -189,12 +191,11 @@ function! SetTabLine()
   return s
 endf
 
-highlight TabLine           cterm=bold         ctermfg=white           ctermbg=darkcyan
-highlight TabLineSel        cterm=bold         ctermfg=lightred        ctermbg=black
-highlight TabLineFill       cterm=bold         ctermbg=darkcyan
-
-map <F5> :tabpre<CR>
-map <F6> :tabnext<CR>
+" highlight TabLine           cterm=bold         ctermfg=white           ctermbg=darkcyan
+" highlight TabLineSel        cterm=bold         ctermfg=lightred        ctermbg=black
+" highlight TabLineFill       cterm=bold         ctermbg=darkcyan
+" map <F5> :tabpre<CR>
+" map <F6> :tabnext<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Rename a buffer within Vim and on the disk

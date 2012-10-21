@@ -31,8 +31,6 @@ bindkey "^[9" select 9
 bindkey "^[0" select 10
 bindkey "^[-" select 11
 bindkey "^[=" select 12
-# bind F4 to kill screen window
-bindkey -k k4 kill
 # bind F9 to create a new screen
 bindkey -k k9 screen
 # bind F10 to rename current screen window
