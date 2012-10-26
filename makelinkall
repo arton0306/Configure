@@ -1,6 +1,9 @@
 # tcsh
 ln -s ~/Configure/.cshrc ~/.cshrc
 
+# bash
+ln -s ~/Configure/.bashrc ~/.bashrc
+
 # screen
 ln -s ~/Configure/.screenrc ~/.screenrc
 
