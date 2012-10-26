@@ -25,6 +25,7 @@ alias makecscope 'findcode > cscope.files; cscope -bqu;'
 alias grep='grep --color=auto'
 alias artongrep 'grep -s -r -n -l'
 alias ll 'ls -al'
+alias ls 'ls --color'
 
 # setenv
 
