@@ -22,6 +22,7 @@ alias artongrep='grep -s -r -n -l'
 alias ll='ls -al'
 alias ls='ls --color'
 alias update='sudo apt-get update'
+alias install='sudo apt-get install'
 
 # tools
 # autojump ( sudo apt-get install autojump )
