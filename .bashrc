@@ -24,7 +24,6 @@ set autolist
 # Aliases
 alias virc='vim -p ~/.*shrc'
 alias sorc='source ~/.bashrc'
-alias vi='vim'
 alias findcode='find . ! -name "*~" | grep ".cpp\|\.h"'
 alias makecscope='findcode > cscope.files; cscope -bqu;'
 alias grep='grep --color=auto'
