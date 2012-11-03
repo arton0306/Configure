@@ -32,3 +32,12 @@ alias install='sudo apt-get install'
 
 # Path
 export PATH="~/tools:$PATH"
+
+# set gcc env
+export GCC_PATH=/usr/bin/gcc-4.7.2
+export LD_LIBRARY_PATH=$GCC_PATH/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
+export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
+export CPLUS_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
+export PATH=$GCC_PATH/bin:$PATH
+export LD_LIBRARY_PATH=$GCC_PATH/lib:GCC_PATH/lib64:$LD_LIBRARY_PATH
