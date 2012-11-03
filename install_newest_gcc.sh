@@ -50,12 +50,14 @@ tar -jxf gcc-4.7.2.tar.bz2
 cd gcc-4.7.2
 mkdir build
 cd build
+export lib64name=lib64
 export LD_LIBRARY_PATH=$GCC_PATH$GCC_FOLDER_NAME/lib:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
 export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
 export CPLUS_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
 ../configure --build=x86_64-linux-gnu --prefix=$GCC_PATH$GCC_FOLDER_NAME --with-gmp=$GCC_PATH$GCC_FOLDER_NAME --with-mpfr=$GCC_PATH$GCC_FOLDER_NAME --with-mpc=$GCC_PATH$GCC_FOLDER_NAME --enable-checking=release --enable-languages=c,c++
-sudo ln -s /usr/lib/x86_64-linux-gnu $GCC_PATHlib64
+make
+sudo ln -s /usr/lib/x86_64-linux-gnu $GCC_PATH$lib64name
 sudo make install
 
 # set gcc path
