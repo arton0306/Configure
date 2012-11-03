@@ -3,12 +3,13 @@ export GCC_PATH=/usr/bin/
 export GCC_FOLDER_NAME=gcc-4.7.2
 
 # install some dependencies
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install g++
-sudo apt-get install gawk
-sudo apt-get install m4
-sudo apt-get install gcc-multilib
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install build-essential
+sudo apt-get -y install g++
+sudo apt-get -y install gawk
+sudo apt-get -y install m4
+sudo apt-get -y install gcc-multilib
 
 # install newest gmp (http://gmplib.org/)
 cd ~/Downloads
