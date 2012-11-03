@@ -3,11 +3,21 @@
 ###################################
 
 # Prompt
-export PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ " # color
+### PS1="\t-\u@\h:\w\$ " # nocolor
 
-# Environment
+# History
 set history=2000
 set savehist=2000
+export HISTTIMEFORMAT=' %F %T ' # show date time in history
+shopt -s histappend # append to the history file, don't overwrite it
+HISTSIZE=1000 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTFILESIZE=2000
+
+# less ( make less more friendly for non-text input files, see lesspipe(1) )
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Shell command completion
 set filec
 set autolist
 
@@ -24,12 +34,6 @@ alias ls='ls --color'
 alias update='sudo apt-get update'
 alias install='sudo apt-get install'
 
-# tools
-# autojump ( sudo apt-get install autojump )
-. /usr/share/autojump/autojump.sh
-
-# setenv
-
 # Path
 export PATH="~/tools:$PATH"
 
@@ -41,3 +45,8 @@ export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
 export CPLUS_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
 export PATH=$GCC_PATH/bin:$PATH
 export LD_LIBRARY_PATH=$GCC_PATH/lib:GCC_PATH/lib64:$LD_LIBRARY_PATH
+
+# tools
+# autojump ( sudo apt-get install autojump )
+. /usr/share/autojump/autojump.sh
+
