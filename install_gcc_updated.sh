@@ -11,9 +11,9 @@ sudo apt-get -y install gawk
 sudo apt-get -y install m4
 sudo apt-get -y install gcc-multilib
 
-sudo apt-get -y install libgmp3c2 # install newest gmp (http://gmplib.org/)
-sudo apt-get -y install libmpfr4 # install newest mpfr (http://www.mpfr.org/)
-sudo apt-get -y install libmpc-dev # install newest mpc (http://www.multiprecision.org/)
+sudo apt-get -y install libgmp3c2 # install gmp (http://gmplib.org/)
+sudo apt-get -y install libmpfr4 # install mpfr (http://www.mpfr.org/)
+sudo apt-get -y install libmpc-dev # install mpc (http://www.multiprecision.org/)
 
 # install gcc
 cd ~/Downloads
@@ -23,6 +23,7 @@ cd gcc-4.7.2
 mkdir build
 cd build
 export lib64name=lib64
+### if you install gmp, mpfr, mpc in $GCC_PATH$GCC_FOLDER_NAME, you should add the line below
 ### export LD_LIBRARY_PATH=$GCC_PATH$GCC_FOLDER_NAME/lib:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
 export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
