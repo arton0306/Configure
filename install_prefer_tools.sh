@@ -7,6 +7,7 @@ git config --global core.editor "vim"
 # tools ( the alias are set in ~/.bashrc )
 update
 install -y vim
+install -y tcsh
 install -y autojump
 install -y aptitude
 install -y screen
