@@ -35,7 +35,7 @@ echo $SOURCE_DIR
 echo $BUILD_DIR
 echo $GCC_TARBALL
 
-echo "prepare utilities"
+echo "preparing utilities"
 sudo apt-get install tar wget -y
 
 echo "downloading sources: gcc-4.7.2, llvm-3.1, clang-3.1, boost-1.51.0"
@@ -76,6 +76,7 @@ echo "update ldconfig after llvm-3.1, clang-3.1"
 sudo ldconfig
 
 echo "start building boost-1.51.0"
+sudo apt-get install libbz2-dev
 cd $SOURCE_DIR/$BOOST_NAME
 ./bootstrap.sh && ./b2 --prefix=$BOOST_PREFIX --without-python stage && sudo ./b2 --prefix=BOOST_PREFIX --without-python install
 cd $WORK_DIR
