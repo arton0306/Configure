@@ -1,8 +1,13 @@
+### use "ctrl+a :source ~/.screenrc" to reload config
+
 # Start message
 startup_message off
 
 # Set hardstatus always on
 hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %= [Load: %l] | %M %d %0c:%s "
+
+# set the buffer for scroll back
+defscrollback 30000
 
 # Set default encoding using utf8
 defutf8 on
