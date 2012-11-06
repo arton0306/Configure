@@ -31,14 +31,17 @@ bindkey "^[9" select 9
 bindkey "^[0" select 10
 bindkey "^[-" select 11
 bindkey "^[=" select 12
-# bind F9 to create a new screen
-bindkey -k k9 screen
-# bind F10 to rename current screen window
-bindkey -k k; title
-# bind F11 to move to previous window
-bindkey -k F1 prev
-# bind F12 to move to next window
-bindkey -k F2 next
+# key mapping
+# F1234567890 12
+# k123456789;F12
+# bind F5 to create a new screen
+bindkey -k k5 screen
+# bind F6 to rename current screen window
+bindkey -k k6 title
+# bind F7 to move to previous window
+bindkey -k k7 prev
+# bind F8 to move to next window
+bindkey -k k8 next
 
 # 256 colors mode
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
