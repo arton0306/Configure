@@ -41,7 +41,7 @@ bindkey "^[=" select 12
 # k123456789;F12
 # bind F5 to create a new screen
 bindkey -k k5 screen
-# bind F6 to rename current screen window
+# bind F6 to rename current screen window ( ctrl a + A )
 bindkey -k k6 title
 # bind F7 to move to previous window
 bindkey -k k7 prev
