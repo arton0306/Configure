@@ -41,6 +41,7 @@ alias install='sudo apt-get install'
 alias rm='rm -i'
 HISTORY_BAK_FOLDER=$HOME/history_bak
 alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
+alias allgit='repo forall -c git'
 
 # Path
 
