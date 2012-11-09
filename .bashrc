@@ -5,6 +5,10 @@
 # Prompt
 PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ " # color
 ### PS1="\t-\u@\h:\w\$ " # nocolor
+# Extra extension
+if [ -f "$HOME/.bash_ps1" ]; then
+    . "$HOME/.bash_ps1"
+fi
 
 # History
 set history=2000
@@ -39,11 +43,19 @@ alias ls='ls --color'
 alias update='sudo apt-get update'
 alias install='sudo apt-get install'
 alias rm='rm -i'
-HISTORY_BAK_FOLDER=$HOME/history_bak
-alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
-alias allgit='repo forall -c git'
+### don't save history for security if you do concern
+### HISTORY_BAK_FOLDER=$HOME/history_bak
+### alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
+alias gitall='repo forall -c git'
 
 # Path
+### ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="$PATH:$1"
+    fi
+}
+pathadd /home/arton/tools/eclipse
 
 # tools
 # autojump ( sudo apt-get install autojump )
