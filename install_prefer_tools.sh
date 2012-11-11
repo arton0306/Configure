@@ -1,10 +1,3 @@
-# set a little configuration
-git config --global user.name "Arton Chang"
-git config --global user.email arton0306@gmail.com
-git config --global color.ui true
-git config --global core.editor "vim"
-git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"
-
 # terminal tools ( the alias are set in ~/.bashrc )
 update
 install -y vim
@@ -17,6 +10,7 @@ install -y openssh-server
 install -y procps   # for top
 install -y htop     # a tool more convenient than top
 install -y ruby
+install -y openvpn
 
 # gui tools
 install -y synaptic # a gui apt-get tool
