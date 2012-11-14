@@ -9,7 +9,7 @@ ln -s ~/Configure/.bash_ps1 ~/.bash_ps1
 ln -s ~/Configure/.screenrc ~/.screenrc
 
 # vim
-ln -s ~/Configure/.vimrc ~/.vimrc
+ln -s ~/Configure/vim/.vimrc ~/.vimrc
 mkdir ~/.vim
 mkdir ~/.vim/colors
-ln -s ~/Configure/desert256.vim ~/.vim/colors/desert256.vim
+ln -s ~/Configure/vim/colors/desert256.vim ~/.vim/colors/desert256.vim
