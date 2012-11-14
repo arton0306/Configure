@@ -10,6 +10,4 @@ ln -s ~/Configure/.screenrc ~/.screenrc
 
 # vim
 ln -s ~/Configure/vim/.vimrc ~/.vimrc
-mkdir ~/.vim
-mkdir ~/.vim/colors
-ln -s ~/Configure/vim/colors/desert256.vim ~/.vim/colors/desert256.vim
+ln -s ~/Configure/vim ~/.vim
