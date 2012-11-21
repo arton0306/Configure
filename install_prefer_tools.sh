@@ -10,6 +10,7 @@ install -y openssh-server
 install -y procps   # for top
 install -y htop     # a tool more convenient than top
 install -y ruby
+install -y rubygems # ruby install packeage
 install -y openvpn
 
 # gui tools

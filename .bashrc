@@ -43,6 +43,8 @@ alias ls='ls --color'
 alias update='sudo apt-get update'
 alias install='sudo apt-get install'
 alias rm='rm -i'
+alias dirs='dirs -v'
+alias pushme='pushd `pwd`'
 ### don't save history for security if you do concern
 ### HISTORY_BAK_FOLDER=$HOME/history_bak
 ### alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
