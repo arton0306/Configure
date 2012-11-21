@@ -60,9 +60,10 @@ vnoremap * :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('n')<C
 vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<CR>
 
 " toggle paste mode
-noremap <F5> <ESC>:set paste!<CR>
+noremap <F3> <ESC>:set paste!<CR>
 
 " plugins
+noremap <F2> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
@@ -198,64 +199,47 @@ endf
 " map <F6> :tabnext<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Rename a buffer within Vim and on the disk
-" Copyright June 2007-2011 by Christian J. Robinson <heptite@gmail.com>
-" Distributed under the terms of the Vim license.  See ":help license".
-" Usage:
-" :Rename[!] {newname}
+" => add Find Grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-command! -nargs=* -complete=file -bang Rename call Rename(<q-args>, '<bang>')
 
-function! Rename(name, bang)
-     let l:name    = a:name
-     let l:oldfile = expand('%:p')
+cabbrev grep <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Grep' : 'grep')<CR>
+cabbrev find <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Find' : 'find')<CR>
+map ,s :execute " grep -srnw --exclude=tags --exclude=*.html --exclude-dir=framework_addon --exclude-dir=network_addon --exclude-dir=runtime_addon --exclude-dir=build --exclude-dir=bin --binary-files=without-match --exclude-dir=.git --exclude-dir=.repo . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
-     if bufexists(fnamemodify(l:name, ':p'))
-          if (a:bang ==# '!')
-               silent exe bufnr(fnamemodify(l:name, ':p')) . 'bwipe!'
-          else
-               echohl ErrorMsg
-               echomsg 'A buffer with that name already exists (use ! to override).'
-               echohl None
-               return 0
-          endif
-     endif
-
-     let l:status = 1
-
-     let v:errmsg = ''
-     silent! exe 'saveas' . a:bang . ' ' . l:name
-
-     if v:errmsg =~# '^$\|^E329'
-          let l:lastbufnr = bufnr('$')
-
-          if expand('%:p') !=# l:oldfile && filewritable(expand('%:p'))
-               if fnamemodify(bufname(l:lastbufnr), ':p') ==# l:oldfile
-                    silent exe l:lastbufnr . 'bwipe!'
-               else
-                    echohl ErrorMsg
-                    echomsg 'Could not wipe out the old buffer for some reason.'
-                    echohl None
-                    let l:status = 0
-               endif
-
-               if delete(l:oldfile) != 0
-                    echohl ErrorMsg
-                    echomsg 'Could not delete the old file: ' . l:oldfile
-                    echohl None
-                    let l:status = 0
-               endif
-          else
-               echohl ErrorMsg
-               echomsg 'Rename failed for some reason.'
-               echohl None
-               let l:status = 0
-          endif
-     else
-          echoerr v:errmsg
-          let l:status = 0
-     endif
-
-     return l:status
+function! Grep(name)
+  execute ":grep -isrn --exclude=tags --exclude=*.html --exclude-dir=framework_addon --exclude-dir=network_addon --exclude-dir=runtime_addon --exclude-dir=build --exclude-dir=bin --exclude-dir=.git --exclude-dir=.repo --binary-files=without-match . -e ".a:name
+  execute ":copen"
 endfunction
+command! -nargs=1 Grep :call Grep("<args>")
+
+function! Find(name)
+  echo a:name
+  let l:list=system("find . -iname '".a:name."' | perl -ne 'print \"$.\\t$_\"'")
+  let l:num=strlen(substitute(l:list, "[^\n]", "", "g"))
+  if l:num < 1
+    echo "'".a:name."' not found"
+    return
+  endif
+  if l:num != 1
+    echo l:list
+    let l:input=input("Which ? (CR=nothing)\n")
+    if strlen(l:input)==0
+      return
+    endif
+    if strlen(substitute(l:input, "[0-9]", "", "g"))>0
+      echo "Not a number"
+      return
+    endif
+    if l:input<1 || l:input>l:num
+      echo "Out of range"
+      return
+    endif
+    let l:line=matchstr("\n".l:list, "\n".l:input."\t[^\n]*")
+  else
+    let l:line=l:list
+  endif
+  let l:line=substitute(l:line, "^[^\t]*\t./", "", "")
+  execute ":e ".l:line
+endfunction
+command! -nargs=1 Find :call Find("<args>")
 
