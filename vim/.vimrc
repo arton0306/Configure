@@ -63,6 +63,7 @@ vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<C
 noremap <F3> <ESC>:set paste!<CR>
 
 " plugins
+noremap <F2> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
