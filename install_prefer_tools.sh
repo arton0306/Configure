@@ -12,6 +12,8 @@ install -y htop     # a tool more convenient than top
 install -y ruby
 install -y rubygems # ruby install packeage
 install -y openvpn
+install -y ctags
+install -y exuberant-ctags
 
 # gui tools
 install -y synaptic # a gui apt-get tool
