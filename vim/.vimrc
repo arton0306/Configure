@@ -1,3 +1,6 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Environment
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set history=500 " Sets how many lines of history VIM has to rememberset
 
 set nocompatible
@@ -35,7 +38,7 @@ set ve=all " let ctrl + v be more convenient and powerful
 set ttymouse=xterm2                     " For using mouse=a with screen
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Key Mapping
+" => General Key Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 nmap <leader>vimrc     :e $MYVIMRC<CR>
@@ -43,7 +46,7 @@ nmap <leader>sorc      :source $MYVIMRC<CR>
 imap jj                <ESC>
 inoremap {<CR> {<CR><END><CR>}<UP><END>
 
-" Smart way to move btw. windows
+" Smart way to move to split windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -52,9 +55,6 @@ map <C-l> <C-W>l
 " When pressing <leader>cd switch to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>
 
-" press F11 to toggle specails charactor show
-noremap <F11> :set list!<CR>
-
 " search multiple line
 vnoremap * :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('n')<CR>
 vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<CR>
@@ -62,15 +62,18 @@ vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<C
 " toggle paste mode
 noremap <F3> <ESC>:set paste!<CR>
 
-" plugins
+" tab
+noremap <leader>ts <ESC>:tab split<CR>
+
+" ctags ( <c-]> find definition )
+noremap <leader>ctags <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins Key Mapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FuzzyFinder
 noremap <leader>ff <ESC>:FufCoverageFile<CR>
 noremap <silent> <c-\> :FufTag <c-r>=expand('<cword>')<cr><cr>
-noremap <leader>ctags <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
-" ctags <c-]> find definition
-
-" tab
-noremap <leader>ts <ESC>:tab split<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
@@ -107,6 +110,8 @@ endfunction
 set lcs=tab:>-,trail:-
 set list
 hi SpecialKey ctermbg=red ctermfg=red guibg=red guifg=red
+" use :set list! to toggle specails charactor show
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => a function to search multiple line ( by: ptt - bootleq )
@@ -208,7 +213,6 @@ endf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => add Grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 cabbrev grep <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Grep' : 'grep')<CR>
 map ,s :execute " grep -srnw --exclude=tags --exclude=*.html --exclude-dir=framework_addon --exclude-dir=network_addon --exclude-dir=runtime_addon --exclude-dir=build --exclude-dir=bin --binary-files=without-match --exclude-dir=.git --exclude-dir=.repo . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
