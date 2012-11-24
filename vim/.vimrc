@@ -63,6 +63,11 @@ vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<C
 noremap <F3> <ESC>:set paste!<CR>
 
 " plugins
+" FuzzyFinder
+noremap <leader>ff <ESC>:FufCoverageFile<CR>
+noremap <silent> <c-\> :FufTag <c-r>=expand('<cword>')<cr><cr>
+noremap <leader>ctags <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
+" ctags <c-]> find definition
 
 " tab
 noremap <leader>ts <ESC>:tab split<CR>
@@ -201,11 +206,10 @@ endf
 " map <F6> :tabnext<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => add Find Grep
+" => add Grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 cabbrev grep <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Grep' : 'grep')<CR>
-cabbrev find <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Find' : 'find')<CR>
 map ,s :execute " grep -srnw --exclude=tags --exclude=*.html --exclude-dir=framework_addon --exclude-dir=network_addon --exclude-dir=runtime_addon --exclude-dir=build --exclude-dir=bin --binary-files=without-match --exclude-dir=.git --exclude-dir=.repo . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 
 function! Grep(name)
@@ -213,35 +217,4 @@ function! Grep(name)
   execute ":copen"
 endfunction
 command! -nargs=1 Grep :call Grep("<args>")
-
-function! Find(name)
-  echo a:name
-  let l:list=system("find . -iname '".a:name."' | perl -ne 'print \"$.\\t$_\"'")
-  let l:num=strlen(substitute(l:list, "[^\n]", "", "g"))
-  if l:num < 1
-    echo "'".a:name."' not found"
-    return
-  endif
-  if l:num != 1
-    echo l:list
-    let l:input=input("Which ? (CR=nothing)\n")
-    if strlen(l:input)==0
-      return
-    endif
-    if strlen(substitute(l:input, "[0-9]", "", "g"))>0
-      echo "Not a number"
-      return
-    endif
-    if l:input<1 || l:input>l:num
-      echo "Out of range"
-      return
-    endif
-    let l:line=matchstr("\n".l:list, "\n".l:input."\t[^\n]*")
-  else
-    let l:line=l:list
-  endif
-  let l:line=substitute(l:line, "^[^\t]*\t./", "", "")
-  execute ":e ".l:line
-endfunction
-command! -nargs=1 Find :call Find("<args>")
 
