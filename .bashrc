@@ -49,8 +49,8 @@ alias pushme='pushd `pwd`'
 ### HISTORY_BAK_FOLDER=$HOME/history_bak
 ### alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
 alias gitall='repo forall -c git'
-alias hellocpp='cp ~/Configure/code_template/helloc++.cpp ./hellocpp.cpp; vim hellocpp.cpp'
-alias helloc='cp ~/Configure/code_template/helloc.c ./helloc.c; vim helloc.c'
+alias testc='cp ~/Configure/code_template/test.c ./test.c -i && vim test.c'
+alias testcpp='cp ~/Configure/code_template/test.cpp ./test.cpp -i && vim test.cpp'
 
 # Path
 ### ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
