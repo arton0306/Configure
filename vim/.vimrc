@@ -114,6 +114,7 @@ set lcs=tab:>-,trail:-
 set list
 hi SpecialKey ctermbg=red ctermfg=red guibg=red guifg=red
 " use :set list! to toggle specails charactor show
+noremap <F2> <ESC>:set list!<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
