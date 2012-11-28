@@ -73,6 +73,9 @@ noremap <leader>ctags <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FuzzyFinder
 noremap <leader>ff <ESC>:FufCoverageFile<CR>
+noremap <leader>mff <ESC>:FufCoverageFile!<CR>
+noremap <leader>fb <ESC>:FufBuffer<CR>
+noremap <leader>mfb <ESC>:FufBuffer!<CR>
 noremap <silent> <c-\> :FufTag <c-r>=expand('<cword>')<cr><cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
