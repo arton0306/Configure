@@ -1,0 +1,1 @@
+grep Vector $(find . -name '*.t' | grep -v 'graphviz' )

@@ -51,6 +51,7 @@ alias pushme='pushd `pwd`'
 alias gitall='repo forall -c git'
 alias testc='cp ~/Configure/code_template/test.c ./test.c -i && vim test.c'
 alias testcpp='cp ~/Configure/code_template/test.cpp ./test.cpp -i && vim test.cpp'
+alias usage='cat ~/Configure/command_example/grep.txt'
 
 # Path
 ### ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
