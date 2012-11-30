@@ -1,6 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Environment
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on " smart tab with Makefile
+
 set history=500 " Sets how many lines of history VIM has to rememberset
 
 set nocompatible
