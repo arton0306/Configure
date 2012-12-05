@@ -1,1 +1,2 @@
 grep Vector $(find . -name '*.t' | grep -v 'graphviz' )
+grep HashMap $(find . -name '*.t' -o -name '*.cpp' -o -name '*.h' | grep -v 'graphviz' )

@@ -5,6 +5,7 @@ install -y tcsh
 install -y autojump
 install -y aptitude # a text apt-get tool
 install -y screen
+install -y byobu    # a convineint tool which backend is screen
 install -y mosh     # a remote terminal application ( http://mosh.mit.edu/ )
 install -y openssh-server
 install -y procps   # for top
