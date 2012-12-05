@@ -61,6 +61,7 @@ pathadd() {
     fi
 }
 pathadd /home/arton/tools/eclipse
+pathadd /usr/local/go/bin
 
 # tools
 # autojump ( sudo apt-get install autojump )
