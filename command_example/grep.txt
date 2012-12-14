@@ -1,2 +1,4 @@
 grep Vector $(find . -name '*.t' | grep -v 'graphviz' )
 grep HashMap $(find . -name '*.t' -o -name '*.cpp' -o -name '*.h' | grep -v 'graphviz' )
+wc -l $(find . -name '*.t' -o -name '*.cpp' | grep -v 'graphviz')
+git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"
