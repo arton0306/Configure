@@ -1,0 +1,12 @@
+# Compiled source
+*.o
+
+# Packages
+*.gz
+*.tar
+*.zip
+
+# Vim
+*.vim
+*.swp
+*.swo
