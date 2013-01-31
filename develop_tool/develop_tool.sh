@@ -89,3 +89,23 @@ cd $WORK_DIR
 echo "update ldconfig after boost-1.52.0"
 sudo ldconfig
 
+### And execute the steps below...
+# install msgpack (https://github.com/msgpack/website/blob/master/releases/cpp/msgpack-0.5.7.tar.gz)
+# install ttb (http://threadingbuildingblocks.org/uploads/77/189/4.1%20update%201/tbb41_20121003oss_lin.tgz)
+# install cogapp (http://pypi.python.org/packages/source/c/cogapp/cogapp-2.3.tar.gz#md5=d801042bba801e8837f6d9781e7a6454)
+#
+# Download repo from here: http://code.google.com/p/git-repo/downloads/list
+# chmod +x repo (you can put it under /usr/sbin)
+# repo init -u git@github.com:zillians/platform_manifest_supercell.git
+# repo sync
+# repo forall -c git checkout -b master --track origin/master
+# repo forall -c git checkout -b develop --track origin/develop
+#
+# create a folder for buildout at where you like ( but out of source ), and enter this folder
+# cmake -DENABLE_FEATURE_CUDA=OFF -DCMAKE_BUILD_TYPE=Debug source-path( the folder named platform )
+# modify llvm-config position to correct position ( /usr/lib/llvm-3.1/llvm-config ) with ccmake
+# install rstm ( https://github.com/zillians/rstm )
+# ccmake .
+#
+# make zillians-language-compiler-collection
+# test some cases
