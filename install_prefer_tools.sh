@@ -22,3 +22,7 @@ install -y meld # a diff tool ( http://meldmerge.org/ )
 install -y gitg # git gui client tool
 install -y git-gui
 install -y cgdb
+
+# unetbooting dependency
+install -y ia32-libs
+install -y p7zip-full
