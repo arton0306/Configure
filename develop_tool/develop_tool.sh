@@ -78,7 +78,7 @@ sudo sh -c "echo '$GCC_PREFIX/lib64' > /etc/ld.so.conf.d/libc64.conf" && sudo ld
 echo "start building llvm-3.2, clang-3.2"
 cd $SOURCE_DIR/$LLVM_NAME
 ./configure --enable-assertions --disable-optimized --enable-debug-runtime --prefix=/usr/lib/llvm-3.2
-make REQUIRES_RTTI=1 -j $CORE_NUM && sudo make install-
+make REQUIRES_RTTI=1 -j $CORE_NUM && sudo make install
 cd $WORK_DIR
 
 echo "update ldconfig after llvm-3.2, clang-3.2"
