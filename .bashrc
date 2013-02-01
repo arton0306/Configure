@@ -2,6 +2,9 @@
 #   My Prefer Environment
 ###################################
 
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 # Prompt
 PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ " # color
 ### PS1="\t-\u@\h:\w\$ " # nocolor

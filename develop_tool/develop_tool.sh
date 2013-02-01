@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# if you encounter "ld connot find ctr1.o, uncomment these
 # ref: http://stackoverflow.com/questions/6329887/compiling-problems-cannot-find-crt1-o
 # sudo ln -s /usr/lib/x86_64-linux-gnu /usr/lib64
 
@@ -34,6 +35,9 @@ GCC_PREFIX='/usr/local'
 LLVM_PREFIX='/usr/local'
 BOOST_PREFIX='/usr/local'
 
+# core number for quick build
+CORE_NUM='4'
+
 echo $WORK_DIR
 echo $DOWNLOAD_DIR
 echo $SOURCE_DIR
@@ -65,7 +69,7 @@ sudo apt-get install libgmp3-dev libmpc-dev libmpfr-dev m4 g++-multilib gcc-mult
 
 echo "start building gcc-4.7.2"
 cd $SOURCE_DIR/$GCC_NAME
-./configure --enable-languages=c,c++ && make && sudo make install
+./configure --enable-languages=c,c++ && make -j $CORE_NUM && sudo make install
 cd $WORK_DIR
 
 echo "update ldconfig after libstdc++ from gcc-4.7.2"
@@ -74,7 +78,7 @@ sudo sh -c "echo '$GCC_PREFIX/lib64' > /etc/ld.so.conf.d/libc64.conf" && sudo ld
 echo "start building llvm-3.2, clang-3.2"
 cd $SOURCE_DIR/$LLVM_NAME
 ./configure --enable-assertions --disable-optimized --enable-debug-runtime --prefix=/usr/lib/llvm-3.2
-make REQUIRES_RTTI=1 -j4 && sudo make install-
+make REQUIRES_RTTI=1 -j $CORE_NUM && sudo make install-
 cd $WORK_DIR
 
 echo "update ldconfig after llvm-3.2, clang-3.2"

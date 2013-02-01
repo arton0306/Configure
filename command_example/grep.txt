@@ -9,3 +9,5 @@ in git 1.7 => git branch --set-upstream foo upstream/foo
 in git 1.8 => git branch -u upstream/foo foo
 ----- find & xargs -----
 find -iname '*.a' | xargs -i ls -l {}  | grep service
+----- zip & unzip -----
+tar xvjf OpenCV-2.4.3.tar.bz2
