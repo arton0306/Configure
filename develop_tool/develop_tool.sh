@@ -87,7 +87,8 @@ sudo ldconfig
 echo "start building boost-1.52.0"
 sudo apt-get install libbz2-dev zlib1g-dev
 cd $SOURCE_DIR/$BOOST_NAME
-./bootstrap.sh && ./b2 --prefix=$BOOST_PREFIX --without-python stage && sudo ./b2 --prefix=BOOST_PREFIX --without-python install
+./bootstrap.sh && ./b2 --prefix=$BOOST_PREFIX --without-python stage
+sudo ./b2 --prefix=BOOST_PREFIX --without-python install
 cd $WORK_DIR
 
 echo "update ldconfig after boost-1.52.0"
