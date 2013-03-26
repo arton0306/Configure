@@ -96,6 +96,7 @@ sudo ldconfig
 
 ### And execute the steps below...
 # install msgpack (https://github.com/msgpack/website/blob/master/releases/cpp/msgpack-0.5.7.tar.gz)
+sudo wget https://github.com/msgpack/website/blob/master/releases/cpp/msgpack-0.5.7.tar.gz -O msgpack-0.5.7.tar.gz
 # install ttb (http://threadingbuildingblocks.org/uploads/77/189/4.1%20update%201/tbb41_20121003oss_lin.tgz)
 # install cogapp (http://pypi.python.org/packages/source/c/cogapp/cogapp-2.3.tar.gz#md5=d801042bba801e8837f6d9781e7a6454)
 #
