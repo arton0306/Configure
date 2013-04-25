@@ -13,3 +13,5 @@ find -iname '*.a' | xargs -i ls -l {}  | grep service
 tar xvjf OpenCV-2.4.3.tar.bz2
 ----- ldconfig -----
 ldconfig -p
+----- write -----
+write username

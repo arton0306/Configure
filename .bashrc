@@ -55,7 +55,7 @@ alias pushme='pushd `pwd`'
 alias gitall='repo forall -c git'
 alias testc='cp ~/Configure/code_template/test.c ./test.c -i && vim test.c'
 alias testcpp='cp ~/Configure/code_template/test.cpp ./test.cpp -i && vim test.cpp'
-alias usage='cat ~/Configure/command_example/grep.txt'
+alias usage='cat ~/Configure/command_example/cmd_example.txt'
 alias note='vim ~/Configure/note/note'
 
 # Path
