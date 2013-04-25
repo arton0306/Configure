@@ -68,7 +68,10 @@ noremap <F3> <ESC>:set paste!<CR>
 noremap <leader>ts <ESC>:tab split<CR>
 
 " ctags ( <c-]> find definition )
-noremap <leader>ctags <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
+noremap <leader>ctags <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+" note
+noremap <leader>note <ESC>:tabe ~/Configure/note/note<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins Key Mapping
