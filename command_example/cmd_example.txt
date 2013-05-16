@@ -9,9 +9,12 @@ in git 1.7 => git branch --set-upstream foo upstream/foo
 in git 1.8 => git branch -u upstream/foo foo
 ----- find & xargs -----
 find -iname '*.a' | xargs -i ls -l {}  | grep service
+find -iregex ".*[^(\.c)(\.o)(\.h)]"
 ----- zip & unzip -----
 tar xvjf OpenCV-2.4.3.tar.bz2
 ----- ldconfig -----
 ldconfig -p
 ----- write -----
 write username
+----- for in command -----
+for i in $(find *jarvis*); do ./$i status; done;
