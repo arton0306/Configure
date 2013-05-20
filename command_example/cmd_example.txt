@@ -16,5 +16,9 @@ tar xvjf OpenCV-2.4.3.tar.bz2
 ldconfig -p
 ----- write -----
 write username
------ for in command -----
+----- for in shell script -----
 for i in $(find *jarvis*); do ./$i status; done;
+----- dpkg -----
+dpkg --list "foo*"
+dpkg --status packagename
+dpkg --search filename
