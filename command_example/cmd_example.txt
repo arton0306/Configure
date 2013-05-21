@@ -22,3 +22,5 @@ for i in $(find *jarvis*); do ./$i status; done;
 dpkg --list "foo*"
 dpkg --status packagename
 dpkg --search filename
+----- ctags -----
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
