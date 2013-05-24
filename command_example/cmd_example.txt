@@ -24,3 +24,5 @@ dpkg --status packagename
 dpkg --search filename
 ----- ctags -----
 ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+----- awk -----
+awk -F' ' '{print $1}'
