@@ -28,3 +28,6 @@ ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 awk -F' ' '{print $1}'
 ----- convert -----
 convert rose.jpg -resize 50% rose.png
+----- system info -----
+uname -a
+lsb_release -a
