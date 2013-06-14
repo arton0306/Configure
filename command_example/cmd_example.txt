@@ -19,6 +19,8 @@ write username
 ----- for in shell script -----
 for i in $(find *jarvis*); do ./$i status; done;
 ----- dpkg -----
+dpkg -i packagename
+dpkg -r packagename
 dpkg --list "foo*"
 dpkg --status packagename
 dpkg --search filename
@@ -31,3 +33,5 @@ convert rose.jpg -resize 50% rose.png
 ----- system info -----
 uname -a
 lsb_release -a
+----- download lots images -----
+for i in $(seq -w 1000); do wget $(head -n $i list | tail -n 1 ) -O $i.jpg; done
