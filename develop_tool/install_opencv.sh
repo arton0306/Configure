@@ -1,6 +1,5 @@
 # ref: http://indranilsinharoy.com/2012/11/01/installing-opencv-on-linux/
 sudo apt-get update
-sudo apt-get upgrade
 
 sudo apt-get install -y build-essential
 sudo apt-get install -y cmake
