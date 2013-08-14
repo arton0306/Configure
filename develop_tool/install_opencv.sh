@@ -59,6 +59,19 @@ sudo apt-get install -y libv4l-0
 sudo apt-get install -y libv4l-dev
 
 #download opencv
-#cmake .
-#make
-#make install
+ORIGIN_DIR=`pwd`
+TEMP_DIR_NAME=asdfghjkl123
+cd $HOME
+mkdir TEMP_DIR_NAME
+cd TEMP_DIR_NAME
+OPENCV_TARBALL='http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.6.1/opencv-2.4.6.1.tar.gz?r=http%3A%2F%2Fopencv.org%2Fdownloads.html&ts=1376453228&use_mirror=jaist'
+OPENCV_PACKAGE='opencv-2.4.6.1.tar.gz'
+wget $OPENCV_TARBALL -O $OPENCV_PACKAGE
+tar -xzf $OPENCV_PACKAGE
+
+cd opencv-2.4.6.1
+cmake .
+make -j 4
+sudo make install
+
+#remove TEMP_DIR_NAME
