@@ -1,0 +1,14 @@
+sh -x ./myscript => -x debug, or as below
+#!/bin/bash -x => debug, 1st line
+echo -n "abc" => -n print string and keep cursor at the same line
+(ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
+
+----- testing -----
+do concate "[" or "]" with the other char
+[ -f ] check is a file
+[ -e ] check exsit
+[ ... -a ... ] and
+[ ... -o ... ] or
+
+Refs:
+https://sites.google.com/site/tiger2000/
