@@ -4,6 +4,7 @@ lspci : list pci device
 pkill : kill process by name
 ulimit : user limit ( -a to list all limit info ), 0 means unlimited
 type -a : show a command execution order list
+stty -a : ( setting tty ) list hotkey and tty info
 
 bash command execution order:
 1. relative/absolute path : /bin/ls or ./ls
