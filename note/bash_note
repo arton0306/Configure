@@ -1,4 +1,4 @@
-sh -x ./myscript => -x debug, or as below
+sh -x ./myscript => -x debug( show all command ), or as below
 #!/bin/bash -x => debug, 1st line
 echo -n "abc" => -n print string and keep cursor at the same line
 (ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
@@ -12,3 +12,21 @@ do concate "[" or "]" with the other char
 
 Refs:
 https://sites.google.com/site/tiger2000/
+
+----- var -----
+1. var and its content are separated by =
+   ex: myname=arton
+2. there is no space at the 2 ends of =
+   ex: myname = arton (error!)
+   ex: myname=Chang Arton (error!)
+3. the name of var must start with nondigit
+4. " expand the var
+   ' remain the var
+5. use \ to escape
+6. `command` and $(command) can get the result of command
+7. "$var" or ${var} can expand var
+8. use "export" to make a var to be env var
+9. traditionally ( not forcely ),
+   uppercase words are system default var
+   lowercase words are user customized var
+10 use "unset" to delete the content of a var
