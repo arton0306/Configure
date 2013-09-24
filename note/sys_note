@@ -3,3 +3,10 @@ lsusb : list usb device
 lspci : list pci device
 pkill : kill process by name
 ulimit : user limit ( -a to list all limit info ), 0 means unlimited
+type -a : show a command execution order list
+
+bash command execution order:
+1. relative/absolute path : /bin/ls or ./ls
+2. alias
+3. bash builtin
+4. search path in $PATH
