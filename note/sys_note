@@ -2,3 +2,4 @@ hwinfo : a good tool for listing hardware
 lsusb : list usb device
 lspci : list pci device
 pkill : kill process by name
+ulimit : user limit ( -a to list all limit info )
