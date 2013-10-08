@@ -47,7 +47,8 @@ fi
 
 # Aliases
 if [[ ${platform} == 'freebsd' ]]; then
-    alias ls='ls -G'          # BSD ls
+    alias ls='ls -G'           # BSD ls
+    export LSCOLORS=gxfxcxdxbxegedabagacad # refs:http://blog.longwin.com.tw/2006/07/color_ls_in_bash_2006/
 else
     alias ls='ls --color=auto' # GNU coreutils ls
 fi
