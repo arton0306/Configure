@@ -48,6 +48,10 @@ nmap <leader>sorc      :source $MYVIMRC<CR>
 imap jj                <ESC>
 inoremap {<CR> {<CR><END><CR>}<UP><END>
 
+" scroll conveniently
+nmap ff <c-f>
+nmap FF <c-b>
+
 " Smart way to move to split windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
