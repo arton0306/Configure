@@ -38,3 +38,5 @@ for i in $(seq -w 1000); do wget $(head -n $i list | tail -n 1 ) -O $i.jpg; done
 for i in $(seq -w 0061); do wget $(../get_s3_url.py $(head -n $i list | tail -n 1 )) -O $i.jpg; done;
 ----- sed, tr -----
 ls -1 ../*.py | sed -e 's/..\///g ; s/\.py//g' | tr '\n' ',' | sed -e 's/,$//'
+----- readlink -----
+cd $(readlink mylink)
