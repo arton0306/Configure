@@ -1,0 +1,9 @@
+# print tree
+git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+
+# submodule
+# refs ( http://josephjiang.com/entry.php?id=342 )
+git submodule add git@github.com:josephj/javascript-platform-yui.git static/platform
+git submodule init
+git submodule update
+
