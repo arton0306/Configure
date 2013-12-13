@@ -40,3 +40,5 @@ for i in $(seq -w 0061); do wget $(../get_s3_url.py $(head -n $i list | tail -n 
 ls -1 ../*.py | sed -e 's/..\///g ; s/\.py//g' | tr '\n' ',' | sed -e 's/,$//'
 ----- readlink -----
 cd $(readlink mylink)
+----- screen capture -----
+import abc.png
