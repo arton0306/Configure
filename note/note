@@ -1,3 +1,7 @@
+src     ~/zillians/jarvis/platform/projects/jarvis/src/plate-detection
+build   ~/zillians/jarvis
+
+
  make training_data_gen && bin/training_data_gen ~/zillians/testdata/hire_final/part1.detplate.list /tmp/ori.data /tmp/norm.data
 
 ======================================================================================================================================================
