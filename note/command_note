@@ -42,3 +42,5 @@ ls -1 ../*.py | sed -e 's/..\///g ; s/\.py//g' | tr '\n' ',' | sed -e 's/,$//'
 cd $(readlink mylink)
 ----- screen capture -----
 import abc.png
+----- open folder in terminal -----
+nautilus path
