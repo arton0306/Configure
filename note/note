@@ -1,3 +1,368 @@
+ make training_data_gen && bin/training_data_gen ~/zillians/testdata/hire_final/part1.detplate.list /tmp/ori.data /tmp/norm.data
+
+======================================================================================================================================================
+ann version 20130910 142140
+
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/bright/
+(ans,det,match,fp):( 2034891,10788319, 1565268, 9223051)
+match plate / ans plate : 1367 /1809
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/dark/
+(ans,det,match,fp):(  679376, 3395413,  428020, 2967393)
+match plate / ans plate :  274 / 470
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/bright/
+(ans,det,match,fp):(   18242,  142510,   15606,  126904)
+match plate / ans plate :   10 /  14
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/dark/
+(ans,det,match,fp):(    3688,   68437,    1872,   66565)
+match plate / ans plate :    2 /   4
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/bright/
+(ans,det,match,fp):(     351,   39006,     324,   38682)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/dark/
+(ans,det,match,fp):(       0,   15858,       0,   15858)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/1920_1088/bright/
+(ans,det,match,fp):(     476,    4139,       0,    4139)
+match plate / ans plate :    0 /   1
+/home/arton/zillians/testdata/hire_final/20130802/352_288/bright/
+(ans,det,match,fp):(       0,    4805,       0,    4805)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/640_480/bright/
+(ans,det,match,fp):(  173953, 1460480,  127542, 1332938)
+match plate / ans plate :  269 / 379
+/home/arton/zillians/testdata/hire_final/20130802/640_480/dark/
+(ans,det,match,fp):(   17204,  145218,    9398,  135820)
+match plate / ans plate :   12 /  25
+/home/arton/zillians/testdata/hire_final/20130802/720_480/bright/
+(ans,det,match,fp):(    9158,  112271,    8347,  103924)
+match plate / ans plate :   13 /  15
+/home/arton/zillians/testdata/hire_final/20130802/720_480/dark/
+(ans,det,match,fp):(    3759,   21106,    1102,   20004)
+match plate / ans plate :    1 /   5
+/home/arton/zillians/testdata/hire_final/20130802/960_540/dark/
+(ans,det,match,fp):(    2160,    7529,    2160,    5369)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/bright/
+(ans,det,match,fp):( 2394636,13043447, 1887079,11156368)
+match plate / ans plate : 1732 /2263
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/dark/
+(ans,det,match,fp):(  635296, 3424367,  431785, 2992582)
+match plate / ans plate :  270 / 430
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/bright/
+(ans,det,match,fp):(   16635,  149427,   12513,  136914)
+match plate / ans plate :    8 /  13
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/dark/
+(ans,det,match,fp):(    4535,   25341,    3380,   21961)
+match plate / ans plate :    1 /   2
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/bright/
+(ans,det,match,fp):(     176,    3778,       0,    3778)
+match plate / ans plate :    0 /   1
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/dark/
+(ans,det,match,fp):(       0,   31480,       0,   31480)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130808/352_288/bright/
+(ans,det,match,fp):(    2848,   16869,    2560,   14309)
+match plate / ans plate :    6 /   7
+/home/arton/zillians/testdata/hire_final/20130808/352_288/dark/
+(ans,det,match,fp):(     476,    5215,     476,    4739)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130808/640_480/bright/
+(ans,det,match,fp):(  251865, 1979703,  186816, 1792887)
+match plate / ans plate :  353 / 515
+/home/arton/zillians/testdata/hire_final/20130808/640_480/dark/
+(ans,det,match,fp):(   43307,  268998,   35576,  233422)
+match plate / ans plate :   37 /  47
+/home/arton/zillians/testdata/hire_final/20130808/720_480/bright/
+(ans,det,match,fp):(    3762,   36494,    3232,   33262)
+match plate / ans plate :    7 /   9
+/home/arton/zillians/testdata/hire_final/20130808/720_480/dark/
+(ans,det,match,fp):(    1020,    8178,       0,    8178)
+match plate / ans plate :    0 /   1
+===== TOTAL =====
+(ans,det,match,fp):( 6297814,35198388, 4723056,30475332)
+match plate / ans plate : 4365 /6013
+===== time spending =====
+919 seconds
+===== 665 missing big plates ( 600 pixels ) =====
+
+======================================================================================================================================================
+======================================================================================================================================================
+======================================================================================================================================================
+======================================================================================================================================================
+======================================================================================================================================================
+
+20130909 151640
+server version part1
+
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/bright/
+(ans,det,match,fp):( 2099671,15290816, 1633691,13657125)
+match plate / ans plate : 1437 /1906
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/dark/
+(ans,det,match,fp):(  544701, 5885796,  398744, 5487052)
+match plate / ans plate :  267 / 403
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/bright/
+(ans,det,match,fp):(   13836,  231033,   11650,  219383)
+match plate / ans plate :   12 /  15
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/dark/
+(ans,det,match,fp):(     432,   62123,       0,   62123)
+match plate / ans plate :    0 /   1
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/bright/
+(ans,det,match,fp):(    2156,   35749,    2156,   33593)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/dark/
+(ans,det,match,fp):(       0,   24350,       0,   24350)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/1920_1088/bright/
+(ans,det,match,fp):(     900,    3304,     800,    2504)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130802/1920_1088/dark/
+(ans,det,match,fp):(       0,    2007,       0,    2007)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/352_288/bright/
+(ans,det,match,fp):(     430,    8410,     250,    8160)
+match plate / ans plate :    1 /   2
+/home/arton/zillians/testdata/hire_final/20130802/640_480/bright/
+(ans,det,match,fp):(  198968, 2185513,  151889, 2033624)
+match plate / ans plate :  308 / 416
+/home/arton/zillians/testdata/hire_final/20130802/640_480/dark/
+(ans,det,match,fp):(   17003,  356951,   11538,  345413)
+match plate / ans plate :   16 /  25
+/home/arton/zillians/testdata/hire_final/20130802/720_480/bright/
+(ans,det,match,fp):(    5091,  161689,    3351,  158338)
+match plate / ans plate :    6 /  10
+/home/arton/zillians/testdata/hire_final/20130802/720_480/dark/
+(ans,det,match,fp):(    2796,   33837,    1281,   32556)
+match plate / ans plate :    2 /   4
+/home/arton/zillians/testdata/hire_final/20130802/960_540/dark/
+(ans,det,match,fp):(       0,    4242,       0,    4242)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/bright/
+(ans,det,match,fp):( 2495107,17914442, 1912710,16001732)
+match plate / ans plate : 1670 /2268
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/dark/
+(ans,det,match,fp):(  687604, 5894580,  467751, 5426829)
+match plate / ans plate :  290 / 467
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/bright/
+(ans,det,match,fp):(   16470,  216527,   15597,  200930)
+match plate / ans plate :   15 /  16
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/dark/
+(ans,det,match,fp):(    8820,   69511,    6834,   62677)
+match plate / ans plate :    2 /   4
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/bright/
+(ans,det,match,fp):(    4294,   18792,    3686,   15106)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/dark/
+(ans,det,match,fp):(       0,   56059,       0,   56059)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130808/352_288/bright/
+(ans,det,match,fp):(    3094,   20000,    2117,   17883)
+match plate / ans plate :    7 /  11
+/home/arton/zillians/testdata/hire_final/20130808/352_288/dark/
+(ans,det,match,fp):(     627,   12662,     578,   12084)
+match plate / ans plate :    2 /   2
+/home/arton/zillians/testdata/hire_final/20130808/640_480/bright/
+(ans,det,match,fp):(  263751, 2902224,  206635, 2695589)
+match plate / ans plate :  400 / 539
+/home/arton/zillians/testdata/hire_final/20130808/640_480/dark/
+(ans,det,match,fp):(   27866,  407858,   16570,  391288)
+match plate / ans plate :   23 /  39
+/home/arton/zillians/testdata/hire_final/20130808/720_480/bright/
+(ans,det,match,fp):(    2599,   50152,    1336,   48816)
+match plate / ans plate :    5 /   7
+/home/arton/zillians/testdata/hire_final/20130808/720_480/dark/
+(ans,det,match,fp):(       0,    7895,       0,    7895)
+match plate / ans plate :    0 /   0
+===== TOTAL =====
+(ans,det,match,fp):( 6396216,51856522, 4849164,47007358)
+match plate / ans plate : 4466 /6138
+===== time spending =====
+644 seconds
+===== 639 missing big plates ( 600 pixels ) =====
+
+======================================================================================================================================================
+
+20130909 152900
+server version part2
+
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/bright/
+(ans,det,match,fp):( 2034891,15398076, 1578406,13819670)
+match plate / ans plate : 1376 /1809
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/dark/
+(ans,det,match,fp):(  679376, 5959046,  435743, 5523303)
+match plate / ans plate :  284 / 470
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/bright/
+(ans,det,match,fp):(   18242,  187518,   16029,  171489)
+match plate / ans plate :   10 /  14
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/dark/
+(ans,det,match,fp):(    3688,   89254,    2124,   87130)
+match plate / ans plate :    2 /   4
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/bright/
+(ans,det,match,fp):(     351,   45698,     351,   45347)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/dark/
+(ans,det,match,fp):(       0,   26502,       0,   26502)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/1920_1088/bright/
+(ans,det,match,fp):(     476,    9282,     476,    8806)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130802/352_288/bright/
+(ans,det,match,fp):(       0,    9606,       0,    9606)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/640_480/bright/
+(ans,det,match,fp):(  173953, 2099451,  129456, 1969995)
+match plate / ans plate :  277 / 379
+/home/arton/zillians/testdata/hire_final/20130802/640_480/dark/
+(ans,det,match,fp):(   17204,  298428,    9540,  288888)
+match plate / ans plate :   12 /  25
+/home/arton/zillians/testdata/hire_final/20130802/720_480/bright/
+(ans,det,match,fp):(    9158,  150082,    8543,  141539)
+match plate / ans plate :   14 /  15
+/home/arton/zillians/testdata/hire_final/20130802/720_480/dark/
+(ans,det,match,fp):(    3759,   24326,    1854,   22472)
+match plate / ans plate :    2 /   5
+/home/arton/zillians/testdata/hire_final/20130802/960_540/dark/
+(ans,det,match,fp):(    2160,    9728,    2160,    7568)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/bright/
+(ans,det,match,fp):( 2394636,18023279, 1874507,16148772)
+match plate / ans plate : 1687 /2263
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/dark/
+(ans,det,match,fp):(  635296, 5756780,  450960, 5305820)
+match plate / ans plate :  284 / 430
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/bright/
+(ans,det,match,fp):(   16635,  231701,   13388,  218313)
+match plate / ans plate :   10 /  13
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/dark/
+(ans,det,match,fp):(    4535,   55327,    3484,   51843)
+match plate / ans plate :    1 /   2
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/bright/
+(ans,det,match,fp):(     176,    6184,       0,    6184)
+match plate / ans plate :    0 /   1
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/dark/
+(ans,det,match,fp):(       0,   49588,       0,   49588)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130808/352_288/bright/
+(ans,det,match,fp):(    2848,   21647,    2560,   19087)
+match plate / ans plate :    6 /   7
+/home/arton/zillians/testdata/hire_final/20130808/352_288/dark/
+(ans,det,match,fp):(     476,   17390,     476,   16914)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130808/640_480/bright/
+(ans,det,match,fp):(  251865, 2851363,  185161, 2666202)
+match plate / ans plate :  352 / 515
+/home/arton/zillians/testdata/hire_final/20130808/640_480/dark/
+(ans,det,match,fp):(   43307,  458230,   35614,  422616)
+match plate / ans plate :   40 /  47
+/home/arton/zillians/testdata/hire_final/20130808/720_480/bright/
+(ans,det,match,fp):(    3762,   58126,    3435,   54691)
+match plate / ans plate :    8 /   9
+/home/arton/zillians/testdata/hire_final/20130808/720_480/dark/
+(ans,det,match,fp):(    1020,    6798,     473,    6325)
+match plate / ans plate :    0 /   1
+===== TOTAL =====
+(ans,det,match,fp):( 6297814,51843410, 4754740,47088670)
+match plate / ans plate : 4369 /6013
+===== time spending =====
+636 seconds
+===== 643 missing big plates ( 600 pixels ) =====
+
+======================================================================================================================================================
+
+20130909 1459
+server version ans_trim_number.txt
+
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/bright/
+(ans,det,match,fp):( 4134562,30688892, 3212097,27476795)
+match plate / ans plate : 2813 /3715
+/home/arton/zillians/testdata/hire_final/20130802/1280_720/dark/
+(ans,det,match,fp):( 1224077,11844842,  834487,11010355)
+match plate / ans plate :  551 / 873
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/bright/
+(ans,det,match,fp):(   32078,  418551,   27679,  390872)
+match plate / ans plate :   22 /  29
+/home/arton/zillians/testdata/hire_final/20130802/1280_800/dark/
+(ans,det,match,fp):(    4120,  151377,    2124,  149253)
+match plate / ans plate :    2 /   5
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/bright/
+(ans,det,match,fp):(    2507,   81447,    2507,   78940)
+match plate / ans plate :    2 /   2
+/home/arton/zillians/testdata/hire_final/20130802/1920_1080/dark/
+(ans,det,match,fp):(       0,   50852,       0,   50852)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/1920_1088/bright/
+(ans,det,match,fp):(    1376,   12586,    1276,   11310)
+match plate / ans plate :    2 /   2
+/home/arton/zillians/testdata/hire_final/20130802/1920_1088/dark/
+(ans,det,match,fp):(       0,    2007,       0,    2007)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130802/352_288/bright/
+(ans,det,match,fp):(     430,   18016,     250,   17766)
+match plate / ans plate :    1 /   2
+/home/arton/zillians/testdata/hire_final/20130802/640_480/bright/
+(ans,det,match,fp):(  372921, 4284964,  281345, 4003619)
+match plate / ans plate :  585 / 795
+/home/arton/zillians/testdata/hire_final/20130802/640_480/dark/
+(ans,det,match,fp):(   34207,  655379,   21078,  634301)
+match plate / ans plate :   28 /  50
+/home/arton/zillians/testdata/hire_final/20130802/720_480/bright/
+(ans,det,match,fp):(   14249,  311771,   11894,  299877)
+match plate / ans plate :   20 /  25
+/home/arton/zillians/testdata/hire_final/20130802/720_480/dark/
+(ans,det,match,fp):(    6555,   58163,    3135,   55028)
+match plate / ans plate :    4 /   9
+/home/arton/zillians/testdata/hire_final/20130802/960_540/dark/
+(ans,det,match,fp):(    2160,   13970,    2160,   11810)
+match plate / ans plate :    1 /   1
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/bright/
+(ans,det,match,fp):( 4889743,35937721, 3787217,32150504)
+match plate / ans plate : 3357 /4531
+/home/arton/zillians/testdata/hire_final/20130808/1280_720/dark/
+(ans,det,match,fp):( 1322900,11651360,  918711,10732649)
+match plate / ans plate :  574 / 897
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/bright/
+(ans,det,match,fp):(   33105,  448228,   28985,  419243)
+match plate / ans plate :   25 /  29
+/home/arton/zillians/testdata/hire_final/20130808/1280_800/dark/
+(ans,det,match,fp):(   13355,  124838,   10318,  114520)
+match plate / ans plate :    3 /   6
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/bright/
+(ans,det,match,fp):(    4470,   24976,    3686,   21290)
+match plate / ans plate :    1 /   2
+/home/arton/zillians/testdata/hire_final/20130808/1920_1080/dark/
+(ans,det,match,fp):(       0,  105647,       0,  105647)
+match plate / ans plate :    0 /   0
+/home/arton/zillians/testdata/hire_final/20130808/352_288/bright/
+(ans,det,match,fp):(    5942,   41647,    4677,   36970)
+match plate / ans plate :   13 /  18
+/home/arton/zillians/testdata/hire_final/20130808/352_288/dark/
+(ans,det,match,fp):(    1103,   30052,    1054,   28998)
+match plate / ans plate :    3 /   3
+/home/arton/zillians/testdata/hire_final/20130808/640_480/bright/
+(ans,det,match,fp):(  515616, 5753587,  391796, 5361791)
+match plate / ans plate :  752 /1054
+/home/arton/zillians/testdata/hire_final/20130808/640_480/dark/
+(ans,det,match,fp):(   71173,  866088,   52184,  813904)
+match plate / ans plate :   63 /  86
+/home/arton/zillians/testdata/hire_final/20130808/720_480/bright/
+(ans,det,match,fp):(    6361,  108278,    4771,  103507)
+match plate / ans plate :   13 /  16
+/home/arton/zillians/testdata/hire_final/20130808/720_480/dark/
+(ans,det,match,fp):(    1020,   14693,     473,   14220)
+match plate / ans plate :    0 /   1
+===== TOTAL =====
+(ans,det,match,fp):(12694030,103699932, 9603904,94096028)
+match plate / ans plate : 8835 /12151
+===== time spending =====
+1293 seconds
+===== 1282 missing big plates ( 600 pixels ) =====
+
+
+******************************************************************************************************************************************************
+******************************************************************************************************************************************************
+******************************************************************************************************************************************************
+******************************************************************************************************************************************************
+******************************************************************************************************************************************************
+
     ===== TOTAL =====
     (ans,det,match,fp):(  950337, 3902422,  808357, 3094065)
     match plate / ans plate :  719 / 853
