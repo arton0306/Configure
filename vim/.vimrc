@@ -259,6 +259,7 @@ Bundle 'gmarik/vundle'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
+filetype plugin indent on     " required
 "
 " Brief help
 " :BundleList          - list configured bundles
