@@ -237,37 +237,35 @@ command! -nargs=1 Grep :call Grep("<args>")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
-" uncomment this section for installing plugins
-" comment this section after installing
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"    filetype off                  " required!
+filetype off                  " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My bundles here:
 "
-"    set rtp+=~/.vim/bundle/vundle/
-"    call vundle#rc()
+" original repos on GitHub
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
+
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+
 "
-"    " let Vundle manage Vundle
-"    " required!
-"    Bundle 'gmarik/vundle'
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install (update) bundles
+" :BundleSearch(!) foo - search (or refresh cache first) for foo
+" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
 "
-"    " My bundles here:
-"    "
-"    " original repos on GitHub
-"    " Bundle 'tpope/vim-fugitive'
-"    " Bundle 'Lokaltog/vim-easymotion'
-"    " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"    " Bundle 'tpope/vim-rails.git'
-"
-"    " vim-scripts repos
-"    Bundle 'L9'
-"    Bundle 'FuzzyFinder'
-"
-"    "
-"    " Brief help
-"    " :BundleList          - list configured bundles
-"    " :BundleInstall(!)    - install (update) bundles
-"    " :BundleSearch(!) foo - search (or refresh cache first) for foo
-"    " :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"    "
-"    " see :h vundle for more details or wiki for FAQ
-"    " NOTE: comments after Bundle commands are not allowed.
-"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle commands are not allowed.
+
