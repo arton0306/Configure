@@ -1,0 +1,9 @@
+install git for windows
+
+// ref : http://stackoverflow.com/questions/6883760/git-for-windows-bashrc-or-equivalent-config-files-for-git-bash-shell
+setup  ~/.bashrc 
+~ is usually your C:\Users\<your user name> folder. Typing echo ~ in the git bash terminal will tell you what that folder is.
+
+// ref : http://stackoverflow.com/questions/2114111/where-does-git-config-global-get-written-to
+setup ~/.gitconfig
+git config --global --edit should tell you the exact location no matter what kind of setup you have--just look at what file comes up in your editor.
