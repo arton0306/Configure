@@ -44,3 +44,6 @@ cd $(readlink mylink)
 import abc.png
 ----- open folder in terminal -----
 nautilus path
+----- vim -----
+%! xxd      hex mode
+%! xxd -r   back to normal mode
