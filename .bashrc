@@ -45,6 +45,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# force BASH to check the size of the window after the completion of every command
+# ref: http://forums.gentoo.org/viewtopic-t-112348-highlight-bash+wrap.html
+shopt -s checkwinsize
+
 # Aliases
 if [[ ${platform} == 'freebsd' ]]; then
     alias ls='ls -G'           # BSD ls
@@ -82,8 +86,6 @@ pathadd() {
         PATH="$PATH:$1"
     fi
 }
-pathadd /home/arton/tools/eclipse
-pathadd /usr/local/go/bin
 
 # tools
 # autojump ( sudo apt-get install autojump )
