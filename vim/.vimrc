@@ -1,5 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Environment
+" use "help command' to get vim doc, ex:
+" help expandtab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on " smart tab with Makefile
 
