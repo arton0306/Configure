@@ -46,6 +46,7 @@ set ttymouse=xterm2                     " For using mouse=a with screen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 nmap <leader>vimrc     :e $MYVIMRC<CR>
+nmap <leader>tcl       :tabnew ~/aptcl/test.tcl<CR>
 nmap <leader>sorc      :source $MYVIMRC<CR>
 imap jj                <ESC>
 inoremap {<CR> {<CR><END><CR>}<UP><END>
@@ -70,11 +71,15 @@ vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<C
 " toggle paste mode
 noremap <F3> <ESC>:set paste!<CR>
 
+" source header switcher
+map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+
 " tab
 noremap <leader>ts <ESC>:tab split<CR>
 
 " ctags ( <c-]> find definition )
-noremap <leader>ctags <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" noremap <leader>ctags <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+noremap <leader>ctags <ESC>:!ctags -R --fields=+iaS --extra=+q .<CR>
 
 " note
 noremap <leader>note <ESC>:tabe ~/Configure/note/note<CR>
@@ -272,3 +277,4 @@ filetype plugin indent on     " required
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
 
+set tags=tags;../tags
