@@ -1,6 +1,7 @@
 ----- grep -----
 grep Vector $(find . -name '*.t' | grep -v 'graphviz' )
 grep HashMap $(find . -name '*.t' -o -name '*.cpp' -o -name '*.h' | grep -v 'graphviz' )
+grep -rn --exclude="tags" Node .
 ----- wc -----
 wc -l $(find . -name '*.t' -o -name '*.cpp' | grep -v 'graphviz')
 ----- git -----
@@ -10,6 +11,7 @@ in git 1.8 => git branch -u upstream/foo foo
 ----- find & xargs -----
 find -iname '*.a' | xargs -i ls -l {}  | grep service
 find -iregex ".*[^(\.c)(\.o)(\.h)]"
+find . -maxdepth 1 -type f -name ".*" -exec grep set {} \;
 ----- zip & unzip -----
 tar xvjf OpenCV-2.4.3.tar.bz2
 ----- ldconfig -----
