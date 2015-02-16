@@ -68,6 +68,8 @@ alias install='sudo apt-get install'
 alias rm='rm -i'
 alias dirs='dirs -v'
 alias pushme='pushd `pwd`'
+# ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
+alias gdb='gdb '
 
 ### don't save history for security if you do concern
 ### HISTORY_BAK_FOLDER=$HOME/history_bak
