@@ -1,4 +1,5 @@
 ### use "ctrl+a :source ~/.screenrc" to reload config
+term xterm
 
 # Start message
 startup_message off
@@ -51,3 +52,9 @@ bindkey -k k8 next
 # 256 colors mode
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
+shell "/ads/arton/build/bash-4.3.30/bin/bash"
+
+# avoid C-a s to freeze the screen
+# ref-
+# http://askubuntu.com/questions/92679/session-freezes-when-using-the-screen-command
+bind s
