@@ -42,6 +42,14 @@ set ve=all " let ctrl + v be more convenient and powerful
 set ttymouse=xterm2                     " For using mouse=a with screen
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim temp file folder
+" ref -
+" http://stackoverflow.com/questions/607435/why-does-vim-save-files-with-a-extension
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set backupdir=~/.vim/tmp,.
+set directory=~/.vim/tmp,.
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Key Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
