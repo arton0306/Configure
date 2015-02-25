@@ -56,7 +56,11 @@ if [[ ${platform} == 'freebsd' ]]; then
 else
     alias ls='ls --color=auto' # GNU coreutils ls
 fi
-alias ll='ls -al'
+
+# ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
+# http://en.wikipedia.org/wiki/Alias_%28command%29 Chaining
+alias gdb='gdb '
+alias ll='ls -al '
 alias virc='vim -p ~/.*shrc'
 alias sorc='source ~/.bashrc'
 alias findcode='find . ! -name "*~" | grep ".cpp\|\.h"'
@@ -68,8 +72,6 @@ alias install='sudo apt-get install'
 alias rm='rm -i'
 alias dirs='dirs -v'
 alias pushme='pushd `pwd`'
-# ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
-alias gdb='gdb '
 
 ### don't save history for security if you do concern
 ### HISTORY_BAK_FOLDER=$HOME/history_bak
