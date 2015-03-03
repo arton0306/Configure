@@ -17,7 +17,7 @@ set guifont=Consolas:h12:cANSI " set font
 
 set nu " show line number
 
-set et sw=4 ts=4 sts=4 " tab control ( expandtab, shiftwidth, tabstop, smarttab )
+set et sw=4 ts=8 sts=8 " tab control ( expandtab, shiftwidth, tabstop, smarttab )
 
 set ai " auto indent
 set si " smart indent
@@ -135,10 +135,10 @@ endfunction
 " => Highlight specail characters
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set lcs=tab:>-,trail:-
-set list
 hi SpecialKey ctermbg=red ctermfg=red guibg=red guifg=red
 " use :set list! to toggle specails charactor show
 noremap <F2> <ESC>:set list!<CR>
+set nolist
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -273,6 +273,7 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+" Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on     " required
 "

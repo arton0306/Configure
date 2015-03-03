@@ -1,23 +1,10 @@
------ grep -----
-grep Vector $(find . -name '*.t' | grep -v 'graphviz' )
-grep HashMap $(find . -name '*.t' -o -name '*.cpp' -o -name '*.h' | grep -v 'graphviz' )
-grep -rn --exclude="tags" Node .
 ----- wc -----
 wc -l $(find . -name '*.t' -o -name '*.cpp' | grep -v 'graphviz')
 ----- git -----
 git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"
-in git 1.7 => git branch --set-upstream foo upstream/foo
 in git 1.8 => git branch -u upstream/foo foo
------ find & xargs -----
-find -iname '*.a' | xargs -i ls -l {}  | grep service
-find -iregex ".*[^(\.c)(\.o)(\.h)]"
-find . -maxdepth 1 -type f -name ".*" -exec grep set {} \;
 ----- zip & unzip -----
 tar xvjf OpenCV-2.4.3.tar.bz2
------ ldconfig -----
-ldconfig -p
------ write -----
-write username
 ----- for in shell script -----
 for i in $(find *jarvis*); do ./$i status; done;
 ----- dpkg -----
@@ -40,12 +27,15 @@ for i in $(seq -w 1000); do wget $(head -n $i list | tail -n 1 ) -O $i.jpg; done
 for i in $(seq -w 0061); do wget $(../get_s3_url.py $(head -n $i list | tail -n 1 )) -O $i.jpg; done;
 ----- sed, tr -----
 ls -1 ../*.py | sed -e 's/..\///g ; s/\.py//g' | tr '\n' ',' | sed -e 's/,$//'
------ readlink -----
-cd $(readlink mylink)
------ screen capture -----
-import abc.png
------ open folder in terminal -----
-nautilus path
 ----- vim -----
 %! xxd      hex mode
 %! xxd -r   back to normal mode
+----- grep -----
+grep Vector $(find . -name '*.t' | grep -v 'graphviz' )
+grep HashMap $(find . -name '*.t' -o -name '*.cpp' -o -name '*.h' | grep -v 'graphviz' )
+grep -rn --exclude="tags" Node .
+----- find & xargs -----
+find -iname '*.a' | xargs -i ls -l {}  | grep service
+find -iregex ".*[^(\.c)(\.o)(\.h)]"
+find . -maxdepth 1 -type f -name ".*" -exec grep set {} \;
+find . -name "*.cpp" -exec grep -n --color=auto "Slice" {} \; -print

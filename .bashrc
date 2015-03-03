@@ -2,6 +2,9 @@
 #   My Prefer Environment
 ###################################
 
+# LANG
+export LANG="en_US"
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 

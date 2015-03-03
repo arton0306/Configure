@@ -1,0 +1,10 @@
+----- ldconfig -----
+ldconfig -p
+----- write -----
+write username
+----- readlink -----
+cd $(readlink mylink)
+----- screen capture -----
+import abc.png
+----- open folder in terminal -----
+nautilus path

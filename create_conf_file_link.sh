@@ -1,5 +1,5 @@
 # tcsh
-ln -s ~/Configure/.cshrc ~/.cshrc
+ln -s ~/Configure/.cshrc ~/.cshrc.ongit
 
 # bash
 ln -s ~/Configure/.bashrc ~/.bashrc
