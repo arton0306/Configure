@@ -8,3 +8,5 @@ cd $(readlink mylink)
 import abc.png
 ----- open folder in terminal -----
 nautilus path
+----- check system load -----
+uptime
