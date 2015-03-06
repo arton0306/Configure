@@ -75,6 +75,7 @@ map <leader>cd :cd %:p:h<cr>
 " search multiple line
 vnoremap * :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('n')<CR>
 vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<CR>
+noremap % *#
 
 " toggle paste mode
 noremap <F3> <ESC>:set paste!<CR>
@@ -95,12 +96,12 @@ noremap <leader>note <ESC>:tabe ~/Configure/note/note<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins Key Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FuzzyFinder
-noremap <leader>ff <ESC>:FufCoverageFile<CR>
-noremap <leader>mff <ESC>:FufCoverageFile!<CR>
-noremap <leader>fb <ESC>:FufBuffer<CR>
-noremap <leader>mfb <ESC>:FufBuffer!<CR>
-noremap <silent> <c-\> :FufTag <c-r>=expand('<cword>')<cr><cr>
+" " FuzzyFinder
+" noremap <leader>ff <ESC>:FufCoverageFile<CR>
+" noremap <leader>mff <ESC>:FufCoverageFile!<CR>
+" noremap <leader>fb <ESC>:FufBuffer<CR>
+" noremap <leader>mfb <ESC>:FufBuffer!<CR>
+" noremap <silent> <c-\> :FufTag <c-r>=expand('<cword>')<cr><cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
