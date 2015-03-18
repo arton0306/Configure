@@ -10,3 +10,7 @@ import abc.png
 nautilus path
 ----- check system load -----
 uptime
+----- ctags -----
+ctags -R *
+in vim :set tags=/ads/arton/AP_codebase/build/src/tags
+in vim :tag or ctrl+]

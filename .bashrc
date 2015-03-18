@@ -63,6 +63,7 @@ fi
 # ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
 # http://en.wikipedia.org/wiki/Alias_%28command%29 Chaining
 alias gdb='gdb '
+alias arggdb='gdb --args '
 alias ll='ls -al '
 alias virc='vim -p ~/.*shrc'
 alias sorc='source ~/.bashrc'
@@ -95,6 +96,8 @@ pathadd() {
         PATH="$PATH:$1"
     fi
 }
+### ref - http://alistapart.com/article/the-path-to-enlightenment
+alias listpath="echo $PATH | tr ':' '\n' | sort"
 
 # tools
 # autojump ( sudo apt-get install autojump )
