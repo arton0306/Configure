@@ -3,7 +3,7 @@
 ###################################
 
 # Prompt
-#set prompt="%B%n@%m [%/] (\!) # "
+# set prompt="%B%n@%m [%/] (\!) # "
 set prompt="%{\033]0;%n@%m: %~\007%}%{^[[0;1;35m%}[%{^[[0;1;33m%}%n%{^[[0;1;35m%}@%{^[[0;1;33m%}%m %{^[[36m%}%~%{^[[35m%}]%{^[[36m%}%{^[[0m%}# "
 
 # Environment
@@ -23,7 +23,6 @@ alias vi 'vim'
 alias findcode 'find . ! -name "*~" | grep ".cpp\|\.h"'
 alias makecscope 'findcode > cscope.files; cscope -bqu;'
 alias grep='grep --color=auto'
-alias artongrep 'grep -s -r -n -l'
 alias ll 'ls -al'
 alias ls 'ls --color'
 alias update='sudo apt-get update'
@@ -34,10 +33,10 @@ alias install='sudo apt-get install'
 # Path
 
 # set gcc env
-export GCC_PATH=/usr/bin/gcc-4.7.2
-export LD_LIBRARY_PATH=$GCC_PATH/lib:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
-export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
-export CPLUS_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
-export PATH=$GCC_PATH/bin:$PATH
-export LD_LIBRARY_PATH=$GCC_PATH/lib:GCC_PATH/lib64:$LD_LIBRARY_PATH
+# export GCC_PATH=/usr/bin/gcc-4.7.2
+# export LD_LIBRARY_PATH=$GCC_PATH/lib:$LD_LIBRARY_PATH
+# export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
+# export C_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
+# export CPLUS_INCLUDE_PATH=/usr/include/x86_64-linux-gnu
+# export PATH=$GCC_PATH/bin:$PATH
+# export LD_LIBRARY_PATH=$GCC_PATH/lib:GCC_PATH/lib64:$LD_LIBRARY_PATH
