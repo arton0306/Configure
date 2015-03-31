@@ -1,6 +1,9 @@
 # print tree
 git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
+# ls-files
+git ls-files --others --exclude-standard
+
 # submodule
 # refs ( http://josephjiang.com/entry.php?id=342 )
 ## for creater

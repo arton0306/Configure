@@ -76,6 +76,7 @@ alias install='sudo apt-get install'
 alias rm='rm -i'
 alias dirs='dirs -v'
 alias pushme='pushd `pwd`'
+alias jobs='jobs -l'
 
 ### don't save history for security if you do concern
 ### HISTORY_BAK_FOLDER=$HOME/history_bak
