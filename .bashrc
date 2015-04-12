@@ -104,12 +104,13 @@ alias listpath="echo \$PATH | tr ':' '\n'"
 
 # tools
 # autojump ( sudo apt-get install autojump )
-if [ -f /usr/share/autojump/autojump.sh ]; then
-    . /usr/share/autojump/autojump.sh
-fi
-if [[ `type -t j` != "function" ]]; then
-    source /home/arton/.autojump/etc/profile.d/autojump.sh
-fi
+# if [ -f /usr/share/autojump/autojump.sh ]; then
+#     . /usr/share/autojump/autojump.sh
+# fi
+# if [[ `type -t j` != "function" ]]; then
+#     source /home/arton/.autojump/etc/profile.d/autojump.sh
+# fi
+source /home/arton/.autojump/etc/profile.d/autojump.sh
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
