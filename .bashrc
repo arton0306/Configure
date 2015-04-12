@@ -91,6 +91,7 @@ alias path='cat ~/Configure/note/path_note'
 alias note='vim ~/Configure/note/note'
 
 # Path
+PATH=/usr/bin:/usr/sbin:/bin:/sbin
 ### ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
 pathadd() {
     if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
@@ -114,8 +115,9 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-if [ -f $HOME/.local_bashrc ]; then
-    . $HOME/.local_bashrc
+# use .sh to enable vim syntax highlight
+if [ -f $HOME/.local_bashrc.sh ]; then
+    . $HOME/.local_bashrc.sh
 else
-    touch $HOME/.local_bashrc
+    touch $HOME/.local_bashrc.sh
 fi
