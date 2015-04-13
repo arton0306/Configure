@@ -75,7 +75,7 @@ map <leader>cd :cd %:p:h<cr>
 " search multiple line
 vnoremap * :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('n')<CR>
 vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<CR>
-noremap % *#
+noremap % #*
 
 " toggle paste mode
 noremap <F3> <ESC>:set paste!<CR>
