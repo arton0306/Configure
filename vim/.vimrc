@@ -274,7 +274,20 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-" Bundle 'Valloric/YouCompleteMe'
+
+if $isYcmOn == "YES"
+    Bundle 'Valloric/YouCompleteMe'
+    let g:ycm_global_ycm_extra_conf = '~/Configure/vim/.ycm_extra_conf.py'
+    noremap <leader>yr             :YcmDiags<CR>
+    noremap <leader>yd             :YcmShowDetailedDiagnostic<CR>
+    noremap <leader>build          :YcmForceCompileAndDiagnostics<CR>
+    noremap <leader>ycmrestart     :YcmRestartServer<CR>
+    noremap <leader>flag           :YcmDebugInfo<CR>
+    noremap <leader>rr             :YcmCompleter GoTo<CR>
+    noremap <leader>tt             :YcmCompleter GoToImprecise<CR>
+    noremap <leader>reflag         :YcmCompleter ClearCompilationFlagCache<CR>
+    noremap <leader>type           :YcmCompleter GetType<CR>
+endif
 
 filetype plugin indent on     " required
 "
@@ -288,3 +301,7 @@ filetype plugin indent on     " required
 " NOTE: comments after Bundle commands are not allowed.
 
 set tags=tags;../tags
+
+
+" let g:ycm_server_use_vim_stdout = 1
+" let g:ycm_server_log_level = 'debug'
