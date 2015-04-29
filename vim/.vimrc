@@ -252,6 +252,19 @@ endfunction
 command! -nargs=1 Grep :call Grep("<args>")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => auto remove trailing white space if save *.c *.cpp *.h *.hpp
+" http://unix.stackexchange.com/questions/75430/vi-vim-how-to-automatically-strip-trailing-spaces-on-save
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre *.c,*.cpp,*.hpp,*.h :call <SID>StripTrailingWhitespaces()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off                  " required!
@@ -285,6 +298,7 @@ if $isYcmOn == "YES"
     noremap <leader>flag           :YcmDebugInfo<CR>
     noremap <leader>rr             :YcmCompleter GoTo<CR>
     noremap <leader>tt             :YcmCompleter GoToImprecise<CR>
+    noremap <leader>gg             :YcmCompleter GoToDefinition<CR>
     noremap <leader>reflag         :YcmCompleter ClearCompilationFlagCache<CR>
     noremap <leader>type           :YcmCompleter GetType<CR>
 endif
