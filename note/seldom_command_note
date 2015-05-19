@@ -14,3 +14,10 @@ uptime
 ctags -R *
 in vim :set tags=/ads/arton/AP_codebase/build/src/tags
 in vim :tag or ctrl+]
+----- cvs -----
+cvs update -p r1.1 head.tcl > head.tcl
+----- jobs -----
+jobs -l
+kill -9 pid
+----- atop env -----
+evince xxx.pdf

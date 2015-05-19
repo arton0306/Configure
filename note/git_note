@@ -4,6 +4,9 @@ git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev
 # ls-files
 git ls-files --others --exclude-standard
 
+# misc
+git difftool
+
 # submodule
 # refs ( http://josephjiang.com/entry.php?id=342 )
 ## for creater
@@ -14,4 +17,3 @@ after git clone...
 git submodule init
 git submodule update
 git submodule update --init --recursive
-
