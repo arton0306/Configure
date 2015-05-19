@@ -60,6 +60,11 @@ else
     alias ls='ls --color=auto' # GNU coreutils ls
 fi
 
+# ref https://raam.org/2007/recovering-from-ctrls-in-putty/
+# prevent ctrl + s to sending xoff
+stty ixany
+stty ixoff -ixon
+
 # ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
 # http://en.wikipedia.org/wiki/Alias_%28command%29 Chaining
 alias gdb='gdb '
@@ -77,6 +82,8 @@ alias rm='rm -i'
 alias dirs='dirs -v'
 alias pushme='pushd `pwd`'
 alias jobs='jobs -l'
+alias gt='git tree'
+alias gs='git status'
 
 ### don't save history for security if you do concern
 ### HISTORY_BAK_FOLDER=$HOME/history_bak
