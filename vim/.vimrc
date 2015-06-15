@@ -77,6 +77,9 @@ vnoremap * :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('n')<C
 vnoremap # :<C-U>set hlsearch<CR>:call <SID>search_selected_text_literaly('N')<CR>
 noremap % #*
 
+" filled with spaces at selection block
+vnoremap <leader>del :s/\%V./ /g<CR>
+
 " toggle paste mode
 noremap <F3> <ESC>:set paste!<CR>
 
