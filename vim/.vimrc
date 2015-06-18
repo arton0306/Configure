@@ -258,14 +258,15 @@ command! -nargs=1 Grep :call Grep("<args>")
 " => auto remove trailing white space if save *.c *.cpp *.h *.hpp
 " http://unix.stackexchange.com/questions/75430/vi-vim-how-to-automatically-strip-trailing-spaces-on-save
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! <SID>StripTrailingWhitespaces()
+function! StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
     %s/\s\+$//e
     call cursor(l, c)
 endfun
 
-autocmd BufWritePre *.c,*.cpp,*.hpp,*.h :call <SID>StripTrailingWhitespaces()
+"autocmd BufWritePre *.c,*.cpp,*.hpp,*.h :call StripTrailingWhitespaces()
+noremap <leader>delsp <ESC>:call StripTrailingWhitespaces()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
