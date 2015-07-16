@@ -69,6 +69,8 @@ stty ixoff -ixon
 # http://en.wikipedia.org/wiki/Alias_%28command%29 Chaining
 alias gdb='gdb '
 alias arggdb='gdb --args '
+alias cgdb='cgdb '
+alias argcgdb='cgdb --args '
 alias ll='ls -al '
 alias virc='vim -p ~/.*shrc'
 alias sorc='source ~/.bashrc'
