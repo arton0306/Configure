@@ -1,0 +1,8 @@
+wget http://ftp.twaren.net/Unix/GNU/gnu/help2man/help2man-1.47.1.tar.xz
+tar xvJf help2man-1.47.1.tar.xz 
+cd help2man-1.47.1
+./configure --prefix=.../help2man
+make
+make install
+
+
