@@ -2,10 +2,11 @@
 # escape
 # ref http://superuser.com/questions/142680/bash-vs-gnu-screen-replace-ctrl-a-with-ctrl-shift-a
 # ctrl + _ becomes the control, ctrl+shift+- k => issue kill screen window command
-escape ^_-
+# escape ^_-
 
 # ref https://wiki.archlinux.org/index.php/Home_and_End_keys_not_working
-#term xterm
+term xterm
+# term screen-256color
 
 # Start message
 startup_message off
