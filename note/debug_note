@@ -38,3 +38,6 @@ show history size
 
 [init]
 default position : ./.gdbinit
+
+[gdb fail]
+info source
