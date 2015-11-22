@@ -119,7 +119,7 @@ alias listpath="echo \$PATH | tr ':' '\n'"
 # if [[ `type -t j` != "function" ]]; then
 #     source /home/arton/.autojump/etc/profile.d/autojump.sh
 # fi
-source /home/arton/.autojump/etc/profile.d/autojump.sh
+# source /home/arton/.autojump/etc/profile.d/autojump.sh
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
