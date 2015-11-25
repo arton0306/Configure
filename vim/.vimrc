@@ -331,3 +331,7 @@ set tags=tags;../tags
 
 " let g:ycm_server_use_vim_stdout = 1
 " let g:ycm_server_log_level = 'debug'
+
+if has('gui running')
+    set guifont=DejaVu\ Sans\ Mono\ 11
+endif
