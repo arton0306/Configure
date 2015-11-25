@@ -12,9 +12,9 @@ sudo apt-get -y install libmpc-dev  # install mpc (http://www.multiprecision.org
 
 # install gcc
 cd ~/downloads
-wget --user-agent=Safari "ftp://208.118.235.20/gnu/gcc/gcc-4.8.0/gcc-4.8.0.tar.bz2"
-tar -jxf gcc-4.8.0.tar.bz2
-cd gcc-4.8.0
+wget --user-agent=Safari "ftp://208.118.235.20/gnu/gcc/gcc-4.9.2/gcc-4.9.2.tar.bz2"
+tar -jxf gcc-4.9.2.tar.bz2
+cd gcc-4.9.2
 mkdir build && cd build
 ../configure --enable-languages=c,c++
 make && sudo make install

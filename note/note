@@ -1,137 +1,7 @@
-% report_wirelen_bbox
-arton: report bbox and wirelength of total nets
-iter net count: 49845
-total net wire length: 1490628705
-overall BBox: (0,0),(580000,640000)
-rect count on mask 0: 0
-net area on mask 0: 0
-It took me 0 clicks (0.000000 seconds).
+io_analog_pol_73__ATdrc_54444
+io_analog_pol_71__ATdrc_54468
 
-rect count on mask 1: 933724
-this is arton slice improved version!
-new algo used count: 0
-time on prevpro: 6.09
-time on slicemark fill: 4.74
-time on sorting: 21.83
-time on create mark: 3.2
-slice count: 70649
-sort info: 10000 3212
-sort info: 10000 3184
-sort info: 10000 3148
-sort info: 10000 3126
-sort info: 10000 3110
-sort info: 10000 3086
-sort info: 10000 3072
-sort info: 10000 3066
-sort info: 10000 3052
-sort info: 10000 3036
-net area on mask 1: 1.97336e+10
-It took me 35700000 clicks (35.700001 seconds).
 
-rect count on mask 2: 619397
-this is arton slice improved version!
-new algo used count: 0
-time on prevpro: 1.18
-time on slicemark fill: 0.5
-time on sorting: 1.72
-time on create mark: 0.23
-slice count: 21799
-sort info: 10000 858
-sort info: 10000 846
-sort info: 10000 814
-sort info: 10000 814
-sort info: 10000 810
-sort info: 10000 784
-sort info: 10000 774
-sort info: 10000 774
-sort info: 10000 764
-sort info: 10000 750
-net area on mask 2: 5.58806e+10
-It took me 3660000 clicks (3.660000 seconds).
-
-rect count on mask 3: 292268
-this is arton slice improved version!
-new algo used count: 0
-time on prevpro: 0.48
-time on slicemark fill: 0.18
-time on sorting: 0.48
-time on create mark: 0.1
-slice count: 17622
-sort info: 10000 496
-sort info: 10000 490
-sort info: 10000 458
-sort info: 10000 438
-sort info: 10000 412
-sort info: 10000 410
-sort info: 10000 402
-sort info: 10000 398
-sort info: 10000 390
-sort info: 10000 382
-net area on mask 3: 5.19773e+10
-It took me 1290000 clicks (1.290000 seconds).
-
-rect count on mask 4: 98445
-this is arton slice improved version!
-new algo used count: 0
-time on prevpro: 0.15
-time on slicemark fill: 0.05
-time on sorting: 0.14
-time on create mark: 0
-slice count: 12241
-sort info: 10000 312
-sort info: 10000 200
-sort info: 10000 166
-sort info: 10000 136
-sort info: 10000 122
-sort info: 10000 70
-sort info: 10000 62
-sort info: 10000 58
-sort info: 10000 34
-sort info: 10000 34
-net area on mask 4: 4.27955e+10
-It took me 350000 clicks (0.350000 seconds).
-
-rect count on mask 5: 19987
-this is arton slice improved version!
-new algo used count: 0
-time on prevpro: 0.03
-time on slicemark fill: 0.01
-time on sorting: 0.01
-time on create mark: 0
-slice count: 5439
-sort info: 10000 34
-sort info: 0 94
-sort info: 0 88
-sort info: 0 86
-sort info: 0 82
-sort info: 0 82
-sort info: 0 80
-sort info: 0 80
-sort info: 0 78
-sort info: 0 78
-net area on mask 5: 2.06751e+10
-It took me 60000 clicks (0.060000 seconds).
-
-rect count on mask 6: 216
-this is arton slice improved version!
-new algo used count: 0
-time on prevpro: 0
-time on slicemark fill: 0
-time on sorting: 0
-time on create mark: 0
-slice count: 86
-sort info: 0 20
-sort info: 0 16
-sort info: 0 14
-sort info: 0 14
-sort info: 0 12
-sort info: 0 12
-sort info: 0 12
-sort info: 0 10
-sort info: 0 10
-sort info: 0 10
-net area on mask 6: 5.81857e+09
-It took me 0 clicks (0.000000 seconds).
 
 ================== fix looseshpae and via =======================
 =======================================================================  ori algo with merge
@@ -330,4 +200,124 @@ this is arton slice improved version!
 net area on mask 6: 1.78703e+11
 It took me 10000 clicks (0.010000 seconds).
 
+===========================================================================================
 
+ver slice on mask 1
+
+arton: report bbox and wirelength of total nets
+iter net count: 49845
+total net wire length: 1490628705
+overall BBox: (0,0),(580000,640000)
+mask 0, x=     0, y=     0, m=   0
+mask 1, x=323624, y=570420, m=48068
+mask 2, x=139247, y=660908, m=22214
+mask 3, x=363136, y=190038, m=1765
+mask 4, x= 48677, y=140066, m=   2
+mask 5, x= 36964, y= 24571, m=   2
+mask 6, x=  8396, y=   374, m=   0
+============================ artonSliceAlgo: 1
+rect count on mask 0: 0
+net area on mask 0: 0
+It took me 0 clicks (0.000000 seconds).
+
+rect count on mask 1: 942112
+net area on mask 1: 1.01527e+11
+It took me 22250000 clicks (22.250000 seconds).
+
+rect count on mask 2: 822369
+net area on mask 2: 5.37118e+10
+It took me 760000 clicks (0.760000 seconds).
+
+rect count on mask 3: 554939
+net area on mask 3: 5.86397e+10
+It took me 470000 clicks (0.470000 seconds).
+
+rect count on mask 4: 188745
+net area on mask 4: 4.6474e+10
+It took me 160000 clicks (0.160000 seconds).
+
+rect count on mask 5: 61537
+net area on mask 5: 3.08251e+10
+It took me 80000 clicks (0.080000 seconds).
+
+rect count on mask 6: 8770
+net area on mask 6: 1.78703e+11
+It took me 0 clicks (0.000000 seconds).
+
+============================ artonSliceAlgo: 0
+rect count on mask 0: 0
+net area on mask 0: 0
+It took me 0 clicks (0.000000 seconds).
+
+rect count on mask 1: 942112
+net area on mask 1: 1.01527e+11
+It took me 86050000 clicks (86.050003 seconds).
+
+rect count on mask 2: 822369
+net area on mask 2: 5.37118e+10
+It took me 670000 clicks (0.670000 seconds).
+
+rect count on mask 3: 554939
+net area on mask 3: 5.86397e+10
+It took me 400000 clicks (0.400000 seconds).
+
+rect count on mask 4: 188745
+net area on mask 4: 4.6474e+10
+It took me 130000 clicks (0.130000 seconds).
+
+rect count on mask 5: 61537
+net area on mask 5: 3.08251e+10
+It took me 50000 clicks (0.050000 seconds).
+
+rect count on mask 6: 8770
+net area on mask 6: 1.78703e+11
+It took me 0 clicks (0.000000 seconds).
+
+============================================================================================
+
+arton: report bbox and wirelength of total nets
+iter net count: 49845
+total net wire length: 1490628705
+overall BBox: (0,0),(580000,640000)
+mask 0, #h=     0, #v=     0, #sqr=    0, ttl_h_len=       0.000000, ttl_v_len=       0.000000
+bbox:(0,0),(0,0)unit_h:           -nan, unit_v:           -nan
+mask 1, #h=323624, #v=570420, #sqr=48068, ttl_h_len=318081095.000000, ttl_v_len=250716055.000000
+bbox:(0,10),(580000,639890)unit_h:     548.415681, unit_v:     391.817302
+mask 2, #h=139247, #v=660908, #sqr=22214, ttl_h_len=116063205.000000, ttl_v_len=588558260.000000
+bbox:(50,0),(579950,640000)unit_h:     200.143482, unit_v:     919.622281
+mask 3, #h=363136, #v=190038, #sqr= 1765, ttl_h_len=577976170.000000, ttl_v_len=98289055.000000
+bbox:(0,50),(580000,639950)unit_h:     996.510638, unit_v:     153.600649
+mask 4, #h= 48677, #v=140066, #sqr=    2, ttl_h_len=36051580.000000, ttl_v_len=453791980.000000
+bbox:(50,10),(579950,639890)unit_h:      62.168615, unit_v:     709.182941
+mask 5, #h= 36964, #v= 24571, #sqr=    2, ttl_h_len=228288570.000000, ttl_v_len=18105780.000000
+bbox:(10,150),(579990,639850)unit_h:     393.614556, unit_v:      28.303549
+mask 6, #h=  8396, #v=   374, #sqr=    0, ttl_h_len=10262880.000000, ttl_v_len=53769555.000000
+bbox:(1500,0),(579400,640000)unit_h:      17.758920, unit_v:      84.014930
+============================ artonSliceAlgo: 1
+rect count on mask 0: 0
+net area on mask 0: 0
+It took me 0 clicks (0.000000 seconds).
+
+rect count on mask 1: 942112
+net area on mask 1: 1.01527e+11
+It took me 11650000 clicks (11.650000 seconds).
+
+rect count on mask 2: 822369
+net area on mask 2: 5.37118e+10
+It took me 900000 clicks (0.900000 seconds).
+
+rect count on mask 3: 554939
+net area on mask 3: 5.86397e+10
+It took me 550000 clicks (0.550000 seconds).
+
+rect count on mask 4: 188745
+net area on mask 4: 4.6474e+10
+It took me 160000 clicks (0.160000 seconds).
+
+rect count on mask 5: 61537
+net area on mask 5: 3.08251e+10
+It took me 70000 clicks (0.070000 seconds).
+
+rect count on mask 6: 8770
+net area on mask 6: 1.78703e+11
+It took me 10000 clicks (0.010000 seconds).
