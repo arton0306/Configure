@@ -1,12 +1,16 @@
-###################################
-#   My Prefer Environment
-###################################
+#-------------------------------------------
+# Locale
+# http://moto.debian.tw/viewtopic.php?t=6213
+# http://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do
+#-------------------------------------------
+export LANG=zh_TW.UTF-8
+# export LC_ALL="en_US.UTF-8"
+export LC_ALL="C"
 
-# LANG
-export LANG="en_US"
-
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+#-------------------------------------------
+# Others
+#-------------------------------------------
+[ -z "$PS1" ] && return        # If not running interactively, don't do anything
 
 # get platform
 platform='unknown'
