@@ -86,6 +86,7 @@ alias pushme='pushd `pwd`'
 alias jobs='jobs -l'
 alias gt='git tree'
 alias gs='git status'
+alias tmux='TERM=xterm-256color tmux'
 
 ### don't save history for security if you do concern
 ### HISTORY_BAK_FOLDER=$HOME/history_bak
