@@ -104,10 +104,6 @@ if [[ `type -t j` != "function" ]]; then
     source /home/arton/.autojump/etc/profile.d/autojump.sh
 fi
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 #-------------------------------------------
 # FreeBSD
 #-------------------------------------------
@@ -118,7 +114,7 @@ if [[ ${uname} == 'FreeBSD' ]]; then
 fi
 
 #-------------------------------------------
-# source local setting
+# Load Local Setting (External Source)
 #-------------------------------------------
 if [ -f $HOME/.local_bashrc.sh ]; then
     . $HOME/.local_bashrc.sh
