@@ -17,7 +17,7 @@ PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;
 # PS1="\t-\u@\h:\w\$ "
 
 #-------------------------------------------
-# Others
+# Bash Command Configure
 #-------------------------------------------
 # History
 set history=2000
@@ -26,6 +26,10 @@ export HISTTIMEFORMAT=' %F %T ' # show date time in history
 shopt -s histappend # append to the history file, don't overwrite it
 HISTSIZE=1000 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTFILESIZE=2000
+
+### don't save history for security if you do concern
+### HISTORY_BAK_FOLDER=$HOME/history_bak
+### alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
 
 # less ( make less more friendly for non-text input files, see lesspipe(1) )
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -44,41 +48,33 @@ fi
 # ref: http://forums.gentoo.org/viewtopic-t-112348-highlight-bash+wrap.html
 shopt -s checkwinsize
 
-# Aliases
-alias ls='ls --color=auto' # GNU coreutils ls
-
 # ref https://raam.org/2007/recovering-from-ctrls-in-putty/
 # prevent ctrl + s to sending xoff
 stty ixany
 stty ixoff -ixon
 
+#-------------------------------------------
+# Alias
 # ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
 # http://en.wikipedia.org/wiki/Alias_%28command%29 Chaining
-alias gdb='gdb '
+#-------------------------------------------
+alias ls='ls --color=auto' # GNU coreutils ls
+alias ll='ls -al'
+alias grep='grep --color=auto'
+alias rm='rm -i'
+alias jobs='jobs -l'
+alias dirs='dirs -v'
+
 alias arggdb='gdb --args '
-alias cgdb='cgdb '
-alias argcgdb='cgdb --args '
-alias ll='ls -al '
-alias virc='vim -p ~/.*shrc'
-alias sorc='source ~/.bashrc'
 alias findcode='find . ! -name "*~" | grep ".cpp\|\.h"'
 alias makecscope='findcode > cscope.files; cscope -bqu;'
-alias grep='grep --color=auto'
-# alias artongrep='grep -s -r -n -l'
+
 alias update='sudo apt-get update'
 alias install='sudo apt-get install'
-alias rm='rm -i'
-alias dirs='dirs -v'
-alias pushme='pushd `pwd`'
-alias jobs='jobs -l'
 alias gt='git tree'
 alias gs='git status'
 alias tmux='TERM=xterm-256color tmux'
 
-### don't save history for security if you do concern
-### HISTORY_BAK_FOLDER=$HOME/history_bak
-### alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
-alias gitall='repo forall -c git'
 alias testc='cp ~/Configure/code_template/test.c ./test.c -i && vim test.c'
 alias testcpp='cp ~/Configure/code_template/test.cpp ./test.cpp -i && vim test.cpp'
 alias usage='cat ~/Configure/note/command_note'
