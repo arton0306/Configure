@@ -108,6 +108,7 @@ noremap <leader>note <ESC>:tabe ~/Configure/note/note<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
+" help hl-Pmenu
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 set statusline=%2*\ [%{&encoding},\ " encoding
@@ -121,6 +122,8 @@ set statusline+=%2*\ [%y\ \ Row:%4.l/%4.L\ Col:%3.c\ ]\ %*
 highlight User1 term=underline cterm=underline ctermfg=white ctermbg=darkblue guifg=white guibg=darkblue
 highlight User2 term=underline cterm=underline ctermfg=yellow ctermbg=darkblue guifg=yellow guibg=darkblue
 highlight User3 term=underline cterm=underline ctermfg=grey ctermbg=darkblue guifg=grey guibg=darkblue
+highlight Pmenu ctermbg=gray ctermfg=234
+highlight PmenuSel ctermbg=234 ctermfg=gray
 
 function! CurDir()
     let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
