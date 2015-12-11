@@ -12,17 +12,6 @@ export LC_ALL="C"
 #-------------------------------------------
 [ -z "$PS1" ] && return        # If not running interactively, don't do anything
 
-# get platform
-platform='unknown'
-unamestr=$(uname)
-if [[ "$unamestr" == 'Linux' ]]; then
-    platform='linux'
-elif [[ "$unamestr" == 'FreeBSD' ]]; then
-    platform='freebsd'
-elif [[ "$unamestr" == 'Darwin' ]]; then
-    platform='freebsd'
-fi
-
 # Prompt
 PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ " # color
 # PS1="\t-\u@\h:\w\$ " # nocolor
@@ -57,12 +46,7 @@ fi
 shopt -s checkwinsize
 
 # Aliases
-if [[ ${platform} == 'freebsd' ]]; then
-    alias ls='ls -G'           # BSD ls
-    export LSCOLORS=gxfxcxdxbxegedabagacad # refs:http://blog.longwin.com.tw/2006/07/color_ls_in_bash_2006/
-else
-    alias ls='ls --color=auto' # GNU coreutils ls
-fi
+alias ls='ls --color=auto' # GNU coreutils ls
 
 # ref https://raam.org/2007/recovering-from-ctrls-in-putty/
 # prevent ctrl + s to sending xoff
@@ -119,19 +103,30 @@ alias listpath="echo \$PATH | tr ':' '\n'"
 
 # tools
 # autojump ( sudo apt-get install autojump )
-# if [ -f /usr/share/autojump/autojump.sh ]; then
-#     . /usr/share/autojump/autojump.sh
-# fi
-# if [[ `type -t j` != "function" ]]; then
-#     source /home/arton/.autojump/etc/profile.d/autojump.sh
-# fi
-# source /home/arton/.autojump/etc/profile.d/autojump.sh
+if [ -f /usr/share/autojump/autojump.sh ]; then
+    . /usr/share/autojump/autojump.sh
+fi
+if [[ `type -t j` != "function" ]]; then
+    source /home/arton/.autojump/etc/profile.d/autojump.sh
+fi
+source /home/arton/.autojump/etc/profile.d/autojump.sh
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# use .sh to enable vim syntax highlight
+#-------------------------------------------
+# FreeBSD
+#-------------------------------------------
+if [[ ${uname} == 'FreeBSD' ]]; then
+    alias ls='ls -G'
+    # refs:http://blog.longwin.com.tw/2006/07/color_ls_in_bash_2006/
+    export LSCOLORS=gxfxcxdxbxegedabagacad
+fi
+
+#-------------------------------------------
+# source local setting
+#-------------------------------------------
 if [ -f $HOME/.local_bashrc.sh ]; then
     . $HOME/.local_bashrc.sh
 else
