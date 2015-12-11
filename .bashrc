@@ -19,39 +19,34 @@ PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;
 #-------------------------------------------
 # Bash Command Configure
 #-------------------------------------------
-# History
+set filec     # enable tab filename completion
+set autolist  # enable tab filename list
+
+export HISTTIMEFORMAT=' %F %T ' # show date time in history
 set history=2000
 set savehist=2000
-export HISTTIMEFORMAT=' %F %T ' # show date time in history
 shopt -s histappend # append to the history file, don't overwrite it
 HISTSIZE=1000 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTFILESIZE=2000
-
-### don't save history for security if you do concern
-### HISTORY_BAK_FOLDER=$HOME/history_bak
-### alias history="history > $HISTORY_BAK_FOLDER/\$(date '+%y_%m_%d-%T'); vim $HISTORY_BAK_FOLDER/\$(ls $HISTORY_BAK_FOLDER -t | head -n 1)" # save history to a file with timestamp named and vim it
-
-# less ( make less more friendly for non-text input files, see lesspipe(1) )
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# Shell command completion
-set filec
-set autolist
-### enable programmable completion features (you don't need to enable
-### this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-### sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
 
 # force BASH to check the size of the window after the completion of every command
 # ref: http://forums.gentoo.org/viewtopic-t-112348-highlight-bash+wrap.html
 shopt -s checkwinsize
 
+# less ( make less more friendly for non-text input files, see lesspipe(1) )
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 # ref https://raam.org/2007/recovering-from-ctrls-in-putty/
 # prevent ctrl + s to sending xoff
 stty ixany
 stty ixoff -ixon
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
 
 #-------------------------------------------
 # Alias
