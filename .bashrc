@@ -80,16 +80,17 @@ alias local_note='cat ~/Configure/note/local_note'
 alias path='cat ~/Configure/note/path_note'
 alias note='vim ~/Configure/note/note'
 
+#-------------------------------------------
 # Path
+#-------------------------------------------
 PATH=/usr/bin:/usr/sbin:/bin:/sbin
-### ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
+# ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
 pathadd() {
     if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="$PATH:$1"
     fi
 }
-### ref - http://alistapart.com/article/the-path-to-enlightenment
-#alias listpath="echo \$PATH | tr ':' '\n' | sort"
+# ref - http://alistapart.com/article/the-path-to-enlightenment
 alias listpath="echo \$PATH | tr ':' '\n'"
 
 # tools
