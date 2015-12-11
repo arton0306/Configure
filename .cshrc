@@ -34,7 +34,7 @@ set   white="%{\033[0;37m%}"
 set     end="%{\033[0m%}" # This is needed at the end... :(
 
 if ($?tcsh) then
-    set prompt="${magenta}%n@${white}%B%m${blue}[ ! ] ${red}%c3${end}> "
+    set prompt="${magenta}%n@${white}%B%m${blue}[ ! ] ${red}%~ ${end}> "
 else
     set prompt="`hostname`:! `dirs` > "
 endif
