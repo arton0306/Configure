@@ -8,18 +8,17 @@ export LANG=zh_TW.UTF-8
 export LC_ALL="C"
 
 #-------------------------------------------
-# Others
+# Prompt
 #-------------------------------------------
 [ -z "$PS1" ] && return        # If not running interactively, don't do anything
+# color
+PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+# non-color
+# PS1="\t-\u@\h:\w\$ "
 
-# Prompt
-PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ " # color
-# PS1="\t-\u@\h:\w\$ " # nocolor
-# Extra extension
-#     if [ -f "$HOME/.bash_ps1" ]; then
-#         . "$HOME/.bash_ps1"
-#     fi
-
+#-------------------------------------------
+# Others
+#-------------------------------------------
 # History
 set history=2000
 set savehist=2000
