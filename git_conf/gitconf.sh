@@ -1,5 +1,5 @@
 if ! [ -f $HOME/.gitignore_global ]; then
-    cp .gitignore_global ~
+    ln -s ~/Configure/git_conf/.gitignore_global ~/.gitignore_global
 fi
 
 # set a little configuration

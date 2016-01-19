@@ -53,8 +53,11 @@ fi
 # ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
 # http://en.wikipedia.org/wiki/Alias_%28command%29 Chaining
 #-------------------------------------------
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
 alias ls='ls --color=auto' # GNU coreutils ls
-alias ll='ls -al'
+alias ll='ls -alF'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias jobs='jobs -l'

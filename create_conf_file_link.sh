@@ -3,7 +3,6 @@ ln -s ~/Configure/.cshrc ~/.cshrc.ongit
 
 # bash
 ln -s ~/Configure/.bashrc ~/.bashrc
-ln -s ~/Configure/.bash_ps1 ~/.bash_ps1
 
 # tmux
 ln -s ~/Configure/.tmux.conf ~/.tmux.conf
