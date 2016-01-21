@@ -8,3 +8,7 @@ if [ -f $HOME/.bashrc ]; then
 fi
 source ~/Configure/create_conf_file_link.sh
 source ~/Configure/git_conf/gitconf.sh
+
+cd ~/Configure
+git submodule init
+git submodule update
