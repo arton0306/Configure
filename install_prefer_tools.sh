@@ -6,6 +6,9 @@ install -y tmux
 install -y htop     # a tool more convenient than top
 install -y ruby
 install -y rubygems # ruby install packeage
+install -y apt-file
+install -y dtrx     # do the right extract
+install -y cmake-curses-gui
 
 # install -y tcsh
 # install -y aptitude # a text apt-get tool
