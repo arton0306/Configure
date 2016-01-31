@@ -83,6 +83,8 @@ alias local_note='cat ~/Configure/note/local_note'
 alias path='cat ~/Configure/note/path_note'
 alias note='vim ~/Configure/note/note'
 alias x='dtrx'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 #-------------------------------------------
 # Path
@@ -103,6 +105,9 @@ alias listpath="echo \$PATH | tr ':' '\n'"
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
+#virtual env
+export PIP_REQUIRE_VIRTUALENV=true
+
 # autojump
 if [ -f /usr/share/autojump/autojump.sh ]; then
     . /usr/share/autojump/autojump.sh
