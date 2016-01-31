@@ -82,11 +82,15 @@ alias usage2='cat ~/Configure/note/seldom_command_note'
 alias local_note='cat ~/Configure/note/local_note'
 alias path='cat ~/Configure/note/path_note'
 alias note='vim ~/Configure/note/note'
+alias x='dtrx'
 
 #-------------------------------------------
 # Path
+# I put 3rd party sources       at ~/sources
+#                 build         at ~/build
+#                 exe soft link at ~/.local/bin
 #-------------------------------------------
-PATH=/usr/bin:/usr/sbin:/bin:/sbin
+PATH=/usr/bin:/usr/sbin:/bin:/sbin:~/.local/bin
 # ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
 pathadd() {
     if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
