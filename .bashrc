@@ -90,7 +90,7 @@ alias x='dtrx'
 #                 build         at ~/build
 #                 exe soft link at ~/.local/bin
 #-------------------------------------------
-PATH=/usr/bin:/usr/sbin:/bin:/sbin:~/.local/bin
+PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:~/.local/bin
 # ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
 pathadd() {
     if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
