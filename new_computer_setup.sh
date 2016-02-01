@@ -2,6 +2,8 @@ sudo apt-get install -y git
 sudo apt-get install -y autojump
 sudo apt-get install -y tmux
 sudo apt-get install -y vim
+sudo apt-get install -y dtrx
+sudo apt-get install -y apt-file
 
 if [ -f $HOME/.bashrc ]; then
     mv $HOME/.bashrc $HOME/.bashrc.orig
