@@ -4,6 +4,7 @@ sudo apt-get install -y tmux
 sudo apt-get install -y vim
 sudo apt-get install -y dtrx
 sudo apt-get install -y apt-file
+sudo apt-file update
 
 if [ -f $HOME/.bashrc ]; then
     mv $HOME/.bashrc $HOME/.bashrc.orig
