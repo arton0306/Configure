@@ -1,4 +1,8 @@
+sudo apt-get update
+sudo apt-get dist-upgrade -y
+
 sudo apt-get install -y git
+sudo apt-get install -y htop
 sudo apt-get install -y autojump
 sudo apt-get install -y tmux
 sudo apt-get install -y vim
