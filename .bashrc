@@ -86,6 +86,9 @@ alias x='dtrx'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+# desktop
+alias o='nautilus'
+
 #-------------------------------------------
 # Path
 # I put 3rd party sources       at ~/sources
