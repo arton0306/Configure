@@ -85,6 +85,7 @@ alias note='vim ~/Configure/note/note'
 alias x='dtrx'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias godaddy='ssh 192.169.172.134'
 
 # desktop
 alias o='nautilus'
