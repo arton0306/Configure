@@ -64,7 +64,6 @@ alias jobs='jobs -l'
 alias dirs='dirs -v'
 
 alias arggdb='gdb --args '
-alias findcode='find . ! -name "*~" | grep ".cpp\|\.h"'
 alias makecscope='findcode > cscope.files; cscope -bqu;'
 
 alias update='sudo apt-get update'
@@ -74,17 +73,24 @@ alias gs='git status'
 #alias tmux='TERM=xterm-256color tmux'
 alias open='xdg-open'
 
-alias testc='cp ~/Configure/code_template/test.c ./test.c -i && vim test.c'
-alias testcpp='cp ~/Configure/code_template/test.cpp ./test.cpp -i && vim test.cpp'
 alias usage='cat ~/Configure/note/command_note'
-alias reg='cat ~/Configure/note/reg'
 alias usage2='cat ~/Configure/note/seldom_command_note'
+alias reg='cat ~/Configure/note/reg'
 alias local_note='cat ~/Configure/note/local_note'
 alias path='cat ~/Configure/note/path_note'
 alias note='vim ~/Configure/note/note'
+
 alias x='dtrx'
 alias ..='cd ..'
 alias ...='cd ../..'
+
+alias ctar='tar -cvf '
+alias ctargz='tar -zcvf '
+alias ctarbz2='tar -jcvf '
+alias xtar='tar -xvf '
+alias xtargz='tar -zxvf '
+alias xtarbz2='tar -jxvf '
+
 alias godaddy='ssh 192.169.172.134'
 
 # desktop
