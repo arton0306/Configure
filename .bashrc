@@ -91,6 +91,7 @@ alias xtar='tar -xvf '
 alias xtargz='tar -zxvf '
 alias xtarbz2='tar -jxvf '
 
+alias ptt='ssh bbsu@ptt.cc'
 alias godaddy='ssh 192.169.172.134'
 
 # desktop
