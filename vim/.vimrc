@@ -272,6 +272,12 @@ endfun
 noremap <leader>delsp <ESC>:call StripTrailingWhitespaces()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" code template
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>cpp1 i#include <iostream><CR><CR>using namespace std;<CR><CR>int main{<CR>return 0;<ESC>O
+map <leader>cpp2 i#include <bits/stdc++.h><CR><CR>using namespace std;<CR><CR>int main{<CR>return 0;<ESC>O
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off                  " required!
