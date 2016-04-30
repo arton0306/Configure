@@ -276,6 +276,9 @@ noremap <leader>delsp <ESC>:call StripTrailingWhitespaces()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>cpp1 i#include <iostream><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<ESC>O
 map <leader>cpp2 i#include <bits/stdc++.h><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<ESC>O
+map <leader>fori ifor (int i = 0; i < _; ++i) {<CR><ESC>kf_
+map <leader>forj ifor (int j = 0; j < _; ++j) {<CR><ESC>kf_
+map <leader>fork ifor (int k = 0; k < _; ++k) {<CR><ESC>kf_
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
