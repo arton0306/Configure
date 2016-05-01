@@ -97,6 +97,8 @@ alias godaddy='ssh 192.169.172.134'
 # desktop
 alias o='nautilus'
 
+alias py3='python3'
+
 #-------------------------------------------
 # Path
 # I put 3rd party sources       at ~/sources
