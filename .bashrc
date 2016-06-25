@@ -58,7 +58,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 alias ls='ls --color=auto' # GNU coreutils ls
 alias ll='ls -alF'
-alias grep='grep --color=auto'
+alias g='grep --color=auto'
 alias rm='rm -i'
 alias jobs='jobs -l'
 alias dirs='dirs -v'
