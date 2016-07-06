@@ -59,6 +59,7 @@ fi
 alias ls='ls --color=auto' # GNU coreutils ls
 alias ll='ls -alF'
 alias g='grep --color=auto'
+alias gi='grep -i --color=auto'
 alias rm='rm -i'
 alias jobs='jobs -l'
 alias dirs='dirs -v'
