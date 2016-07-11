@@ -63,6 +63,7 @@ alias gi='grep -i --color=auto'
 alias rm='rm -i'
 alias jobs='jobs -l'
 alias dirs='dirs -v'
+alias vim='TERM=xterm vim'
 
 alias arggdb='gdb --args '
 alias makecscope='findcode > cscope.files; cscope -bqu;'
