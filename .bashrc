@@ -71,7 +71,7 @@ alias update='sudo apt-get update'
 alias install='sudo apt-get install'
 alias gt='git tree'
 alias gs='git status'
-#alias tmux='TERM=xterm-256color tmux'
+alias tmux='TERM=screen-256color tmux'
 alias open='xdg-open'
 
 alias usage='cat ~/Configure/note/command_note'
