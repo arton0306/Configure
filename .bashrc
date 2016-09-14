@@ -52,6 +52,7 @@ fi
 # Alias
 # ref http://superuser.com/questions/373504/get-value-of-an-alias-in-bash
 # http://en.wikipedia.org/wiki/Alias_%28command%29 Chaining
+# http://stackoverflow.com/questions/7715939/linux-alias-chain-commands-can-recursion-be-avoided
 #-------------------------------------------
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -64,6 +65,8 @@ alias rm='rm -i'
 alias jobs='jobs -l'
 alias dirs='dirs -v'
 alias vim='TERM=xterm vim'
+alias vims='TERM=screen-256color \vim'
+alias vimx='TERM=xterm-256color \vim'
 
 alias arggdb='gdb --args '
 alias makecscope='findcode > cscope.files; cscope -bqu;'
