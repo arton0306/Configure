@@ -43,3 +43,6 @@ find . -name "*.cpp" -exec grep -n --color=auto "Slice" {} \; -print
 find . \( -name "*.cpp" -o -name "*.h" \) -a ! -name "guSlice.*" | sort
 ----- service -----
 sudo service apache2 start
+----- sun studio analyzer -----
+collect -p 1.0 my_executable_file
+analyzer
