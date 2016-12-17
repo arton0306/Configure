@@ -1,5 +1,3 @@
------ wc -----
-wc -l $(find . -name '*.t' -o -name '*.cpp' | grep -v 'graphviz')
 ----- git -----
 git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 in git 1.8 => git branch -u upstream/foo foo
@@ -32,9 +30,9 @@ ls -1 ../*.py | sed -e 's/..\///g ; s/\.py//g' | tr '\n' ',' | sed -e 's/,$//'
 %! xxd      hex mode
 %! xxd -r   back to normal mode
 ----- grep -----
-grep Vector $(find . -name '*.t' | grep -v 'graphviz' )
-grep HashMap $(find . -name '*.t' -o -name '*.cpp' -o -name '*.h' | grep -v 'graphviz' )
-grep -rn --exclude="tags" Node .
+-s diable the msg "No such file or directory"
+-n print line number
+-I skip binary
 ----- find & xargs -----
 find -iname '*.a' | xargs -i ls -l {}  | grep service
 find -iregex ".*[^(\.c)(\.o)(\.h)]"
