@@ -59,6 +59,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 alias ls='ls --color=auto' # GNU coreutils ls
 alias ll='ls -alF'
+alias gocd='go_file_dir'
 alias g='grep --color=auto'
 alias gi='grep -i --color=auto'
 alias rm='rm -i'
@@ -119,6 +120,13 @@ pathadd() {
 }
 # ref - http://alistapart.com/article/the-path-to-enlightenment
 alias listpath="echo \$PATH | tr ':' '\n'"
+
+#-------------------------------------------
+# Custom Functions
+#-------------------------------------------
+go_file_dir() {
+    cd `dirname $1`
+}
 
 #-------------------------------------------
 # Favorite Tools
