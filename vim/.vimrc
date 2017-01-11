@@ -281,6 +281,7 @@ map <leader>forj ifor (int j = 0; j < _; ++j) {<CR><ESC>kf_
 map <leader>fork ifor (int k = 0; k < _; ++k) {<CR><ESC>kf_
 map <leader>fore ifor (int e = 0; e < _; ++e) {<CR><ESC>kf_
 map <leader>foru ifor (int u = 0; u < _; ++u) {<CR><ESC>kf_
+map <leader>cout1 <ESC>^yiwicout << "<ESC>pa = " << <ESC>A << endl;<ESC>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
