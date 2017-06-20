@@ -114,10 +114,10 @@ set laststatus=2
 set statusline=%2*\ [%{&encoding},\ " encoding
 set statusline+=%{&fileformat}%{\"\".((exists(\"+bomb\")\ &&\ &bomb)?\",BOM\":\"\").\"\"}]
 set statusline+=%{HasPaste()}%*
-set statusline+=%1*\ %F%m%r%h\ %w
+set statusline+=%1*\ %f%m%r%h\ %w
 set statusline+=%=
-set statusline+=%3*<Cwd>%{CurDir()}
-set statusline+=%2*\ [%y\ \ Row:%4.l/%4.L\ Col:%3.c\ ]\ %*
+set statusline+=%3*%{CurDir()}
+set statusline+=%2*\ [Row:%4.l/%4.L\ Col:%3.c\]\ %*
 
 highlight User1 term=underline cterm=underline ctermfg=white ctermbg=darkblue guifg=white guibg=darkblue
 highlight User2 term=underline cterm=underline ctermfg=yellow ctermbg=darkblue guifg=yellow guibg=darkblue
