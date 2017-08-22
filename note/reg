@@ -1,2 +1,0 @@
-grep 
-grep -rn "MyFunc\ *(" .
