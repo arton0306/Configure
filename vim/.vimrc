@@ -29,6 +29,7 @@ set backspace=eol,start,indent " Set backspace config
 set ruler " Always show current position
 set showmode " show which mode
 
+set ignorecase
 set smartcase
 set hlsearch "Highlight search things
 
@@ -141,12 +142,11 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Highlight specail characters
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set lcs=tab:>-,trail:-
-hi SpecialKey ctermbg=red ctermfg=red guibg=red guifg=red
+set lcs=tab:>-,trail:.
+hi SpecialKey ctermbg=red ctermfg=white guibg=red guifg=white
 " use :set list! to toggle specails charactor show
 noremap <F2> <ESC>:set list!<CR>
 set nolist
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => a function to search multiple line ( by: ptt - bootleq )
