@@ -9,7 +9,14 @@ set history=500 " Sets how many lines of history VIM has to rememberset
 set noswapfile
 set nocompatible
 
-colorscheme desert256 " set scheme
+if system('uname -s') == "Darwin\n"
+    "OSX
+    colorscheme desert
+else
+    "Linux
+    colorscheme desert256
+endif
+
 syntax on
 set t_Co=256
 
