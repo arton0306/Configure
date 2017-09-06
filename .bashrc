@@ -145,7 +145,7 @@ fi
 #-------------------------------------------
 # FreeBSD
 #-------------------------------------------
-if [[ ${uname} == 'FreeBSD' ]]; then
+if [[ `uname` == 'FreeBSD' ]] || [[ `uname` == 'Darwin' ]]; then
     alias ls='ls -G'
     # refs:http://blog.longwin.com.tw/2006/07/color_ls_in_bash_2006/
     export LSCOLORS=gxfxcxdxbxegedabagacad
