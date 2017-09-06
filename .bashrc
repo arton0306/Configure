@@ -1,3 +1,5 @@
+#! /bin/bash
+
 #-------------------------------------------
 # Locale
 # http://moto.debian.tw/viewtopic.php?t=6213
@@ -138,7 +140,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 if [ -f /usr/share/autojump/autojump.sh ]; then
     . /usr/share/autojump/autojump.sh
 fi
-if [[ `type -t j` != "function" ]]; then
+if [[ -f /usr/share/autojump/autojump.sh ]] && [[ `type -t j` != "function" ]]; then
     source /home/arton/.autojump/etc/profile.d/autojump.sh
 fi
 
