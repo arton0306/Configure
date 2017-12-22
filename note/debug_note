@@ -41,3 +41,7 @@ default position : ./.gdbinit
 
 [gdb fail]
 info source
+
+[tui]
+ctrl+x a : turn on/off tui
+ctrl+x o : switch focus window
