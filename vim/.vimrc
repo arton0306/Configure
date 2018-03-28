@@ -104,6 +104,10 @@ noremap <leader>ctags <ESC>:!ctags -R --fields=+iaS --extra=+q .<CR>
 " note
 noremap <leader>note <ESC>:tabe ~/Configure/note/note<CR>
 
+" hex mode (https://vi.stackexchange.com/questions/2232/how-can-i-use-vim-as-a-hex-editor)
+noremap <leader>hex <ESC>:%!xxd<CR>
+noremap <leader>rhex <ESC>:%!xxd -r<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins Key Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
