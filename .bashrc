@@ -6,8 +6,8 @@
 # http://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do
 #-------------------------------------------
 export LANG=zh_TW.UTF-8
-# export LC_ALL="en_US.UTF-8"
-export LC_ALL="C"
+export LC_ALL="en_US.UTF-8"
+# export LC_ALL="C"
 
 #-------------------------------------------
 # Prompt
@@ -70,6 +70,7 @@ alias dirs='dirs -v'
 alias vim='TERM=xterm vim'
 alias vims='TERM=screen-256color \vim'
 alias vimx='TERM=xterm-256color \vim'
+alias pstree='ps xjf'
 
 alias arggdb='gdb --args '
 alias makecscope='findcode > cscope.files; cscope -bqu;'
@@ -128,6 +129,10 @@ alias listpath="echo \$PATH | tr ':' '\n'"
 #-------------------------------------------
 go_file_dir() {
     cd `dirname $1`
+}
+
+canon() {
+    python -c "import os; print(os.path.realpath('$1'))"
 }
 
 #-------------------------------------------

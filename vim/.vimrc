@@ -39,6 +39,7 @@ set showmode " show which mode
 set ignorecase
 set smartcase
 set hlsearch "Highlight search things
+set wrapscan
 
 set noerrorbells " no sound on errors
 set novisualbell
