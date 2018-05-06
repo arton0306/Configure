@@ -80,7 +80,10 @@ alias install='sudo apt-get install'
 alias gt='git tree'
 alias gs='git status'
 alias tmux='TERM=screen-256color tmux'
-alias open='xdg-open'
+
+if [[ `uname` != 'Darwin' ]]; then
+    alias open='xdg-open'
+fi
 
 alias usage='cat ~/Configure/note/command_note'
 alias usage2='cat ~/Configure/note/seldom_command_note'
