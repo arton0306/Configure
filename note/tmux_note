@@ -1,6 +1,0 @@
-# https://superuser.com/questions/343572/how-do-i-reorder-tmux-windows
-<Prefix>:swap-window -t 0
-
-# resize pane
-<Prefix><Esc><Arrow Key>
-<Prefix>:resize-pane -<[DULR]> <cell number>
