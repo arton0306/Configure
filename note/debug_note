@@ -9,6 +9,9 @@ execute a improper process, the core dump will be produced under current folder 
 [gdb using core dump]
 gdb -c core.7561 ./a.out => run gdb with a.out and core.7561
 
+[gdb GLIBCXX]
+g++ -g -D_GLIBCXX_DEBUG <filename>
+
 [gdb command]
 info reg => list registers
 print $eax   => show register eax's content
