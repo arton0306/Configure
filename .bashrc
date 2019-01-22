@@ -138,6 +138,10 @@ canon() {
     python -c "import os; print(os.path.realpath('$1'))"
 }
 
+rcd() {
+    cd `canon "$1"`
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
