@@ -65,7 +65,7 @@ function TabToggle()
     set expandtab
   endif
 endfunction
-map <F9> :execute TabToggle()<CR>
+map <F9> mz:execute TabToggle()<CR>'z
 execute TabToggle()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
