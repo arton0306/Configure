@@ -24,8 +24,6 @@ set guifont=Consolas:h12:cANSI " set font
 
 set nu " show line number
 
-set et sw=4 ts=8 sts=8 " tab control ( expandtab, shiftwidth, tabstop, smarttab )
-
 set ai " auto indent
 set si " smart indent
 set wrap " wrap lines
@@ -49,6 +47,26 @@ set cpoptions+=$ " add a $ sign to the end of the change destination
 set ve=all " let ctrl + v be more convenient and powerful
 
 set ttymouse=xterm2                     " For using mouse=a with screen
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tab related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set noexpandtab
+function TabToggle()
+  if &expandtab
+    set shiftwidth=8
+    set softtabstop=0
+    set nosmarttab
+    set noexpandtab
+  else
+    set shiftwidth=4
+    set softtabstop=4
+    set smarttab
+    set expandtab
+  endif
+endfunction
+map <F9> :execute TabToggle()<CR>
+execute TabToggle()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim temp file folder
