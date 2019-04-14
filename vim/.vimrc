@@ -313,6 +313,9 @@ map <leader>fore ifor (int e = 0; e < _; ++e) {<CR><ESC>kf_
 map <leader>foru ifor (int u = 0; u < _; ++u) {<CR><ESC>kf_
 map <leader>cout1 <ESC>^yiwicout << "<ESC>pa = " << <ESC>A << endl;<ESC>
 
+" macos use clang in default and clang has no bits/stdc++
+map <leader>cpp3 i#include <cstdio><CR>#include <iostream><CR>#include <vector><CR>#include <cmath><CR>#include <algorithm><CR>#include <string><CR>#include <set><CR>#include <map><CR>#include <list><CR>#include <ctime><CR>#include <cstring><CR>#include <deque><CR>#include <queue><CR>#include <sstream><CR>#include <iomanip><CR>#include <unordered_set><CR>#include <unordered_map><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<ESC>O
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
