@@ -42,10 +42,7 @@ endif
 #========================================
 # Alias
 #========================================
-alias b 'cd -'
 alias g grep
-alias h history
-alias m more
 alias cp 'cp -i'
 alias ls 'ls -F --color=auto'
 alias mv 'mv -i'
