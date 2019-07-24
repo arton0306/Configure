@@ -45,6 +45,7 @@ endif
 alias g grep
 alias cp 'cp -i'
 alias ls 'ls -F --color=auto'
+alias ll 'ls -al'
 alias mv 'mv -i'
 alias rm 'rm -i'
 alias so source
