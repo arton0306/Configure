@@ -7,6 +7,7 @@ zcat log.gz
 ----- for in shell script -----
 for i in $(find *jarvis*); do ./$i status; done;
 ----- ! in shell script ------
+https://pangea.stanford.edu/computing/unix/shell/processes/retry.php
 ! is a token related to the history. If we use "!", shell will output the expanded command and execute it. 
 !! : execute previous command
 !5 : execute the 5th command in history
