@@ -34,8 +34,9 @@ set backspace=eol,start,indent " Set backspace config
 set ruler " Always show current position
 set showmode " show which mode
 
-set ignorecase
-set smartcase
+set ignorecase "This is needed for turning on smartcase
+set smartcase  "We can also ref ':help /\c' or ':help \/C'
+
 set hlsearch "Highlight search things
 set wrapscan
 
