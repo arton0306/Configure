@@ -119,7 +119,7 @@ alias py3='python3'
 #-------------------------------------------
 # ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
 pathadd() {
-    if [[ $PATH == "" ]]; then
+    if [[ -z $PATH ]]; then
         PATH="$1"
     elif [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="$PATH:$1"
