@@ -131,10 +131,10 @@ alias listpath="echo \$PATH | tr ':' '\n'"
 PATH=""
 pathadd ~/.local/bin
 pathadd /usr/local/bin
-pathadd /usr/sbin
 pathadd /usr/bin
-pathadd /sbin
+pathadd /usr/sbin
 pathadd /bin
+pathadd /sbin
 
 #-------------------------------------------
 # Custom Functions
