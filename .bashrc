@@ -117,15 +117,24 @@ alias py3='python3'
 #                 build         at ~/build
 #                 exe soft link at ~/.local/bin
 #-------------------------------------------
-PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:~/.local/bin
 # ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
 pathadd() {
-    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+    if [[ $PATH == "" ]]; then
+        PATH="$1"
+    elif [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="$PATH:$1"
     fi
 }
 # ref - http://alistapart.com/article/the-path-to-enlightenment
 alias listpath="echo \$PATH | tr ':' '\n'"
+
+PATH=""
+pathadd ~/.local/bin
+pathadd /usr/local/bin
+pathadd /usr/sbin
+pathadd /usr/bin
+pathadd /sbin
+pathadd /bin
 
 #-------------------------------------------
 # Custom Functions
