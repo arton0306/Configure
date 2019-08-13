@@ -118,7 +118,14 @@ alias py3='python3'
 #                 exe soft link at ~/.local/bin
 #-------------------------------------------
 # ref - http://superuser.com/questions/39751/add-directory-to-path-if-its-not-already-there
-pathadd() {
+add_path_head() {
+    if [[ -z $PATH ]]; then
+        PATH="$1"
+    elif [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="$1:$PATH"
+    fi
+}
+add_path_tail() {
     if [[ -z $PATH ]]; then
         PATH="$1"
     elif [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
@@ -129,12 +136,12 @@ pathadd() {
 alias listpath="echo \$PATH | tr ':' '\n'"
 
 PATH=""
-pathadd ~/.local/bin
-pathadd /usr/local/bin
-pathadd /usr/bin
-pathadd /usr/sbin
-pathadd /bin
-pathadd /sbin
+add_path_tail ~/.local/bin
+add_path_tail /usr/local/bin
+add_path_tail /usr/bin
+add_path_tail /usr/sbin
+add_path_tail /bin
+add_path_tail /sbin
 
 #-------------------------------------------
 # Custom Functions
