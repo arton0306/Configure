@@ -11,3 +11,8 @@ end
 define sb
     save breakpoints .gdbinit
 end
+
+define skip1
+    tbreak +1
+    jump +1
+end
