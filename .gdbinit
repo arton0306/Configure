@@ -16,3 +16,11 @@ define skip1
     tbreak +1
     jump +1
 end
+
+# ------------------------------------------
+# some useful template
+# ------------------------------------------
+# break someFunction
+# commands
+# print var1
+# end
