@@ -1,2 +1,23 @@
 ifconfig (mac,linux) / ipconfig (windows)
 netstat
+arp
+
+====================================
+/etc/network/interfaces
+====================================
+auto lo
+iface lo inet loopback
+
+auto enp0s9
+iface enp0s9 inet static
+    address 192.168.1.1
+    network 192.168.1.0
+    netmask 255.255.255.0
+    boradcast 192.168.1.255
+
+up route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.2 dev enp0s9
+
+====================================
+/etc/sysctl.conf
+====================================
+net.ipv4_ip_forward
