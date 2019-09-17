@@ -24,3 +24,11 @@ end
 # commands
 # print var1
 # end
+
+# define print_linked_list
+#     set var $node = $arg0
+#     while $node
+#         print *$node
+#         set var $node = $node->next
+#     end
+# end
