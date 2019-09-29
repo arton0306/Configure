@@ -82,6 +82,7 @@ alias update='sudo apt-get update'
 alias install='sudo apt-get install'
 alias gt='git tree'
 alias gs='git status'
+alias gpush='git push origin master'
 alias tmux='TERM=screen-256color tmux'
 
 if [[ `uname` != 'Darwin' ]]; then
