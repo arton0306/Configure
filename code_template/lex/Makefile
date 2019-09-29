@@ -5,3 +5,7 @@ lex1:
 lex2:
 	lex -o 2.yy.c 2.lex
 	gcc 2.yy.c -o lex2
+
+lex3:
+	lex -o 3.yy.c 3.lex
+	gcc 3.yy.c -o lex3
