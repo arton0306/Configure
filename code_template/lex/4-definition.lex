@@ -25,6 +25,8 @@ eol \n
     line_count += 1;
 }
 
+. ;
+
 %%
 
 int main()
