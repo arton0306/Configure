@@ -13,3 +13,7 @@ lex3: 3.lex
 lex4: 4-definition.lex
 	lex -o 4.yy.c 4-definition.lex
 	gcc 4.yy.c -o lex4
+
+lex4b: 4-definition-b.lex
+	lex -o 4b.yy.cpp 4-definition-b.lex
+	g++ 4b.yy.cpp -o lex4b
