@@ -1,6 +1,6 @@
-ifconfig (mac,linux) / ipconfig (windows)
-netstat
-arp
+ifconfig (mac,linux) / ipconfig (windows): show interfaces
+netstat: show socket connection
+arp: Address Resolution Protocol
 
 ====================================
 /etc/network/interfaces
