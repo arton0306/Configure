@@ -1,6 +1,17 @@
+====================================
+ssh
+====================================
+sudo /etc/init.d/ssh start
+sudo /etc/init.d/ssh stop
+sudo /etc/init.d/ssh restart
+
+====================================
+commands
+====================================
 ifconfig (mac,linux) / ipconfig (windows): show interfaces
 netstat: show socket connection
 arp: Address Resolution Protocol
+ls /sys/class/net
 
 ====================================
 /etc/network/interfaces
