@@ -115,6 +115,9 @@ alias o='nautilus'
 
 alias py3='python3'
 
+# network (ubuntu)
+alias net_interfaces='sudo vim /etc/network/interfaces'
+
 #-------------------------------------------
 # Path
 # I put 3rd party sources       at ~/sources
