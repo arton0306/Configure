@@ -21,12 +21,25 @@ iface lo inet loopback
 
 auto enp0s9
 iface enp0s9 inet static
+    address 192.168.4.1
+    network 192.168.4.0
+    netmask 255.255.255.0
+    broadcast 192.168.4.255
+
+# internal network of VMs
+auto enp0s10
+iface enp0s10 inet static
     address 192.168.1.1
     network 192.168.1.0
     netmask 255.255.255.0
-    boradcast 192.168.1.255
+    broadcast 192.168.1.255
 
-up route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.2 dev enp0s9
+# host-only adapter
+auto enp0s8
+allow-hotplug enp0s8
+iface enp0s8 inet static
+    address 192.168.99.102
+    netmask 255.255.255.0
 
 ====================================
 /etc/sysctl.conf
