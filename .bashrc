@@ -193,3 +193,10 @@ if [ -f $HOME/.local_bashrc.sh ]; then
 else
     touch $HOME/.local_bashrc.sh
 fi
+
+#-------------------------------------------
+# Code template
+#-------------------------------------------
+# for var in "$@"; do
+#     echo $var
+# done
