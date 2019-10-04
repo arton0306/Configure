@@ -13,11 +13,6 @@ do concate "[" or "]" with the other char
 Refs:
 https://sites.google.com/site/tiger2000/
 
------ syntax of "for" -----
-for i in $(find *.cpp); do
-    echo $i;
-done;
-
 ----- var -----
 1. var and its content are separated by =
    ex: myname=arton
