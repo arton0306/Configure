@@ -6,7 +6,9 @@
 2.  setup corresponding environment
 3.  prefix the prompt so the client can know the name of environment
 
-so the user can work as in an isolated environment. Now, if we use pip install in the environment, the package will only be installed in the environment. With virtualenv, we can keep our system environment clean.
+so the user can work in the folder as in an isolated environment. Now, if we use pip install in the environment, the package will only be installed in the environment. With virtualenv, we can keep our system environment clean.
+
+Because the virtual env bases on the folder, we can remove the virtual env by just removing the folder.
 
 ### The steps to use virtualenv
 
@@ -18,3 +20,6 @@ so the user can work as in an isolated environment. Now, if we use pip install i
 3.  source `bin/activate`
 4.  ...work here
 5.  use `deactivate` to quit the environment
+
+### Memo
+An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run under virtual env.
