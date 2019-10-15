@@ -3,6 +3,12 @@ sh -x ./myscript => -x debug( show all command ), or as below
 echo -n "abc" => -n print string and keep cursor at the same line
 (ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
 
+----- cursor move -----
+alt+f: move to next word
+alt+b: move to previous word
+crtl+a: move to head
+crtl+e: move to end
+
 ----- testing -----
 do concate "[" or "]" with the other char
 [ -f ] check is a file
