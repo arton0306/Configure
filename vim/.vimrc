@@ -319,7 +319,7 @@ map <leader>cout1 <ESC>^yiwicout << "<ESC>pa = " << <ESC>A << endl;<ESC>
 map <leader>cpp3 i#include <cstdio><CR>#include <iostream><CR>#include <vector><CR>#include <cmath><CR>#include <algorithm><CR>#include <string><CR>#include <set><CR>#include <map><CR>#include <list><CR>#include <ctime><CR>#include <cstring><CR>#include <deque><CR>#include <queue><CR>#include <sstream><CR>#include <iomanip><CR>#include <unordered_set><CR>#include <unordered_map><CR><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<ESC>O
 
 " insert c++ trace macro under where the cursor is
-map <leader>trace <ESC>:read ~/Configure/vim/trace_macro.cpp<CR><ESC>0
+map <leader>trace <ESC>:read ~/Configure/vim/code_template/trace_macro.cpp<CR><ESC>0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle ( https://github.com/gmarik/vundle )
