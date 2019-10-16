@@ -110,6 +110,7 @@ vnoremap <leader>del :s/\%V./ /g<CR>
 
 " toggle paste mode
 noremap <F3> <ESC>:set paste!<CR>
+noremap <leader>pp <ESC>:set paste!<CR>
 
 " source header switcher
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
