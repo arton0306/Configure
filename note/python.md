@@ -35,3 +35,6 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
         ['test.py', '1', '2', '3']
         """
         print sys.argv
+
+### http getter
+ref: `https://gist.github.com/kaito834/36e693a3a54057666d28`
