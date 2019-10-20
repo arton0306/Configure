@@ -27,6 +27,7 @@ Hoeffding's Inequality:
     in big sample (N large), v is probably cose to u (within e)
     P[|v-u|>e] <= 2exp(-2Ne^2)
     the statement 'v=u' is probably approximately correct (PAC)
+Note that this is just a upper bound, the real probability might be much lower than the value.
 
 ### perception
 *  binary classifier
