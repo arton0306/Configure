@@ -37,14 +37,14 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
         print sys.argv
 
 ### http getter
-    # https://github.com/psf/requests instead of ugly `urllib/urllib2`
-    # https://www.kingname.info/2015/04/29/lxmloldbug/ for xpath
+*  https://github.com/psf/requests is a very well-designed library comparing to `urllib/urllib2`
+*  note that chrome's developer tool might add extra tags (i.g. tbody) in copied xpath.
+
+##### example code
 
     import requests
-    response = requests.get('http://service.example.com',
-                            auth=requests.auth.HTTPBasicAuth(
-                              'username',
-                              'password'))
+    response = requests.get('http://service.example.com', auth=('user', 'password'))
+
     print(response.text)
     # print(response.content)
     
