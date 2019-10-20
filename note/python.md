@@ -23,3 +23,15 @@ Because the virtual env bases on the folder, we can remove the virtual env by ju
 
 ### Memo
 An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run under virtual env.
+
+# cookbooks
+
+### use argv
+
+    import sys
+    if __name__ == '__main__':
+        """
+        python test.py 1 2 3
+        ['test.py', '1', '2', '3']
+        """
+        print sys.argv
