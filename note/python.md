@@ -38,6 +38,7 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
 
 ### http getter
 ref: `https://stackoverflow.com/questions/29708708/http-basic-authentication-not-working-in-python-3-4`
+
     import requests
     response = requests.get('http://service.example.com',
                             auth=requests.auth.HTTPBasicAuth(
