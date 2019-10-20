@@ -47,3 +47,9 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
                               'password'))
     print(response.text)
     # print(response.content)
+    
+    from lxml import etree
+    
+    html = etree.HTML(response.content)
+    text_in_the_font_tag = html.xpath("/html/body/table/tr[1]/td/table/tr/td[3]/font/text()")
+    print(text_in_the_font_tag)
