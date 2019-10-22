@@ -1,5 +1,5 @@
 ## Hypothesis and Algorithm
-1. hypothesis (H): a model (i.g. perception)
+1. hypothesis set (H): a model (i.g. perception)
 2. algorithm (A): an algorithm to choose a good g from a model
 3. types of output space:
    *  binary classification
