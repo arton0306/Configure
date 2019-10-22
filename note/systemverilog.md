@@ -18,6 +18,7 @@
    *  case-insensitive
    *  the base specifications can be h, d, o, b
    *  optional signed "s" can be put before the base specification; it does not affect the bit pattern specified, only its interpretation
+   *  a plus or minus operator preceding the size constant is a unary plus or minus operator
    *  if the size of the unsigned number is larger than the size specified for the literal constant, the unsigned number shall be truncated from the left
    *  if the size is not specified, the number is at least 32 bits
    *  special: '0, '1, 'X, 'x, 'Z, 'z, sets all bits to specified value
