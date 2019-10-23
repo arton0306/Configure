@@ -200,10 +200,9 @@ fi
 #-------------------------------------------
 # For old system
 #-------------------------------------------
-
-# cvs
-alias rmcvstmp="rm -f */.#*"
+alias rmcvstmp='rm -f $(find . | grep \.#)'
 # alias rmcvstmp="rm -f **/.#*"
+alias ddd="ddd -background BLACK -foreground GRAY --fontsize 140 --args "
 
 #-------------------------------------------
 # Code template
