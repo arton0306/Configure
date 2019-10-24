@@ -1,15 +1,19 @@
+### built-in
+type: tell you the information about the command containing alias, function, ... and so on
+
+### xxx
 sh -x ./myscript => -x debug( show all command ), or as below
 #!/bin/bash -x => debug, 1st line
 echo -n "abc" => -n print string and keep cursor at the same line
 (ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
 
------ cursor move -----
+### cursor move
 alt+f: move to next word
 alt+b: move to previous word
 crtl+a: move to head
 crtl+e: move to end
 
------ testing -----
+### testing
 do concate "[" or "]" with the other char
 [ -f ] check is a file
 [ -e ] check exsit
@@ -19,20 +23,21 @@ do concate "[" or "]" with the other char
 Refs:
 https://sites.google.com/site/tiger2000/
 
------ var -----
+### var
 1. var and its content are separated by =
-   ex: myname=arton
+   *  myname=arton
 2. there is no space at the 2 ends of =
-   ex: myname = arton (error!)
-   ex: myname=Chang Arton (error!)
+   *  myname = arton (error!)
+   *  myname=Chang Arton (error!)
 3. the name of var must start with nondigit
-4. " expand the var
-   ' remain the var
+4. " and '
+   *  " expand the var
+   *  ' remain the var
 5. use \ to escape
 6. `command` and $(command) can get the result of command
 7. "$var" or ${var} can expand var
 8. use "export" to make a var to be env var
-9. traditionally ( not forcely ),
-   uppercase words are system default var
-   lowercase words are user customized var
-10 use "unset" to delete the content of a var
+9. traditionally ( not forcely )
+   *  uppercase words are system default var
+   *  lowercase words are user customized var
+10. use "unset" to delete the content of a var
