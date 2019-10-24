@@ -2,26 +2,24 @@
 type: tell you the information about the command containing alias, function, ... and so on
 
 ### xxx
-sh -x ./myscript => -x debug( show all command ), or as below
-#!/bin/bash -x => debug, 1st line
-echo -n "abc" => -n print string and keep cursor at the same line
-(ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
+*  sh -x ./myscript => -x debug( show all command ), or as below
+*  #!/bin/bash -x => debug, 1st line
+*  echo -n "abc" => -n print string and keep cursor at the same line
+*  (ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
 
 ### cursor move
-alt+f: move to next word
-alt+b: move to previous word
-crtl+a: move to head
-crtl+e: move to end
+*  alt+f: move to next word
+*  alt+b: move to previous word
+*  crtl+a: move to head
+*  crtl+e: move to end
 
 ### testing
-do concate "[" or "]" with the other char
-[ -f ] check is a file
-[ -e ] check exsit
-[ ... -a ... ] and
-[ ... -o ... ] or
-
-Refs:
-https://sites.google.com/site/tiger2000/
+*  do concate "[" or "]" with the other char
+*  [ -f ] check is a file
+*  [ -e ] check exsit
+*  [ ... -a ... ] and
+*  [ ... -o ... ] or
+*  Refs: <https://sites.google.com/site/tiger2000/>
 
 ### var
 1. var and its content are separated by =
