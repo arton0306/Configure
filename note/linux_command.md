@@ -7,15 +7,8 @@
 * stty -a : ( setting tty ) list hotkey and tty info
 * lsb_release
 
-### bash command execution order
-1. relative/absolute path : /bin/ls or ./ls
-2. alias
-3. bash builtin
-4. search path in $PATH
-
-#### bash for
-* `for i in $(seq -w 1000); do wget $(head -n $i list | tail -n 1 ) -O $i.jpg; done`
-* `for i in $(seq -w 0061); do wget $(../get_s3_url.py $(head -n $i list | tail -n 1 )) -O $i.jpg; done;`
+### some shell built-in
+* bash: type
 
 ### zip & unzip
 * tar -xvjf OpenCV-2.4.3.tar.bz2
