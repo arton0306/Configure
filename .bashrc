@@ -83,6 +83,7 @@ alias install='sudo apt-get install'
 alias gt='git tree'
 alias gs='git status'
 alias gpush='git push origin master'
+alias gls='git ls-files --others --exclude-standard'
 alias tmux='TERM=screen-256color tmux'
 
 if [[ `uname` != 'Darwin' ]]; then
