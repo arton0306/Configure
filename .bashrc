@@ -90,11 +90,7 @@ if [[ `uname` != 'Darwin' ]]; then
     alias open='xdg-open'
 fi
 
-alias usage='cat ~/Configure/note/command_note'
-alias usage2='cat ~/Configure/note/seldom_command_note'
-alias reg='cat ~/Configure/note/reg'
 alias local_note='cat ~/Configure/note/local_note'
-alias path='cat ~/Configure/note/path_note'
 alias note='vim ~/Configure/note/note'
 
 alias x='dtrx'
@@ -109,7 +105,6 @@ alias xtargz='tar -zxvf '
 alias xtarbz2='tar -jxvf '
 
 alias ptt='ssh bbsu@ptt.cc'
-alias godaddy='ssh 192.169.172.134'
 
 # desktop
 alias o='nautilus'
