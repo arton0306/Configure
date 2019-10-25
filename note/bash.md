@@ -1,5 +1,11 @@
+### bash command execution order
+1. relative/absolute path : /bin/ls or ./ls
+2. alias
+3. bash builtin
+4. search path in $PATH
+
 ### built-in
-type: tell you the information about the command containing alias, function, ... and so on
+type `<command>`: show the information about the command containing alias, function, ... and so on
 
 ### xxx
 *  sh -x ./myscript => -x debug( show all command ), or as below
@@ -12,6 +18,10 @@ type: tell you the information about the command containing alias, function, ...
 *  alt+b: move to previous word
 *  crtl+a: move to head
 *  crtl+e: move to end
+
+#### bash for
+* `for i in $(seq -w 1000); do wget $(head -n $i list | tail -n 1 ) -O $i.jpg; done`
+* `for i in $(seq -w 0061); do wget $(../get_s3_url.py $(head -n $i list | tail -n 1 )) -O $i.jpg; done;`
 
 ### testing
 *  do concate "[" or "]" with the other char
