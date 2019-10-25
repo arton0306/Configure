@@ -30,17 +30,11 @@
 * info proc
 * detach
 
-### break point
-* delete/disable/enable
-
 ### history
 * default position : ./.gdb_history
 * set/show history filename/save
 * set history size <n>
 * show history size
-
-### init
-* default position : ./.gdbinit
 
 ### gdb fail
 * info source
