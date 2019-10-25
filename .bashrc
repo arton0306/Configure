@@ -90,13 +90,10 @@ if [[ `uname` != 'Darwin' ]]; then
     alias open='xdg-open'
 fi
 
-alias local_note='cat ~/Configure/note/local_note'
 alias note='vim ~/Configure/note/note'
-
-alias x='dtrx'
 alias ..='cd ..'
 alias ...='cd ../..'
-
+alias x='dtrx'
 alias ctar='tar -cvf '
 alias ctargz='tar -zcvf '
 alias ctarbz2='tar -jcvf '
