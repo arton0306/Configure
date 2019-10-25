@@ -1,4 +1,0 @@
-mksession ~/mysession.vim
-:source ~/mysession.vim
-:h jumplist
-vim -S ~/mysession.vim
