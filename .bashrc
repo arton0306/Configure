@@ -191,6 +191,17 @@ else
 fi
 
 #-------------------------------------------
+# Python Virtual Env
+#-------------------------------------------
+penv() {
+    if [ -z "$1" ]; then
+        ls ~/virtualenv
+    else
+        source ~/virtualenv/$1/bin/activate
+    fi
+}
+
+#-------------------------------------------
 # For old system
 #-------------------------------------------
 alias rmcvstmp='rm -f $(find . | grep \.#)'

@@ -14,7 +14,7 @@ Because the virtual env bases on the folder, we can remove the virtual env by ju
 
 1.  pip install virtualenv
 2.  virtaulenv `dirname`
-    *  If you have several python version in your system, and you want to assign specific python version, use `--/<python bin path>`
+    *  If you have several python version in your system, and you want to assign specific python version, use `--<python bin path>`
     *  In default, the environment will contain the python libs in system. If you do not need these python libs, use `--no-site-packages`
 2.  cd `dirname`
 3.  source `bin/activate`
