@@ -8,6 +8,7 @@
 brew install git
 brew install wget
 brew install tmux
+brew install pypy3
 
 # ----------------------------
 # backup&copy config files 
