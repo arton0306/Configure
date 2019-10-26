@@ -38,7 +38,9 @@ Note that this is just a upper bound, the real probability might be much lower t
 *  PLA: perception learning algorithm
    *  basic idea: choose a better w for wrong input x 
    *  `w_t+1 := w_t + y_n(t)*x_n(t), where y_n(t) = 1 or -1`
-   *  note that there are many method (cyclic, random cyclic...) to implement PLA, just remember the basic idea (basic concept)
+   *  note that there are many method (cyclic, random cyclic, pocket...) to implement PLA, just remember the basic idea (basic concept)
+      *  pocket means adding a best_w to store the best w whenever w is updated
+      *  best_w is updated when finding a better w, while w is updated as regular
    *  a question: if the data is linear separable, can PLA always halt?
       *  yes, according to a non-trivial math provement!
       *  the result is not that important pratically because we don't know if the data is linear separable
