@@ -10,6 +10,9 @@
 ### some shell built-in
 * bash: type
 
+### date
+* date +%Y%m%d_%H%M%S `20191027_194021`
+
 ### zip & unzip
 * tar -xvjf OpenCV-2.4.3.tar.bz2
 * zcat log.gz
