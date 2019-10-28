@@ -10,6 +10,9 @@
 ### some shell built-in
 * bash: type
 
+### for user
+* crontab -e : every user can set their own cron jobs
+
 ### date
 * date +%Y%m%d_%H%M%S `20191027_194021`
 
