@@ -20,8 +20,8 @@ type `<command>`: show the information about the command containing alias, funct
 *  crtl+e: move to end
 
 #### bash for
-* `for i in $(seq -w 1000); do wget $(head -n $i list | tail -n 1 ) -O $i.jpg; done`
-* `for i in $(seq -w 0061); do wget $(../get_s3_url.py $(head -n $i list | tail -n 1 )) -O $i.jpg; done;`
+* `for i in $(seq -w 00 20); do echo $i; done`
+* `for i in {00..20}; do echo $i; done` (Note that zero-padding for brace expansions was introduced in bash 4)
 
 ### testing
 *  do concate "[" or "]" with the other char
