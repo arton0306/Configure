@@ -158,8 +158,10 @@ rcd() {
     cd `canon "$1"`
 }
 
-mkfile() { 
-    mkdir -p $(dirname "$1") && touch "$1" 
+mkfile() {
+    for file_name in "$@"; do
+        mkdir -p $(dirname "$file_name") && touch "$file_name" 
+    done
 }
 
 #-------------------------------------------
@@ -215,6 +217,4 @@ alias ddd="ddd -background BLACK -foreground GRAY --fontsize 140 --args "
 #-------------------------------------------
 # Code template
 #-------------------------------------------
-# for var in "$@"; do
-#     echo $var
-# done
+# (empty)
