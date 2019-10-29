@@ -1,3 +1,19 @@
+## Feasibility of Learning
+
+### Hoeffding's Inequality
+
+    u = x probabitily in bin
+    v = x fraction in sample
+    in big sample (N large), v is probably cose to u (within e)
+    P[|v-u|>e] <= 2exp(-2Ne^2)
+    the statement 'v=u' is probably approximately correct (PAC)
+
+    Note that this is just a upper bound, the real probability might be much lower than the value.
+
+### Vapnik-Chervonenkis (VC) bound:
+
+    P[∃h∈H s.t. |Ein(h) - Eout(h)| > ε] ≤ 4m_h(2N)e^[(-1/8)N(ε^2)]
+
 ## Hypothesis and Algorithm
 1. hypothesis set (H): a model (i.g. perception)
 2. algorithm (A): an algorithm to choose a good g from a model
@@ -19,15 +35,6 @@
    *  batch
    *  online (sequential)
    *  active: will ask human to label a critical data actively
-
-## Feasibility of Learning
-Hoeffding's Inequality:
-    u = x probabitily in bin
-    v = x fraction in sample
-    in big sample (N large), v is probably cose to u (within e)
-    P[|v-u|>e] <= 2exp(-2Ne^2)
-    the statement 'v=u' is probably approximately correct (PAC)
-Note that this is just a upper bound, the real probability might be much lower than the value.
 
 ### perception
 *  binary classifier
