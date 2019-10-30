@@ -56,6 +56,7 @@ alias ... 'cd ../..'
 # Local
 #========================================
 if ( -f ~/.local_csh_set_alias.sh ) then
+    alias localsa 'vi ~/.local_csh_set_alias.sh'
     source ~/.local_csh_set_alias.sh
 endif
 
