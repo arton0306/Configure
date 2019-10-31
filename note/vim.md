@@ -6,9 +6,9 @@
 ### ctags
 *  generate database
 *  vim setting (refer to the other's .vimrc)
-*  ctrl+] : jump to definition (hopefully)
-*  :ts : list all possible definitions
-*  ctrl+i, ctrl+o: vim hot keys (go forward/back)
+*  `ctrl+]` : jump to definition (hopefully)
+*  `:ts` : list all possible definitions
+*  `ctrl+i`, `ctrl+o`: vim hot keys (go forward/back)
 
 ### cscope
 *  http://cscope.sourceforge.net/cscope_vim_tutorial.html
