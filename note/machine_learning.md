@@ -14,6 +14,18 @@
 
     P[∃h∈H s.t. |Ein(h) - Eout(h)| > ε] ≤ 4m_h(2N)e^[(-1/8)N(ε^2)]
 
+### VC dimension (breakpoint-1): the existed max number of points that can be shattered by H
+*  pos-ray: 1
+*  1D perceptron (pos/neg rays): 2
+*  2D perceptron: 3
+*  convex hul: ∞
+*  `P_D[|Ein(h) - Eout(h)| > ε] ≤ 4(2N)^(d_vc)e^[(-1/8)N(ε^2)]`
+
+#### How much data is data enough
+*  in theorem: `10000*d_vc`
+*  in practice: `10*d_vc` (because the theorem is deduced by many upper bound)
+*  (i.g.) we only need 30 data for 2D perceptron
+
 ## Hypothesis and Algorithm
 1. hypothesis set (H): a model (i.g. perception)
 2. algorithm (A): an algorithm to choose a good g from a model
