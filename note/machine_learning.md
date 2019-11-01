@@ -12,6 +12,16 @@
 
 ### Vapnik-Chervonenkis (VC) bound:
 
+#### Basic concepts to build VC bound
+*  a dichotomy: a hypothesis 'limited' to the eyes of `x1, x2, ..., xn`
+   *  |H(x1,x2,...xn)| depends on inputs (x1,x2,...,xn)
+*  growth function: taking max of all possible (x1,x2,...,xn)
+   *  `m_h(N)`: max{x1,x2,...,xn∈X} |H(x1,x2,...xn)|
+*  shatter: if one possible set of N inputs whose all dichotomy can be implemented by H, call those N inputs `shattered` by H
+*  breakpoint: minimun number of data that a H can not shatter
+
+#### VC bound formula
+
     P[∃h∈H s.t. |Ein(h) - Eout(h)| > ε] ≤ 4m_h(2N)e^[(-1/8)N(ε^2)]
 
 ### VC dimension (breakpoint-1): the existed max number of points that can be shattered by H
@@ -55,7 +65,7 @@
    *  `sign[sum(w_i * x_i)] if adding x_0 as 1 for constant item`
    *  and so on ... they are of the same power
 *  PLA: perception learning algorithm
-   *  basic idea: choose a better w for wrong input x 
+   *  basic idea: choose a better w for wrong input x
    *  `w_t+1 := w_t + y_n(t)*x_n(t), where y_n(t) = 1 or -1`
    *  note that there are many method (cyclic, random cyclic, pocket...) to implement PLA, just remember the basic idea (basic concept)
    *  pocket means adding a `best_w` to store the best w whenever w is updated
