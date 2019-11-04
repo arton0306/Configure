@@ -64,6 +64,10 @@
 * find -iname '*.a' | xargs -i ls -l {}  | grep service
 * cat files_to_cp | xargs -i -t /bin/bash -c cp -r {} .
 
+### find working dir of a process
+* https://unix.stackexchange.com/questions/94357/find-out-current-working-directory-of-a-running-process
+* pwdx `pid`
+
 ### service
 * sudo service apache2 start
 
