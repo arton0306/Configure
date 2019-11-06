@@ -75,5 +75,5 @@
       *  yes, according to a non-trivial math provement!
       *  the result is not that important pratically because we don't know if the data is linear separable
 *  if the data is not linear separable, how to get the best w to minimize the error?
-   *  a NP-hard problem!
+   *  a NP-hard problem! (It is interesting that the linear regression problem has a closed form solution.)
    *  a heuristic modified PLA can get a good solution: choose the better w when we update w (it need time to check which w is better)
