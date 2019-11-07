@@ -84,4 +84,4 @@
 *  find w_lin such that `2/N(XᵀXw-Xᵀy) = ▽E_in(w) = 0`
 *  if `XᵀX` is invertible, w_lin = `[(XᵀX)^-1](y)`
 *  if `XᵀX` is not invertible, we can use numerical related tools to get the answer 
-*  we call `[(XᵀX)^-1](y)` as pseudo-inverse `X^⟊`
+*  we call `[(XᵀX)^-1](y)` as pseudo-inverse `X^†`
