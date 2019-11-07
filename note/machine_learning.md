@@ -85,3 +85,4 @@
 *  if `XᵀX` is invertible, w_lin = `[(XᵀX)^-1](y)`
 *  if `XᵀX` is not invertible, we can use numerical related tools to get the answer 
 *  we call `[(XᵀX)^-1](y)` as pseudo-inverse `X^†`
+*  ŷ is the predictions, `ŷ = X(X^†)y`, we call `X(X^†)` as hat matrix because it puts ^ on y
