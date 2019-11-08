@@ -82,13 +82,13 @@
 
 #### let each row of X be the data and each row of y be the label(in Ɍ)
 *  find `w_lin` such that `2/N(XᵀXw-Xᵀy) = ▽E_in(w) = 0`
-*  if `XᵀX` is invertible, `w_lin = [(XᵀX)^-1](y)`
+*  if `XᵀX` is invertible, `w_lin = [(XᵀX)^-1)Xᵀ](y)`
 *  if `XᵀX` is not invertible, we can use numerical related tools to get the answer 
 
 #### avg Ein Eout expected generalization error
 *  `2(d+1)/N`
 
 #### some terms
-*  we call `[(XᵀX)^-1](y)` as pseudo-inverse `X^†`
+*  we call `(XᵀX)^-1)Xᵀ` as pseudo-inverse `X^†`
 *  ŷ is the predictions, `ŷ = X(X^†)y`, we call `X(X^†)` as hat matrix `H` because it puts ^ on y
 *  `H` project y to ŷ on the span of X columns
