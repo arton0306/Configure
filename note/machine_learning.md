@@ -84,11 +84,16 @@
 *  find `w_lin` such that `2/N(XᵀXw-Xᵀy) = ▽E_in(w) = 0`
 *  if `XᵀX` is invertible, `w_lin = [(XᵀX)^-1)Xᵀ](y)`
 *  if `XᵀX` is not invertible, we can use numerical related tools to get the answer 
-
-#### avg Ein Eout expected generalization error
-*  `2(d+1)/N`
+*  avg Ein Eout expected generalization error : `2(d+1)/N`
+*  linear regression for binary classification
+   *  0/1 error ≤ squared error
+   *  it can be a good initial w for pocket PLA
 
 #### some terms
 *  we call `(XᵀX)^-1)Xᵀ` as pseudo-inverse `X^†`
 *  ŷ is the predictions, `ŷ = X(X^†)y`, we call `X(X^†)` as hat matrix `H` because it puts ^ on y
 *  `H` project y to ŷ on the span of X columns
+
+### logistic regression
+
+*  logistic function: `θ(s) = 1 / [1+e^(-s)]`
