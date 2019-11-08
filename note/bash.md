@@ -7,6 +7,12 @@
 ### built-in
 type `<command>`: show the information about the command containing alias, function, ... and so on
 
+### IO redirection
+*  `my_prog >a 2>b` : redirect stdout to file `a`, and redirect stderr to file `b`
+*  `my_prog >& a` : redirect stdout&stderr to file `a`
+*  `my_prog &> a` : redirect stdout&stderr to file `a`
+*  `my_prog >a 2>a` : error, only redirect stdout fo file `a` and discard stderr
+
 ### xxx
 *  sh -x ./myscript => -x debug( show all command ), or as below
 *  #!/bin/bash -x => debug, 1st line
@@ -19,7 +25,7 @@ type `<command>`: show the information about the command containing alias, funct
 *  crtl+a: move to head
 *  crtl+e: move to end
 
-#### bash for
+### bash for
 * `for i in $(seq -w 00 20); do echo $i; done`
 * `for i in {00..20}; do echo $i; done` (Note that zero-padding for brace expansions was introduced in bash 4)
 
