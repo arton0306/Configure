@@ -5,6 +5,8 @@
 
 ### find/replace
 *  by default `:s` will only apply the substitution to the current line, `:%s` makes it address the whole file.
+*  when searching, `\n` is newline, `\r` is CR (carriage return = Ctrl-M = ^M) [ref][1]
+*  when replacing, `\r` is newline, `\n` is a null byte (0x00). [ref][1]
 
 ### ctags
 *  generate database
@@ -20,3 +22,5 @@
 
 ### others
 * :h jumplist
+
+[1]:  <https://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim>
