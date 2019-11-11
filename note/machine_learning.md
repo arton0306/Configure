@@ -95,5 +95,8 @@
 *  `H` project y to ŷ on the span of X columns
 
 ### logistic regression
-
+*  some people call it soft binary classification because it give a possibility score between [0,1] for a event
+*  even the output of target function f(x) is [0,1], the labels of training data are usually 0 or 1
 *  logistic function: `θ(s) = 1 / [1+e^(-s)]`
+*  cross entropy error: `err(w, x, y) = ln(1 + exp(-ywx))` via a non-trivial math deduction
+*  `▽E_in(w_t) = (1/N)(sum{1~N}(θ[(-y_n)(w_t^T)(x_n)])(-y_n)(x_n))`
