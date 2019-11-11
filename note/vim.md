@@ -3,6 +3,9 @@
 * :source ~/mysession.vim
 *  vim -S ~/mysession.vim
 
+### find/replace
+*  by default `:s` will only apply the substitution to the current line, `:%s` makes it address the whole file.
+
 ### ctags
 *  generate database
 *  vim setting (refer to the other's .vimrc)
