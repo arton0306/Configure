@@ -39,6 +39,7 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
 ### http getter
 *  https://github.com/psf/requests is a very well-designed library comparing to `urllib/urllib2`
 *  note that chrome's developer tool might add extra tags (i.g. tbody) in copied xpath.
+*  note that index of td begins from 1
 
 ##### example code
 
