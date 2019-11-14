@@ -26,6 +26,11 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
 
 # cookbooks
 
+### date time string
+
+    import datetime
+    print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
 ### use argv
 
     import sys
