@@ -5,7 +5,8 @@
 4. search path in $PATH
 
 ### built-in
-type `<command>`: show the information about the command containing alias, function, ... and so on
+type `<command>`: show the information about the command containing alias, function, ... etc
+ulimit: often with `-a`, show user limit for core file size, file size, pipe size, stack size, ... etc
 
 ### IO redirection
 *  `my_prog >a 2>b` : redirect stdout to file `a`, and redirect stderr to file `b`
