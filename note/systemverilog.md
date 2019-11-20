@@ -44,3 +44,7 @@ from <https://stackoverflow.com/questions/2102746/what-do-curly-braces-mean-in-v
 ### simple bit vector type (2017 6.11.1)
 
 refer to the data types that can directly represent a one-dimensional packed array of bits.
+
+### PLI
+
+Verilog PLI(Programming Language Interface )
