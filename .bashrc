@@ -212,7 +212,7 @@ pyenv() {
 #-------------------------------------------
 alias rmcvstmp='rm -f $(find . | grep \.#)'
 # alias rmcvstmp="rm -f **/.#*"
-alias ddd="ddd -background BLACK -foreground GRAY --fontsize 140 --args "
+alias ddd="ddd -background BLACK -foreground GRAY --fontsize 140 "
 
 #-------------------------------------------
 # Code template
