@@ -100,6 +100,8 @@
 *  logistic function: `θ(s) = 1 / [1+e^(-s)]`
 *  cross entropy error: `err(w, x, y) = ln(1 + exp(-ywx))` via a non-trivial math deduction
 *  `▽E_in(w_t) = (1/N)(sum{1~N}(θ[(-y_n)(w_t^T)(x_n)])(-y_n)(x_n))`
+*  fixed learning rate: `w_t+1 = w_t - eta * ▽E_in(w_t)`
+*  professor Lin likes using 0.1126 as the eta
 
 ## terms
 
