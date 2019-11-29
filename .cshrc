@@ -19,6 +19,11 @@ set day=`date +%d`
 # Editor
 setenv EDITOR vim
 
+# disable ctrl+s/q
+# ref: https://unix.stackexchange.com/questions/137842/what-is-the-point-of-ctrl-s
+stty stop ''
+stty start ''
+
 #========================================
 # Prompt Settings
 #========================================
