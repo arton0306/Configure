@@ -66,6 +66,12 @@ if ( -f ~/.local_csh_set_alias.sh ) then
 endif
 
 #========================================
+# bindkey
+#========================================
+bindkey -k up history-search-backward  # PageUp
+bindkey -k down history-search-forward # PageDown
+
+#========================================
 # Old
 #========================================
 # Prompt
