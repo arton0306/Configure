@@ -31,7 +31,7 @@ stty start ''
 # Colors!
 set     red="%{\033[0;31m%}"
 set   green="%{\033[0;32m%}"
-set  yellow="%{\033[1;33m%}"
+set  yellow="%{\033[0;33m%}"
 set    blue="%{\033[1;34m%}"
 set magenta="%{\033[1;35m%}"
 set    cyan="%{\033[1;36m%}"
@@ -39,7 +39,11 @@ set   white="%{\033[0;37m%}"
 set     end="%{\033[0m%}" # This is needed at the end... :(
 
 if ($?tcsh) then
-    set prompt="${magenta}%n@${white}%B%m${blue}[ ! ] ${red}%~ ${end}> "
+    # set prompt="${magenta}%n@${white}%B%m${blue}[ ! ] ${red}%~ ${end}> "
+    # arton@arton-pc[ 123 ] ~/sources/src >
+    set prompt="${yellow} %P ${white}%n${red}@${white}%m${blue} %~ ${end}> "
+    set padhour
+    # 05:08:16 arton@arton-pc ~/build2019g/lec/src >
 else
     set prompt="`hostname`:! `dirs` > "
 endif
