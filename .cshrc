@@ -41,7 +41,7 @@ set     end="%{\033[0m%}" # This is needed at the end... :(
 if ($?tcsh) then
     # set prompt="${magenta}%n@${white}%B%m${blue}[ ! ] ${red}%~ ${end}> "
     # arton@arton-pc[ 123 ] ~/sources/src >
-    set prompt="${yellow} %P ${white}%n${red}@${white}%m${blue} %~ ${end}> "
+    set prompt="${yellow}%P ${white}%n${red}@${white}%m${blue} %~ ${end}> "
     set padhour
     # 05:08:16 arton@arton-pc ~/build2019g/lec/src >
 else
