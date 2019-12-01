@@ -4,7 +4,7 @@
 
     u = x probabitily in bin
     v = x fraction in sample
-    in big sample (N large), v is probably cose to u (within e)
+    in big sample (N large), v is probably close to u (within e)
     P[|v-u|>e] ≤ 2exp(-2Ne^2)
     the statement 'v=u' is probably approximately correct (PAC)
 
