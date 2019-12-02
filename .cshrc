@@ -7,9 +7,10 @@ set savehist=2000
 set filec
 set cdpath=(~)
 set autolist
+set listjobs=long # show more info when ctrl+z to suspend job
+
+# http://linux-sxs.org/housekeeping/lscolors.html
 setenv LS_COLORS 'di=01;32:ln=01;33:or=91:ex=91'
-    # == Details about LS_COLORS ==
-    # http://linux-sxs.org/housekeeping/lscolors.html
 
 # TimeStamp settings
 set year=`date +%Y`
