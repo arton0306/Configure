@@ -44,7 +44,6 @@ if ($?tcsh) then
     # arton@arton-pc[ 123 ] ~/sources/src >
     set prompt="${yellow}%P ${white}%n${red}@${white}%m${blue} %~ ${end}> "
     set padhour
-    # 05:08:16 arton@arton-pc ~/build2019g/lec/src >
 else
     set prompt="`hostname`:! `dirs` > "
 endif
