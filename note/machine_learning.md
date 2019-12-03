@@ -103,6 +103,12 @@
 *  fixed learning rate: `w_t+1 = w_t - eta * ▽E_in(w_t)`
 *  professor Lin likes using 0.1126 as the eta
 
+### causes of overfitting
+1. too much noise (stochastic noise)
+2. the target function is too complex (deterministic noise)
+3. excessive power of model
+4. too less data
+
 ## terms
 
 *  SGD: stochastic gradient decent
