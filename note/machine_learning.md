@@ -14,9 +14,9 @@
 
 #### Basic concepts to build VC bound
 *  a dichotomy: a hypothesis 'limited' to the eyes of `x1, x2, ..., xn`
-   *  |H(x1,x2,...xn)| depends on inputs (x1,x2,...,xn)
-*  growth function: taking max of all possible (x1,x2,...,xn)
-   *  `m_h(N)`: max{x1,x2,...,xn∈X} |H(x1,x2,...xn)|
+   *  `|H(x1,x2,...xn)|` depends on inputs `(x1,x2,...,xn)`
+*  growth function: taking max of all possible `(x1,x2,...,xn)`
+   *  `m_h(N): max{x1,x2,...,xn∈X} |H(x1,x2,...xn)|`
 *  shatter: if one possible set of N inputs whose all dichotomy can be implemented by H, call those N inputs `shattered` by H
 *  breakpoint: minimun number of data that a H can not shatter
 
