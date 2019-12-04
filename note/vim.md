@@ -7,6 +7,8 @@
 *  by default `:s` will only apply the substitution to the current line, `:%s` makes it address the whole file.
 *  when searching, `\n` is newline, `\r` is CR (carriage return = Ctrl-M = ^M) [ref][1]
 *  when replacing, `\r` is newline, `\n` is a null byte (0x00). [ref][1]
+*  `:%sno/search_string/replace_string/g` [ref][2]
+*  `:help /magic`
 
 ### ctags
 *  generate database
@@ -24,3 +26,4 @@
 * :h jumplist
 
 [1]:  <https://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim>
+[2]:  <https://stackoverflow.com/questions/6254820/perform-a-non-regex-search-replace-in-vim>
