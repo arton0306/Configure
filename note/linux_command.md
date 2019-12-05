@@ -9,6 +9,7 @@
 
 ### some shell built-in
 * bash: type
+* csh, tcsh: rehash,unhash,hashstat
 
 ### for user
 * crontab -e : every user can set their own cron jobs
