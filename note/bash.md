@@ -22,12 +22,6 @@
 *  echo -n "abc" => -n print string and keep cursor at the same line
 *  (ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
 
-### cursor move
-*  alt+f: move to next word
-*  alt+b: move to previous word
-*  crtl+a: move to head
-*  crtl+e: move to end
-
 ### bash for
 * `for i in $(seq -w 00 20); do echo $i; done`
 * `for i in {00..20}; do echo $i; done` (Note that zero-padding for brace expansions was introduced in bash 4)
