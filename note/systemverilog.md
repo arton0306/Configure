@@ -48,3 +48,25 @@ refer to the data types that can directly represent a one-dimensional packed arr
 ### PLI
 
 Verilog PLI(Programming Language Interface )
+
+# Cook Book
+
+### function
+
+    function logic[31:0] myfunc(int a, int b); 
+        myfunc = a+b;
+    endfunction
+
+    function logic[31:0] myfunc2(int a, int b); 
+        return a+b;
+    endfunction
+  
+### task
+
+    task mytask(input a, input b); 
+    endtask
+
+    module top(input int a, input int b, output int out);
+        initial 
+            mytask(a,b);
+    endmodule
