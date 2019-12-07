@@ -1,0 +1,8 @@
+## install popular tools
+
+### visual studio code
+
+1. download the zip, extract the app and put into Application
+2. open vscode, press `F1`, type `shell command`, select `Shell command 'code' successfully installed in PATH`
+3. vscode will add a symlink `/usr/local/bin/code` to `/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code`
+
