@@ -169,6 +169,8 @@ mkfile() {
 #-------------------------------------------
 #virtual env
 export PIP_REQUIRE_VIRTUALENV=true
+alias syspipon='export PIP_REQUIRE_VIRTUALENV=true'
+alias syspipoff='export PIP_REQUIRE_VIRTUALENV=false'
 
 # autojump
 if [ -f /usr/share/autojump/autojump.sh ]; then
@@ -201,9 +203,9 @@ fi
 #-------------------------------------------
 pyenv() {
     if [ -z "$1" ]; then
-        ls ~/virtualenv
+        ls ~/.virtualenvs
     else
-        source ~/virtualenv/$1/bin/activate
+        source ~/.virtualenvs/$1/bin/activate
     fi
 }
 
