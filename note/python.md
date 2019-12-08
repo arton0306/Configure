@@ -2,7 +2,7 @@
 
 ### The basic idea of virtualenv
 
-1.  copying python related executables and libs to an assigned folder
+1.  create a simlink .Python to the default/assigned python (bin/python is a specail wrapper I guess)
 2.  setup corresponding environment
 3.  prefix the prompt so the client can know the name of environment
 
@@ -16,10 +16,8 @@ Because the virtual env bases on the folder, we can remove the virtual env by ju
 2.  virtaulenv `dirname`
     *  If you want to assign specific python version (python2.7, python3.7, pypy, etc), use `-p <python bin path>`
     *  In default, the environment will contain the python libs in system. If you do not need these python libs, use `--no-site-packages`
-2.  cd `dirname`
-3.  source `bin/activate`
-4.  ...work here
-5.  use `deactivate` to quit the environment
+3.  source `dirname/bin/activate`
+4.  use `deactivate` to quit the environment
 
 ### Memo
 An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run under virtual env.
