@@ -118,6 +118,10 @@
 4. regularization
 5. validation
 
+#### validation
+*  if we have many model Hs and choose a best g from min(Ein(Hs)), it is easy to get overfitting
+*  we can split the data in hand into D_train and D_valid to overcome the problem
+
 ## terms
 
 *  SGD: stochastic gradient decent
