@@ -120,7 +120,8 @@
 
 #### validation
 *  if we have many model Hs and choose a best g from min(Ein(Hs)), it is easy to get overfitting
-*  we can split the data in hand into D_train and D_valid to overcome the problem
+*  we can split the data in hand into `D_train` and `D_valid` to overcome the problem
+*  in practice, we usually choose g' from `min(E_valid(Hs))`, and re-calc `g*` with all D
 
 ## terms
 
