@@ -22,8 +22,11 @@ setenv EDITOR vim
 
 # disable ctrl+s/q
 # ref: https://unix.stackexchange.com/questions/137842/what-is-the-point-of-ctrl-s
-stty stop ''
-stty start ''
+# https://unix.stackexchange.com/questions/26676/how-to-check-if-a-shell-is-login-interactive-batch
+if($?prompt) then 
+    stty stop ''
+    stty start ''
+endif
 
 #========================================
 # Prompt Settings
