@@ -4,12 +4,17 @@
 3. bash builtin
 4. search path in $PATH
 
-### When Bash is invoked as a Login shell [ref][1]
+### configuration file reading order [ref][1]
+#### when Bash is invoked as a Login shell
 1. Login process calls /etc/profile
 2. /etc/profile calls the scripts in /etc/profile.d/
 3. Login process calls ~/.bash_profile
 4. ~/.bash_profile calls ~/.bashrc
 5. ~/.bashrc calls /etc/bashrc
+#### when bash is invoked as a Non login shell;
+1. Non-login process(shell) calls ~/.bashrc
+2. ~/.bashrc calls /etc/bashrc
+3. /etc/bashrc calls the scripts in /etc/profile.d/
 
 ### built-in
 *  type `<command>`: show the information about the command containing alias, function, ... etc
