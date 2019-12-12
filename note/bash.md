@@ -4,6 +4,13 @@
 3. bash builtin
 4. search path in $PATH
 
+### When Bash is invoked as a Login shell [ref][1]
+1. Login process calls /etc/profile
+2. /etc/profile calls the scripts in /etc/profile.d/
+3. Login process calls ~/.bash_profile
+4. ~/.bash_profile calls ~/.bashrc
+5. ~/.bashrc calls /etc/bashrc
+
 ### built-in
 *  type `<command>`: show the information about the command containing alias, function, ... etc
 *  ulimit
@@ -52,3 +59,6 @@
    *  uppercase words are system default var
    *  lowercase words are user customized var
 10. use "unset" to delete the content of a var
+
+
+[1]:  <http://howtolamp.com/articles/difference-between-login-and-non-login-shell/>
