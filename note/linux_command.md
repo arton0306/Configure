@@ -11,11 +11,18 @@
 * bash: type
 * csh, tcsh: rehash,unhash,hashstat
 
-##### shell cursor move
+#### shell cursor move
 *  alt+f: move to next word
 *  alt+b: move to previous word
 *  crtl+a: move to head
 *  crtl+e: move to end
+
+#### path
+*  `$PATH` and `$path` are both available in `csh`
+   -  the format of `$PATH` is `path1:path2:...:pathn` 
+   -  the format of `$path` is `path1 path2 ... pathn` 
+   -  test this behavior with redhat 6
+*  `bash` only uses `$PATH`
 
 ### for user
 * crontab -e : every user can set their own cron jobs
