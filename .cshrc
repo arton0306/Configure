@@ -69,7 +69,3 @@ if ( -f ~/.local_csh_set_alias.sh ) then
     source ~/.local_csh_set_alias.sh
 endif
 
-#========================================
-# Old
-#========================================
-# Prompt
