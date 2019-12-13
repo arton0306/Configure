@@ -1,44 +1,42 @@
-### bash command execution order
+# bash
+
+## command execution order
 1. relative/absolute path : /bin/ls or ./ls
 2. alias
 3. bash builtin
 4. search path in $PATH
 
-### configuration file reading order [ref][1]
-#### be invoked as a login shell
+## configuration file reading order [ref][1]
+### be invoked as a login shell
 1. Login process calls /etc/profile
 2. /etc/profile calls the scripts in /etc/profile.d/
 3. Login process calls ~/.bash_profile
 4. ~/.bash_profile calls ~/.bashrc
 5. ~/.bashrc calls /etc/bashrc
-#### be invoked as a non login shell;
+### be invoked as a non login shell;
 1. Non-login process(shell) calls ~/.bashrc
 2. ~/.bashrc calls /etc/bashrc
 3. /etc/bashrc calls the scripts in /etc/profile.d/
 
-### built-in
+## built-in
 *  type `<command>`: show the information about the command containing alias, function, ... etc
 *  ulimit
    *  often with `-a` to list user limit containing core file size, file size, pipe size, stack size, ... etc
    *  `ulimit [options] [limit]`
+   *  (the pipe size seems not to be the `pipe buffer size`)
+   *  `k=0; while true; do dd if=/dev/zero bs=1k count=1 2>/dev/null; k=$(($k+1)); echo -en "\r$k KB" 1>&2; done | sleep 999`
 
-### IO redirection
+## IO redirection
 *  `my_prog >a 2>b` : redirect stdout to file `a`, and redirect stderr to file `b`
 *  `my_prog >& a` : redirect stdout&stderr to file `a`
 *  `my_prog &> a` : redirect stdout&stderr to file `a`
 *  `my_prog >a 2>a` : error, only redirect stdout fo file `a` and discard stderr
 
-### xxx
-*  sh -x ./myscript => -x debug( show all command ), or as below
-*  #!/bin/bash -x => debug, 1st line
-*  echo -n "abc" => -n print string and keep cursor at the same line
-*  (ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
-
-### bash for
+## for loop
 * `for i in $(seq -w 00 20); do echo $i; done`
 * `for i in {00..20}; do echo $i; done` (Note that zero-padding for brace expansions was introduced in bash 4)
 
-### testing
+## testing
 *  do concate "[" or "]" with the other char
 *  [ -f ] check is a file
 *  [ -e ] check exsit
@@ -46,7 +44,7 @@
 *  [ ... -o ... ] or
 *  Refs: <https://sites.google.com/site/tiger2000/>
 
-### var
+## var
 1. var and its content are separated by =
    *  myname=arton
 2. there is no space at the 2 ends of =
@@ -65,5 +63,17 @@
    *  lowercase words are user customized var
 10. use "unset" to delete the content of a var
 
+## misc
+*  sh -x ./myscript => -x debug( show all command ), or as below
+*  #!/bin/bash -x => debug, 1st line
+*  (ls -l /usr/bin; ls -l /usr/share) | wc -l => (...) grouping
+
+# csh/tcsh
+
+## common mistakes
+*  `if (! $?im_undef_or_x || $im_undef_or_x == "x") then` If im_undef_or_x is undefined, we will get $im_undef_or_x undefind error. According to the tcsh manual, `If expr (an expression, as described under Expressions) evaluates true, then command is executed.  Variable substitution on command happens early, at the same time it does for the rest of the if command.`.
+
+# popular commands
+*  echo -n "abc" => -n print string and keep cursor at the same line
 
 [1]:  <http://howtolamp.com/articles/difference-between-login-and-non-login-shell/>
