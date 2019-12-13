@@ -39,6 +39,16 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
         """
         print sys.argv
 
+### subprocess (using subprocess.run is recommended >= 3.5)
+
+    import subprocess
+    completed_proc = subprocess.run(['echo', 'More output'], capture_output=True)
+    print(completed_proc.stdout)
+    print(completed_proc.stdout.decode('utf-8'))
+    print(completed_proc.stderr)
+    print(completed_proc.stderr.decode('utf-8'))
+    print(completed_proc)
+
 ### http getter
 *  https://github.com/psf/requests is a very well-designed library comparing to `urllib/urllib2`
 *  note that chrome's developer tool might add extra tags (i.g. tbody) in copied xpath.
