@@ -146,16 +146,12 @@ add_path_tail /sbin
 #-------------------------------------------
 # Custom Functions
 #-------------------------------------------
-go_file_dir() {
-    cd `dirname $1`
-}
-
-canon() {
-    python -c "import os; print(os.path.realpath('$1'))"
+rwhich() {
+    python3 -c "import os; import subprocess; pos = subprocess.run(['which', '$1'], capture_output=True).stdout.decode('utf-8').strip(); print(os.path.realpath(pos))"
 }
 
 rcd() {
-    cd `canon "$1"`
+    cd $(dirname $(rwhich "$1"))
 }
 
 mkfile() {
@@ -220,3 +216,8 @@ alias ddd="ddd -background BLACK -foreground GRAY --fontsize 140 "
 # Code template
 #-------------------------------------------
 # (empty)
+
+# Setting PATH for Python 3.8
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
