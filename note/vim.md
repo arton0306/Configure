@@ -24,6 +24,8 @@
 
 ### others
 * :h jumplist
+* `vim -q <(grep -rn --include="*.cpp" mystring)` [ref][3]
 
 [1]:  <https://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim>
 [2]:  <https://stackoverflow.com/questions/6254820/perform-a-non-regex-search-replace-in-vim>
+[3]:  <https://stackoverflow.com/questions/49152029/grep-for-string-and-open-at-the-corresponding-line>
