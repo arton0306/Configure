@@ -6,6 +6,7 @@
 * ulimit : user limit ( -a to list all limit info ), 0 means unlimited
 * stty -a : ( setting tty ) list hotkey and tty info
 * lsb_release
+* `quota -s`, `du -sh *`
 
 ### some shell built-in
 * bash: type
