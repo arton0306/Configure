@@ -42,6 +42,8 @@
 *  [ -e ] check exsit
 *  [ ... -a ... ] and
 *  [ ... -o ... ] or
+*  [ -d "xxxfolder" ] check if xxxfolder exists
+*  [ ! -d "xxxfolder" ] check if xxxfolder does not exist
 *  Refs: <https://sites.google.com/site/tiger2000/>
 
 ## var
