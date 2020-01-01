@@ -65,6 +65,10 @@
 * %! xxd      hex mode
 * %! xxd -r   back to normal mode
 
+### cp
+* copy all contents in a source folder to a existed target folder: `mkdir /home/<new_user>; cp -r /etc/skel/. /home/<new_user>`
+* https://superuser.com/questions/61611/how-to-copy-with-cp-to-include-hidden-files-and-hidden-directories-and-their-con
+
 ### grep
 * -s diable the msg "No such file or directory"
 * -I skip binary
