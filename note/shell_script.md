@@ -75,6 +75,9 @@
 ## common mistakes
 *  `if (! $?im_undef_or_x || $im_undef_or_x == "x") then` If im_undef_or_x is undefined, we will get $im_undef_or_x undefind error. According to the tcsh manual, `If expr (an expression, as described under Expressions) evaluates true, then command is executed.  Variable substitution on command happens early, at the same time it does for the rest of the if command.`.
 
+## using bash function, alias, commands, etc
+*  i.g. `bash -i -c "gt"`
+
 # popular commands
 *  echo -n "abc" => -n print string and keep cursor at the same line
 
