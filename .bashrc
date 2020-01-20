@@ -154,6 +154,14 @@ rcd() {
     cd $(dirname $(rwhich "$1"))
 }
 
+canon() {
+    python -c "import os; print(os.path.realpath('$1'))"
+}
+
+rcd_old() {
+    cd `canon "$1"`
+}
+
 mkfile() {
     for file_name in "$@"; do
         mkdir -p $(dirname "$file_name") && touch "$file_name" 
