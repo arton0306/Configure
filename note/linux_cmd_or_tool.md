@@ -89,9 +89,13 @@
 * https://unix.stackexchange.com/questions/94357/find-out-current-working-directory-of-a-running-process
 * pwdx `pid`
 
+### tmux
+* resolve re-size window issue: `tmux attach -d -t <session name>`
+
 ### service
 * sudo service apache2 start
 
 ### sun studio analyzer
 * collect -p 1.0 my_executable_file
 * analyzer
+
