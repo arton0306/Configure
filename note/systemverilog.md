@@ -49,6 +49,10 @@ refer to the data types that can directly represent a one-dimensional packed arr
 
 Verilog PLI(Programming Language Interface )
 
+### ANCI style module header / non-ANCI style module header (2017 23.2.1)
+*   The non-ANCI style separates the definition of the module header from the declarations of the
+module ports and internal data. i.g. `module mymod(a,b,c); ...`
+
 # Cook Book
 
 ### function
