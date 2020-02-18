@@ -84,6 +84,7 @@
 ### xargs
 * find -iname '*.a' | xargs -i ls -l {}  | grep service
 * cat files_to_cp | xargs -i -t /bin/bash -c cp -r {} .
+* find -iname 'script*" | xargs -0 grep -i "arton_debug"
 
 ### find working dir of a process
 * https://unix.stackexchange.com/questions/94357/find-out-current-working-directory-of-a-running-process
