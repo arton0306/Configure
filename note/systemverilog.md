@@ -1,8 +1,23 @@
-# integer
+# type
+
+## net type (2017 6.7)
+*  supply0 | supply1 | tri | triand | trior | trireg | tri0 | tri1 | uwire | wire | wand | wor
+*  If a data type is not specified in the net declaration or if only a range and/or signing is specified, then the data
+type of the net is implicitly declared as logic.
+*  A valid data type for a net shall be one of the following:
+   *  A 4-state integral type, including a packed array or packed structure.
+   *  A fixed-size unpacked array or unpacked structure, where each element has a valid data type for a net.
+*  The default initialization value for a net shall be the value z.
+
+## integer
 
 ### signed/unsigned
 *  default signed: byte, shortint, int, integer, longint
 *  default unsigned: time, bit, reg, logic
+
+### 2-state / 4-state (2017 6.11)
+*  2-state: bit, byte, shortint, int, longint
+*  4-state: logic, reg, integer, time
 
 ### default value
 *  4-state integral: 'X
