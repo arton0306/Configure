@@ -18,6 +18,7 @@ type of the net is implicitly declared as logic.
 ### 2-state / 4-state (2017 6.11)
 *  2-state: bit, byte, shortint, int, longint
 *  4-state: logic, reg, integer, time
+*  When a 4-state value is automatically converted to a 2-state value, any unknown or high-impedance bits shall be converted to zeros. (2017 6.11.2)
 
 ### default value
 *  4-state integral: 'X
