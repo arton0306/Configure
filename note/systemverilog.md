@@ -57,6 +57,17 @@ from <https://stackoverflow.com/questions/2102746/what-do-curly-braces-mean-in-v
     output [31:0] result; // 32-bit output
     assign result = {{16{a[15]}}, {a[15:0]}};
 
+### assignment patterns (2017 10.9)
+
+Assignment patterns are used for assignments to describe patterns of assignments to structure fields and
+array elements.
+
+	var int A[N] = '{default:1};
+	var integer i = '{31:1, 23:1, 15:1, 8:1, default:0};
+	typedef struct {real r, th;} C;
+	var C x = '{th:PI/2.0, r:1.0};
+	var real y [0:1] = '{0.0, 1.1}, z [0:9] = '{default: 3.1416};
+
 ### simple bit vector type (2017 6.11.1)
 
 refer to the data types that can directly represent a one-dimensional packed array of bits.
