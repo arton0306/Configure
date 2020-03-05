@@ -62,11 +62,15 @@ from <https://stackoverflow.com/questions/2102746/what-do-curly-braces-mean-in-v
 Assignment patterns are used for assignments to describe patterns of assignments to structure fields and
 array elements.
 
-	var int A[N] = '{default:1};
-	var integer i = '{31:1, 23:1, 15:1, 8:1, default:0};
-	typedef struct {real r, th;} C;
-	var C x = '{th:PI/2.0, r:1.0};
-	var real y [0:1] = '{0.0, 1.1}, z [0:9] = '{default: 3.1416};
+    var int A[N] = '{default:1};
+    var integer i = '{31:1, 23:1, 15:1, 8:1, default:0};
+    typedef struct {real r, th;} C;
+    var C x = '{th:PI/2.0, r:1.0};
+    var real y [0:1] = '{0.0, 1.1}, z [0:9] = '{default: 3.1416};
+    
+    var int B[4] = '{a, b, c, d};
+    var C y = '{1.0, PI/2.0};
+    '{a, b, c, d} = B;
 
 ### simple bit vector type (2017 6.11.1)
 
