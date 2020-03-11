@@ -85,6 +85,19 @@ Verilog PLI(Programming Language Interface )
 module ports and internal data. i.g. `module mymod(a,b,c); ...`
 *   The syntax is similiar the pre-ANCI(K&R) style of function definition, which is obsolete in C language.
 
+### concurrent assertion / immediate assertion
+*   immediate assertion: assert ...
+*   concurrent assertion: assert property ...
+
+#### an example of immediate assertion
+    always @(posedge clk)
+        if (state == REQ)
+            assert (req1 || req2);
+            else begin
+                t = $time;
+                #5 $error("assert failed at time %0t",t);
+            end
+
 # Cook Book
 
 ### function
