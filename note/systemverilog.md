@@ -13,6 +13,12 @@ type of the net is implicitly declared as logic. (1800-2017 6.7.1 page 98)
    *  A fixed-size unpacked array or unpacked structure, where each element has a valid data type for a net.
 *  The default initialization value for a net shall be the value z. (1800-2017 6.7.1 page 98)
 
+## var types
+*  One form of variable declaration consists of a data type followed by one or more instances. (1800-2017 6.8 page 101)
+*  Another form of variable declaration begins with the keyword var. The data type is optional in this case. If
+a data type is not specified or if only a range and/or signing is specified, then the data type is implicitly
+declared as logic. (1800-2017 6.8 page 101)
+
 ## integer
 
 ### signed/unsigned
