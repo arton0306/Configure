@@ -8,10 +8,10 @@ be procedurally assigned. If a net on one side of a port is driven by a variable
 assignment is implied. (1800-2017 6.5 page 85)
 *  If a data type is not specified in the net declaration or if only a range and/or signing is specified, then the data
 type of the net is implicitly declared as logic. (1800-2017 6.7.1 page 98)
-*  A valid data type for a net shall be one of the following:
+*  A valid data type for a net shall be one of the following: (1800-2017 6.7.1 page 98)
    *  A 4-state integral type, including a packed array or packed structure.
    *  A fixed-size unpacked array or unpacked structure, where each element has a valid data type for a net.
-*  The default initialization value for a net shall be the value z.
+*  The default initialization value for a net shall be the value z. (1800-2017 6.7.1 page 98)
 
 ## integer
 
@@ -27,7 +27,7 @@ type of the net is implicitly declared as logic. (1800-2017 6.7.1 page 98)
 ### default value
 *  4-state integral: 'X
 *  2-state integral: '0
-*  The default initialization value for a net shall be the value z. The trireg net is an exception. The trireg net shall default to the value x. (1800-2017 page 98)
+*  The default initialization value for a net shall be the value z. The trireg net is an exception. The trireg net shall default to the value x. (1800-2017 6.7.1 page 98)
 
 ### integer literal constants (2017 5.7.1)
 *  1st form: simple decimal number
