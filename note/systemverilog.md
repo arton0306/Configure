@@ -1,9 +1,13 @@
-# type
+# data types (1800-2017 chapter 6)
 
-## net type (2017 6.7)
-*  supply0 | supply1 | tri | triand | trior | trireg | tri0 | tri1 | uwire | wire | wand | wor
+## net types
+*  net types: supply0 | supply1 | tri | triand | trior | trireg | tri0 | tri1 | uwire | wire | wand | wor
+*  A net can be written by one or more continuous assignments, by primitive outputs, or through module ports.
+The resultant value of multiple drivers is determined by the resolution function of the net type. A net cannot
+be procedurally assigned. If a net on one side of a port is driven by a variable on the other side, a continuous
+assignment is implied. (1800-2017 6.5 page 85)
 *  If a data type is not specified in the net declaration or if only a range and/or signing is specified, then the data
-type of the net is implicitly declared as logic.
+type of the net is implicitly declared as logic. (1800-2017 6.7.1 page 98)
 *  A valid data type for a net shall be one of the following:
    *  A 4-state integral type, including a packed array or packed structure.
    *  A fixed-size unpacked array or unpacked structure, where each element has a valid data type for a net.
