@@ -23,7 +23,7 @@ type of the net is implicitly declared as logic.
 ### default value
 *  4-state integral: 'X
 *  2-state integral: '0
-*  The default initialization value for a net shall be the value z. (1800-2017 page 98)
+*  The default initialization value for a net shall be the value z. The trireg net is an exception. The trireg net shall default to the value x. (1800-2017 page 98)
 
 ### integer literal constants (2017 5.7.1)
 *  1st form: simple decimal number
