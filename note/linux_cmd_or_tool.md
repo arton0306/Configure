@@ -11,6 +11,10 @@
 ### some shell built-in
 * bash: type
 * csh, tcsh: rehash,unhash,hashstat
+* bash/csh/tcsh support: temporarily disable an alias
+   -  https://www.cyberciti.biz/faq/bash-shell-temporarily-disable-an-alias/
+   -  \cp
+   -  /bin/cp
 
 #### shell cursor move
 *  alt+f: move to next word
