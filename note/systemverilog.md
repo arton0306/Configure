@@ -87,6 +87,9 @@ array elements.
 
 refer to the data types that can directly represent a one-dimensional packed array of bits.
 
+### DUT
+The semiconductor device being tested is often called the DUT(Device Under Test). It is also sometimes called a UUT(Unit Under Test).
+
 ### PLI
 
 Verilog PLI(Programming Language Interface )
