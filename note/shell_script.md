@@ -1,3 +1,8 @@
+# common
+
+## long alias
+*  suffix '//' in each line [ref][2]
+
 # bash
 
 ## command execution order
@@ -82,3 +87,4 @@
 *  echo -n "abc" => -n print string and keep cursor at the same line
 
 [1]:  <http://howtolamp.com/articles/difference-between-login-and-non-login-shell/>
+[2]:  <https://home.adelphi.edu/sbloch/class/archive/271/fall2005/notes/aliases.html>
