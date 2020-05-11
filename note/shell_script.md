@@ -1,7 +1,7 @@
 # common
 
 ## long alias
-*  suffix '//' in each line [ref][2]
+*  add '//' in the end of each line [ref][2]
 
 # bash
 
