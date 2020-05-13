@@ -1,3 +1,4 @@
+%{
 #include <iostream>
 
 #ifdef NO_LIB_Y
