@@ -1,10 +1,19 @@
 %{
 #include <iostream>
 
-extern "C" {
-    int yylex(void);
-    void yyerror(const char *);
-}
+#ifdef NO_LIB_Y
+    extern "C" {
+        int yylex(void);
+        void yyerror(const char *msg) {
+            std::cout << "[error msg]: " << msg << std::endl;
+        }
+    }
+#else
+    extern "C" {
+        int yylex(void);
+        void yyerror(const char *);
+    }
+#endif
 
 double vbltable[26];
 %}

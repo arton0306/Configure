@@ -4,6 +4,10 @@ a:
 	lex -o lex.yy.cpp lex-a.l
 	yacc -o y.tab.cpp -d yacc-a.y
 	g++ -o calc lex.yy.cpp y.tab.cpp -ll
+a2:
+	lex -o lex.yy.cpp lex-a.l
+	yacc -o y.tab.cpp -d yacc-a.y
+	g++ -o calc lex.yy.cpp y.tab.cpp -ll -DNO_LIB_Y
 b:
 	lex -o lex.yy.cpp lex-b.l
 	yacc -o y.tab.cpp -d yacc-b.y

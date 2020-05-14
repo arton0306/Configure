@@ -1,5 +1,5 @@
 %{
-#include "y.tab.hpp"
+#include "y.tab.h"
 #include <math.h>
 extern double vbltable[26];
 
