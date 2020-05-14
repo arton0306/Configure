@@ -1,15 +1,22 @@
 # https://resources.oreilly.com/examples/9781565920002/blob/master/ch3-03.l
 # https://resources.oreilly.com/examples/9781565920002/blob/master/ch3-03.y
 a:
-        lex -o lex.yy.cpp lex-a.l
-        yacc -o y.tab.cpp -d yacc-a.y
-        g++ -o calc lex.yy.cpp y.tab.cpp -ll
-
+	lex -o lex.yy.cpp lex-a.l
+	yacc -o y.tab.cpp -d yacc-a.y
+	g++ -o calc lex.yy.cpp y.tab.cpp -ll
 b:
-        lex -o lex.yy.cpp lex-b.l
-        yacc -o y.tab.cpp -d yacc-b.y
-        g++ -o rrconflict lex.yy.cpp y.tab.cpp -ll
+	lex -o lex.yy.cpp lex-b.l
+	yacc -o y.tab.cpp -d yacc-b.y
+	g++ -o rrconflict lex.yy.cpp y.tab.cpp -ll
 b2:
-        lex -o lex.yy.cpp lex-b.l
-        yacc -o y.tab.cpp -d yacc-b.y
-        g++ -o rrconflict lex.yy.cpp y.tab.cpp -ll -DNO_LIB_Y
+	lex -o lex.yy.cpp lex-b.l
+	yacc -o y.tab.cpp -d yacc-b.y
+	g++ -o rrconflict lex.yy.cpp y.tab.cpp -ll -DNO_LIB_Y
+c:
+	lex -o lex.yy.cpp lex-c.l
+	yacc -o y.tab.cpp -d yacc-c.y
+	g++ -o c lex.yy.cpp y.tab.cpp -ll
+c2:
+	lex -o lex.yy.cpp lex-c.l
+	yacc -o y.tab.cpp -d yacc-c.y
+	g++ -o c lex.yy.cpp y.tab.cpp -ll -DNO_LIB_Y
