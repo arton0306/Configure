@@ -3,6 +3,10 @@
 #include <cstdio>
 #include <cstdlib>
 
+#ifdef EMBED_YYLEX
+    #include <cctype>
+#endif
+
 #ifdef NO_LIB_Y
     extern "C" {
         int yylex(void);
@@ -44,6 +48,27 @@ exp:
     ;
 
 %%
+
+#ifdef EMBED_YYLEX
+    int yylex (void)
+    {
+        int c = getchar ();
+        while (c == ' ' || c == '\t') {
+            c = getchar ();
+        }
+        if (c == '.' || isdigit (c)) {
+            ungetc (c, stdin);
+            scanf ("%lf", &yylval);
+            return NUMBER;
+        }
+        else if (c == EOF) {
+            return 0;
+            // return YYEOF;
+        } else {
+            return c;
+        }
+    }
+#endif
 
 int main() {
     yyparse();
