@@ -28,3 +28,7 @@ c2:
 c3:
 	yacc -o y.tab.cpp -d yacc-c.y
 	g++ -o c y.tab.cpp -ll -DNO_LIB_Y -DEMBED_YYLEX
+ifelse2:
+	lex -o lex.yy.cpp lex-ifelse.l
+	yacc -o y.tab.cpp -d yacc-ifelse.y
+	g++ -o ifelse lex.yy.cpp y.tab.cpp -ll -DNO_LIB_Y
