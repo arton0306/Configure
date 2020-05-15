@@ -31,8 +31,8 @@ declared as logic. (1800-2017 6.8 page 101)
 *  When a 4-state value is automatically converted to a 2-state value, any unknown or high-impedance bits shall be converted to zeros. (2017 6.11.2)
 
 ### default value
-*  4-state integral: 'X
-*  2-state integral: '0
+*  4-state integral: 'X (1800-2017 page 102) 
+*  2-state integral: '0 (1800-2017 page 102) 
 *  The default initialization value for a net shall be the value z. The trireg net is an exception. The trireg net shall default to the value x. (1800-2017 6.7.1 page 98)
 
 ### integer literal constants (2017 5.7.1)
