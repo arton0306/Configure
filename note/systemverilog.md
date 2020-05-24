@@ -1,3 +1,17 @@
+# module port (1800-2017
+
+# default
+
+## ANSI style port list (1800-2017 page 703)
+*  If the direction is omitted, it shall default to inout.
+*  If the data type is omitted, it shall default to logic, except for interconnect ports, which have no
+data type.
+*  For input and inout ports, the port shall default to a net of default net type. The default net
+type can be changed using the `default_nettype` compiler directive.
+*  If the data type is omitted or declared with the implicit_data_type syntax, the port kind
+shall default to a net of default net type. 
+*  many examples in page 704
+
 # data types (1800-2017 chapter 6)
 
 ## net types
