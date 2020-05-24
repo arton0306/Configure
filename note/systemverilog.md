@@ -1,6 +1,6 @@
-# module port (1800-2017
+# module port
 
-## ANSI style port list (1800-2017 page 703)
+### ANSI style port list (1800-2017 page 703)
 *  If the direction is omitted, it shall default to inout.
 *  If the data type is omitted, it shall default to logic, except for interconnect ports, which have no
 data type.
