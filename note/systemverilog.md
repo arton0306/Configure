@@ -112,8 +112,9 @@ module ports and internal data. i.g. `module mymod(a,b,c); ...`
 *   The syntax is similiar the pre-ANCI(K&R) style of function definition, which is obsolete in C language.
 
 ### concurrent assertion / immediate assertion
-*   immediate assertion: assert ...
-*   concurrent assertion: assert property ...
+*   immediate assertion: `assert ...`
+*   deferred assertion: `assert #0 ...` also name "deferred immediate assertion", one kind of immediate assertion
+*   concurrent assertion: `assert property ...`
 
 #### an example of immediate assertion
     always @(posedge clk)
