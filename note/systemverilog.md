@@ -10,6 +10,10 @@ type can be changed using the `default_nettype` compiler directive.
 shall default to a net of default net type. 
 *  many examples in page 704
 
+# naming
+
+* Implementations may set a limit on the maximum length of identifiers, but the limit shall be at least 1024 characters. If an identifier exceeds the implementation-specific length limit, an error shall be reported. (1800-2017 page 70)
+
 # data types (1800-2017 chapter 6)
 
 ## net types
