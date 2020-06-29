@@ -151,3 +151,13 @@ module ports and internal data. i.g. `module mymod(a,b,c); ...`
         initial 
             mytask(a,b);
     endmodule
+    
+# Confusing Parts
+
+### macro define (1800-2017)
+*   In page 678, it says "The text specified for macro text shall not be split across the following lexical tokens: comments, numbers, string literals, identifiers, keywords, operators". However, in page 680, it provides some mechanism to construct string literals and identifiers.
+*   In page 680, it says macro text can include \`\", \`\\\`\", and \`\`; however, nothing about other usage. Is single backslash(\\) also available? What is the meaning of the code below? (The user might want use macro to construct identifier with leading backslash.)
+
+    define ABC(a) \\\`\`a\`\`_set
+    
+*   test
