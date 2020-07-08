@@ -160,4 +160,16 @@ module ports and internal data. i.g. `module mymod(a,b,c); ...`
 
     \`define ABC(a) \\\`\`a\`\`_set
     
-*   test
+### connecting module instance ports by name (1800-2017)
+In page 712, section 23.3.2.2, it says `Multiple module instance port connections are not allowed.`, for example,
+
+    module test;
+        A ia (.i(a), .i(b));   // illegal connection of input port twice
+    endmodule
+    
+    module A(input i);
+    endmodule
+
+but how about `A ia (.i(), .i(b));` or `A ia (.i(), .i());`
+
+### test
