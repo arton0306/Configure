@@ -41,6 +41,7 @@ declared as logic. (1800-2017 6.8 page 101)
 ### signed/unsigned
 *  default signed: byte, shortint, int, integer, longint
 *  default unsigned: time, bit, reg, logic
+*  Conversions between signed and unsigned values shall keep the same bit representation; only the interpretation changes. (1800-2017, 11.4.3.1)
 
 ### 2-state / 4-state (2017 6.11)
 *  2-state: bit, byte, shortint, int, longint
