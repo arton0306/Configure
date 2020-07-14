@@ -54,8 +54,8 @@ declared as logic. (1800-2017 6.8 page 101)
 
 ### integer literal constants (2017 5.7.1)
 *  1st form: simple decimal number
-   *  i.g. 12345, -56789, 100
-   *  signed
+   *  i.g. 12345, -56789, 100 (page 73)
+   *  signed (page 73: simple decimal numbers without the size and the base format shall be treated as signed integers.)
 *  2nd form: based literal constant
    *  i.g. 5'd12, 4'B1010, 8'hFF, 3'sb111, 'b101
    *  unsigned if not using "s"
@@ -64,7 +64,7 @@ declared as logic. (1800-2017 6.8 page 101)
    *  optional signed "s" can be put before the base specification; it does not affect the bit pattern specified, only its interpretation
    *  a plus or minus operator preceding the size constant is a unary plus or minus operator
    *  if the size of the unsigned number is larger than the size specified for the literal constant, the unsigned number shall be truncated from the left
-   *  if the size is not specified, the number is at least 32 bits
+   *  if the size is not specified, the number is ~~at least~~ 32 bits (1800-2017 Table 11-21, page 283)
    *  special: '0, '1, 'X, 'x, 'Z, 'z, sets all bits to specified value
 *  more example for 2nd form
    *  -4 'sd15 : this is equivalent to -(-4'd 1), or '0001'
@@ -172,4 +172,6 @@ In page 712, section 23.3.2.2, it says `Multiple module instance port connection
 
 but how about `A ia (.i(), .i(b));` or `A ia (.i(), .i());`
 
-### test
+### based literal constant without specifying the size
+*   In 1800-2017 Table 11-21, page 283, it says the bit length is "same as integer".
+*   In 1800-2017 page 73, it says the number of bits that make up an unsized number (which is a simple decimal number or a number with a base specifier but no size specification) shall be at least 32.
