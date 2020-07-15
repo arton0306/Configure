@@ -48,3 +48,7 @@
 * set logging file <filename>
 * set logging overwrite <on/off>
 * show logging
+  
+### screen size (https://sourceware.org/gdb/onlinedocs/gdb/Screen-Size.html)
+* show pagination
+* set pagination <on/off>
