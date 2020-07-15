@@ -42,6 +42,8 @@
 ### tui
 * ctrl+x a : turn on/off tui
 * ctrl+x o : switch focus window
+* info win
+* winheight <win name> [-|+] #line
 
 ### log
 * set logging <on/off>
