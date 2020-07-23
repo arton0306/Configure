@@ -14,3 +14,6 @@
 * git submodule init
 * git submodule update
 * git submodule update --init --recursive
+
+## misc
+* git status -uno: only show staged files (https://stackoverflow.com/questions/10018533/is-it-possible-to-git-status-only-modified-files/10018728)
