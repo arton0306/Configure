@@ -12,3 +12,7 @@
 `echo | gcc -v -x c -E -`
 1. system default path (can be disabled by `-nostdinc`)
 2. `-I`
+
+## MISC
+
+*  check debug build : `objdump --syms <object file> | grep debug`
