@@ -17,3 +17,6 @@ lex4: 4-definition.lex
 lex4b: 4-definition-b.lex
 	lex -o 4b.yy.cpp 4-definition-b.lex
 	g++ 4b.yy.cpp -o lex4b
+
+cleanall:
+	rm -f *.c *.cpp a.out
