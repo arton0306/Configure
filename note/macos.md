@@ -15,7 +15,8 @@
 
 ## hotkeys
 
-* click green window button when `option` pressed : maximize window without fullscreen
+* maximize window without fullscreen : click green window button when `option` pressed
+* move file: copy with `cmd+c`, paste with `cmd+option+v`
 
 ## refences
 
