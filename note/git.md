@@ -18,4 +18,5 @@ If the content of submodule changes while the submodule's head is pointing to th
     +Subproject commit 4152b5c0fda2fa0de467956ed691982a8189953b-dirty
 
 ## misc
-* git status -uno: only show staged files (https://stackoverflow.com/questions/10018533/is-it-possible-to-git-status-only-modified-files/10018728)
+* `git status -uno`: only show staged files (https://stackoverflow.com/questions/10018533/is-it-possible-to-git-status-only-modified-files/10018728)
+* `git merge branch_A`: merge `branch_A` into current branch. After merging, current branch has the information of all changes. Usually, current branch is the main branch, and `branch_A` is to implement/fix something.
