@@ -3,7 +3,8 @@
 * list untracked files: `git ls-files --others --exclude-standard`
 * use difftool: `git difftool myfile`
 
-## submodule refs
+## submodule
+the concept of submodule is that the main repo just store the hash of submodule
 
 ### for creater
 * `git clone --recurse` to clone the main repo and all submodules
