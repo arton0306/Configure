@@ -6,14 +6,10 @@
 ## submodule refs
 
 ### for creater
-* git submodule add git@github.com:josephj/javascript-platform-yui.git static/platform
-* git submodule init ( register submodule into .git/config )
-
-### for others
-* after git clone...
-* git submodule init
-* git submodule update
-* git submodule update --init --recursive
+* `git clone --recurse` to clone the main repo and all submodules
+* `git submodule update --init`
+* `git submodule add <repo url> <folder>`
+* `git submodule init` to register submodule into .git/config from .gitmodules, usually we just use `git submodule update --init`, except you want to change the folder of submodule
 
 ## misc
 * git status -uno: only show staged files (https://stackoverflow.com/questions/10018533/is-it-possible-to-git-status-only-modified-files/10018728)
