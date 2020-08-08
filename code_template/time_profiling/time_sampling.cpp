@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <ctime>
 #include <cstdint>
+#include <chrono>
 
 using namespace std;
 
@@ -18,10 +19,17 @@ int main() {
             }
         }
 
-        if (1) { // test rdtsc
+        if (0) { // test rdtsc
             for (unsigned i = 0; i < sample_count; ++i) {
                 uint64_t temp;
                 temp = __builtin_ia32_rdtsc();
+            }
+        }
+
+        if (1) { // test c++ chrono
+            for (unsigned i = 0; i < sample_count; ++i) {
+                using namespace std::chrono;
+                high_resolution_clock::time_point t1 = high_resolution_clock::now();
             }
         }
     }
