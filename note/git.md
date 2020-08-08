@@ -4,7 +4,7 @@
 * use difftool: `git difftool myfile`
 
 ## submodule
-the concept of submodule is that the main repo just store the hash of submodule
+the concept of submodule is that the main repo just store the hash of submodule's head
 
 ### for creater
 * `git clone --recurse` to clone the main repo and all submodules
