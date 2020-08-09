@@ -16,7 +16,7 @@ void test_rdtsc() {
 
 void test_std_chrono() {
     using namespace std::chrono;
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
+    high_resolution_clock::now();
 }
 
 // assume the total run time can be measured less than 1 sec (do not use too large sample_count)
