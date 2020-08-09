@@ -53,6 +53,7 @@ main(int argc, char *argv[])
     displayClock(CLOCK_MONOTONIC, "CLOCK_MONOTONIC", showRes);
     displayClock(CLOCK_PROCESS_CPUTIME_ID, "CLOCK_PROCESS_CPUTIME_ID", showRes);
 
+    // displayClock(CLOCK_MONOTONIC_RAW, "CLOCK_MONOTONIC_RAW", showRes);
     // displayClock(CLOCK_TAI, "CLOCK_TAI", showRes);
     // displayClock(CLOCK_BOOTTIME, "CLOCK_BOOTTIME", showRes);
 

@@ -35,7 +35,9 @@ int main() {
     }
     clock_gettime(CLOCK_REALTIME, &out2);
 
-    uint64_t elapsed_ns = out2.tv_nsec - out1.tv_nsec;
+    uint64_t elapsed_ns =
+        (out2.tv_sec - out1.tv_sec) * 1000000000 +
+        out2.tv_nsec - out1.tv_nsec;
     printf("%10llu ns for %8llu calls, %6.2lf ns per one call in average\n",
            elapsed_ns,
            sample_count,
