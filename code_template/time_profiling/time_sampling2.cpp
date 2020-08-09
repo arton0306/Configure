@@ -42,7 +42,7 @@ void profiling_wrapper(uint64_t sample_count, void (*func_under_test)(), const c
 }
 
 int main() {
-    const uint64_t sample_count = 100000;
+    const uint64_t sample_count = 1000000;
     profiling_wrapper(sample_count, test_clock_gettime, "[clock_gettime]");
     profiling_wrapper(sample_count, test_rdtsc, "[rdtsc]");
     profiling_wrapper(sample_count, test_std_chrono, "[std chrono]");
