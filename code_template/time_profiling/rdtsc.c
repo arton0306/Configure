@@ -18,7 +18,7 @@ int main()
     printf ("ts2: %lld\n", (val2));
     printf ("diff in Hz: %lld\n", val2-val1);
 
-    const double rdtsc_diff_sec = (val2-val1)/3.4;
+    const double rdtsc_diff_sec = (val2-val1) / 3.408 / 1000000000.0;
     const double clock_gettime_diff_sec =
         t2.tv_sec - t1.tv_sec +
         (t2.tv_nsec - t1.tv_nsec) / 1000000000.0;
