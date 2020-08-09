@@ -24,7 +24,6 @@ void test_std_chrono() {
     high_resolution_clock::now();
 }
 
-// assume the total run time can be measured less than 1 sec (do not use too large sample_count)
 // note that the resolution of clock_gettime might be 1000 ns
 void profiling_wrapper(uint64_t sample_count, void (*func_under_test)(), const char *title) {
     struct timespec out1, out2;
