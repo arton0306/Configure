@@ -17,10 +17,17 @@ int main()
     printf ("ts1: %lld\n", (val1));
     printf ("ts2: %lld\n", (val2));
     printf ("diff in Hz: %lld\n", val2-val1);
-    printf ("diff in sec: %lf\n", (val2-val1)/3.4);
-    printf ("diff clock_gettime in sec: %ld\n",
-            (t2.tv_sec - t1.tv_sec) * 1000000000 +
-            t2.tv_nsec - t1.tv_nsec);
+
+    const double rdtsc_diff_sec = (val2-val1)/3.4;
+    const double clock_gettime_diff_sec =
+        t2.tv_sec - t1.tv_sec +
+        (t2.tv_nsec - t1.tv_nsec) / 1000000000.0;
+
+    printf ("diff in sec: %lf\n", rdtsc_diff_sec);
+    printf ("diff clock_gettime in sec: %lf\n", clock_gettime_diff_sec);
+    if (rdtsc_diff_sec > clock_gettime_diff_sec) {
+        printf ("not expected ... :(\n");
+    }
 
     return 0;
 }
