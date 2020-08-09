@@ -12,10 +12,17 @@ int main() {
     struct timespec out1, out2;
     clock_gettime(CLOCK_REALTIME, &out1);
     {
-        if (0) { // test clock_gettime
+        if (0) { // test clock_gettime real
             for (unsigned i = 0; i < sample_count; ++i) {
                 struct timespec temp;
                 clock_gettime(CLOCK_REALTIME, &temp);
+            }
+        }
+
+        if (1) { // test clock_gettime mono
+            for (unsigned i = 0; i < sample_count; ++i) {
+                struct timespec temp;
+                clock_gettime(CLOCK_MONOTONIC, &temp);
             }
         }
 
@@ -26,7 +33,7 @@ int main() {
             }
         }
 
-        if (1) { // test c++ chrono
+        if (0) { // test c++ chrono
             for (unsigned i = 0; i < sample_count; ++i) {
                 using namespace std::chrono;
                 high_resolution_clock::time_point t1 = high_resolution_clock::now();

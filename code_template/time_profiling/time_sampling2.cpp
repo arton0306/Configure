@@ -5,9 +5,14 @@
 
 using namespace std;
 
-void test_clock_gettime() {
+void test_clock_gettime_realtime() {
     struct timespec temp;
     clock_gettime(CLOCK_REALTIME, &temp);
+}
+
+void test_clock_gettime_monotonic() {
+    struct timespec temp;
+    clock_gettime(CLOCK_MONOTONIC, &temp);
 }
 
 void test_rdtsc() {
@@ -43,7 +48,8 @@ void profiling_wrapper(uint64_t sample_count, void (*func_under_test)(), const c
 
 int main() {
     const uint64_t sample_count = 1000000;
-    profiling_wrapper(sample_count, test_clock_gettime, "[clock_gettime]");
+    profiling_wrapper(sample_count, test_clock_gettime_realtime, "[clock_gettime real]");
+    profiling_wrapper(sample_count, test_clock_gettime_monotonic, "[clock_gettime mono]");
     profiling_wrapper(sample_count, test_rdtsc, "[rdtsc]");
     profiling_wrapper(sample_count, test_std_chrono, "[std chrono]");
 
