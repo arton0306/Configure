@@ -1,4 +1,5 @@
 ### system related
+* sysctl : kernel information query/change
 * hwinfo : a good tool for listing hardware
 * lsusb : list usb device
 * lspci : list pci device
