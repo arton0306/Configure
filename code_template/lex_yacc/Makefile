@@ -30,7 +30,10 @@ c2:
         lex -o lex.yy.cpp lex-c.l
         yacc -o y.tab.cpp -d yacc-c.y
         g++ -o c lex.yy.cpp y.tab.cpp -ll -DNO_LIB_Y
-c2g: #define YYDEBUG
+
+# define YYDEBUG
+# might need to setenv YYDEBUG to 1 (check y.tab.cpp)
+c2g:
         lex -o lex.yy.cpp lex-c.l
         yacc -o y.tab.cpp -d yacc-c.y
         g++ -o c lex.yy.cpp y.tab.cpp -DYYDEBUG -ll -DNO_LIB_Y
