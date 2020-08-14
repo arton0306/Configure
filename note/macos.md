@@ -18,6 +18,10 @@
 * maximize window without fullscreen : click green window button when `option` pressed
 * move file: copy with `cmd+c`, paste with `cmd+option+v`
 
+## homebrew
+
+* install things in `/usr/local/Cellar` and creates the soft links in `/usr/local/bin`
+
 ## refences
 
 [1]:  <https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/>
