@@ -22,6 +22,10 @@
 
 * install things in `/usr/local/Cellar` and creates the soft links in `/usr/local/bin`
 * keg-only: means it was not symlinked into `/usr/local`
+*   an example to add soft links for keg-only
+*   brew install llvm
+*   ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
+*   ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"
 
 ## refences
 
