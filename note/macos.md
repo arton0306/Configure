@@ -21,6 +21,7 @@
 ## homebrew
 
 * install things in `/usr/local/Cellar` and creates the soft links in `/usr/local/bin`
+* keg-only: means it was not symlinked into `/usr/local`
 
 ## refences
 
