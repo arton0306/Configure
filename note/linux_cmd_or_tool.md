@@ -105,3 +105,5 @@
 * collect -p 1.0 my_executable_file
 * analyzer
 
+### pbcopy
+* `cat ~/.ssh/id_rsa.pub | pbcopy`
