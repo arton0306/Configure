@@ -107,3 +107,11 @@
 
 ### pbcopy
 * `cat ~/.ssh/id_rsa.pub | pbcopy`
+
+### command usage convection - some commands need to specify a new name(e.g. new filename, new tagname) and a existed name(e.g. filename, tagname)
+
+####  existed name before new name
+* `ln -s <target> <link_name>`
+
+####  new name before existed name
+* `git tag <tag_name> <commit>`
