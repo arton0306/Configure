@@ -7,6 +7,7 @@
 #-------------------------------------------
 export LANG=zh_TW.UTF-8
 export LC_ALL="en_US.UTF-8"
+export BASH_SILENCE_DEPRECATION_WARNING=1 # used by macos catalina to disable the warning of def zsh
 # export LC_ALL="C"
 
 #-------------------------------------------
