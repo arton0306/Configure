@@ -33,8 +33,10 @@ shopt -s histappend # append to the history file, don't overwrite it
 HISTSIZE=1000 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTFILESIZE=2000
 
-# enable globstar **
-shopt -s globstar
+if ((BASH_VERSINFO[0] >= 4)); then
+    # enable globstar **
+    shopt -s globstar
+fi
 
 # force BASH to check the size of the window after the completion of every command
 # ref: http://forums.gentoo.org/viewtopic-t-112348-highlight-bash+wrap.html
