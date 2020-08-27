@@ -79,6 +79,7 @@
 ### grep
 * -s diable the msg "No such file or directory"
 * -I skip binary
+* `grep -r -i --include \*.cpp --include \*.hpp mystr .`
 
 ### find
 * find -iregex ".*[^(\.c)(\.o)(\.h)]"
