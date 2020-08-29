@@ -1,8 +1,13 @@
+
+# config file read order
+# 1. /etc/gitconfig : for all system
+# 2. ~/.gitconfig : for the user
+# 3. .git/config : for one repo
+
 if ! [ -f $HOME/.gitignore_global ]; then
     ln -s ~/Configure/git_conf/.gitignore_global ~/.gitignore_global
 fi
 
-# set a little configuration
 git config --global user.name "Arton Chang"
 git config --global user.email arton0306@gmail.com
 git config --global color.ui true
