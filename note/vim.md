@@ -27,6 +27,7 @@
 
 ### others
 * :h jumplist
+* `.!<shell_cmd>` can print the output on current position of cursor
 * `vim -q <(grep -rn --include="*.cpp" mystring)` [ref][3]
 * insert tab when expandtab is on: `ctrl + v` tab (in insert mode)
 
