@@ -8,6 +8,7 @@ filetype plugin indent on " smart tab with Makefile
 set history=500 " Sets how many lines of history VIM has to rememberset
 set noswapfile
 set nocompatible
+"set autochdir
 
 if system('uname -s') == "Darwin\n"
     "OSX
