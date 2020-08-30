@@ -25,6 +25,10 @@
 ### register
 *  `:register` to list the contents of all registers
 *  default register for some operation:
+   *  `d` 1
+   *  `y` 0
+   *  `x` -
+   *  the above all also stores in `"`
 
 ### special file
 *  `.viminfo` is used to store the information of last opened files, i.g. the cursor position
