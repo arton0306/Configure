@@ -1,5 +1,14 @@
 ## env
 
+### my usage convention
+*  system preferences => keyboard => Text 把那個智障自動首字大寫取消
+*  system preferences => sound => 調整吵死人的警告音(例如在cli中按左鍵 但游標已在最左邊 這時會發出警告音)
+*  可調整速度的播放軟體 => IINA (不要用MPlayerX有mackeeper病毒)
+*  影片播放軟體(含各種編碼) => SupremePlayer Lite (待查)
+*  掃毒 => malwarebytes
+*  Finder的favorite增加home => 進入finder的preference把home也打勾
+*  Text Editro => Preference => New Document - Format - Plain text  & Open and Save - When Opening a File - Display HTML files as HTML code instead of formatted text
+
 ### path [ref][1]
 
 * for single user: `~/.bash_profile`
