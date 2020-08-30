@@ -141,6 +141,7 @@ noremap <leader>rhex <ESC>:%!xxd -r<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Statusline
+" help statusline
 " help hl-Pmenu
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
