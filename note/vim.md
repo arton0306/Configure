@@ -25,6 +25,7 @@
 ### others
 * :h jumplist
 * `vim -q <(grep -rn --include="*.cpp" mystring)` [ref][3]
+* insert tab when expandtab is on: `ctrl + v` tab (in insert mode)
 
 [1]:  <https://stackoverflow.com/questions/71417/why-is-r-a-newline-for-vim>
 [2]:  <https://stackoverflow.com/questions/6254820/perform-a-non-regex-search-replace-in-vim>
