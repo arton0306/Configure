@@ -22,6 +22,10 @@
 *  https://vimhelp.org/if_cscop.txt.html
 *  `ctrl-\ s` : search all usage for the word on the cursor
 
+### register
+*  `:register` to list the contents of all registers
+*  default register for some operation:
+
 ### special file
 *  `.viminfo` is used to store the information of last opened files, i.g. the cursor position
 
