@@ -22,6 +22,9 @@
 *  https://vimhelp.org/if_cscop.txt.html
 *  `ctrl-\ s` : search all usage for the word on the cursor
 
+### special file
+*  `.viminfo` is used to store the information of last opened files, i.g. the cursor position
+
 ### others
 * :h jumplist
 * `vim -q <(grep -rn --include="*.cpp" mystring)` [ref][3]
