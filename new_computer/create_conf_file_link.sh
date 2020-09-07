@@ -8,7 +8,7 @@ ln -s ~/Configure/.bashrc ~/.bashrc
 ln -s ~/Configure/.tmux.conf ~/.tmux.conf
 
 # screen
-ln -s ~/Configure/.screenrc ~/.screenrc
+# ln -s ~/Configure/.screenrc ~/.screenrc
 
 # vim
 ln -s ~/Configure/vim/.vimrc ~/.vimrc
