@@ -1,0 +1,10 @@
+alias ls='ls --color=auto' # GNU coreutils ls
+alias ll='ls -alF'
+alias rm='rm -i'
+alias jobs='jobs -l'
+alias gt='git tree' # tree is a git alias of 'log --graph --decorate --pretty=oneline --abbrev-commit --all'
+alias gs='git status'
+alias gpush='git push origin master'
+alias gls='git ls-files --others --exclude-standard'
+alias ..='cd ..'
+alias ...='cd ../..'
