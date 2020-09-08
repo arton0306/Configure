@@ -1,8 +1,11 @@
 ## env
 
-### my usage convention
+### change stupid default setting
 *  system preferences => keyboard => Text 把那個智障自動首字大寫取消
 *  system preferences => sound => 調整吵死人的警告音(例如在cli中按左鍵 但游標已在最左邊 這時會發出警告音)
+*  defaults write -g ApplePressAndHoldEnabled -bool false => 讓keyboard按下去時repeat能正常運作
+
+### my usage convention
 *  可調整速度的播放軟體 => IINA (不要用MPlayerX有mackeeper病毒)
 *  影片播放軟體(含各種編碼) => SupremePlayer Lite (待查)
 *  掃毒 => malwarebytes
