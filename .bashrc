@@ -172,6 +172,12 @@ mkfile() {
     done
 }
 
+add_auth() {
+    user="arton"
+    hostname="$1"
+    cat ~/.ssh/id_rsa.pub | ssh "$user@$hostname" 'cat >> .ssh/authorized_keys'
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
