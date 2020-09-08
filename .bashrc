@@ -205,6 +205,7 @@ fi
 
 #-------------------------------------------
 # Load Local Setting (External Source)
+# .sh extension is for coloring in vim as a script
 #-------------------------------------------
 if [ -f $HOME/.local_bashrc.sh ]; then
     . $HOME/.local_bashrc.sh
