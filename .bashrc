@@ -20,14 +20,14 @@ export BASH_SILENCE_DEPRECATION_WARNING=1 # used by macos catalina to disable th
 # PS1="\t-\u@\h:\w\$ "
 
 # 20200908 new color
-red="\033[0;31m"
-green="\033[0;32m"
-yellow="\033[0;33m"
-blue="\033[1;34m"
-magenta="\033[1;35m"
-cyan="\033[1;36m"
-white="\033[0;37m"
-end="\033[0m" # This is needed at the end... :(
+red="\[\033[0;31m\]"
+green="\[\033[0;32m\]"
+yellow="\[\033[0;33m\]"
+blue="\[\033[1;34m\]"
+magenta="\[\033[1;35m\]"
+cyan="\[\033[1;36m\]"
+white="\[\033[0;37m\]"
+end="\[\033[0m\]" # This is needed at the end... :(
 
 PS1="${yellow}\t ${white}\u${red}@${white}\h ${blue}\w ${red}> ${end}"
 
