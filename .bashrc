@@ -206,10 +206,10 @@ fi
 #-------------------------------------------
 # Load Local Setting (External Source)
 #-------------------------------------------
-if [ -f $HOME/.local_bashrc.sh ]; then
-    . $HOME/.local_bashrc.sh
+if [ -f $HOME/.local_bashrc ]; then
+    . $HOME/.local_bashrc
 else
-    touch $HOME/.local_bashrc.sh
+    touch $HOME/.local_bashrc
 fi
 
 #-------------------------------------------
