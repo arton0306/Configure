@@ -105,7 +105,7 @@ if [[ `uname` != 'Darwin' ]]; then
     alias open='xdg-open'
 fi
 
-alias note='vim ~/Configure/note/note'
+alias note='vim ~/note'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias x='dtrx'
