@@ -99,7 +99,7 @@ alias gt='git tree' # tree is a git alias of 'log --graph --decorate --pretty=on
 alias gs='git status'
 alias gpush='git push origin master'
 alias gls='git ls-files --others --exclude-standard'
-alias tmux='TERM=screen-256color tmux'
+# alias tmux='TERM=screen-256color tmux'
 
 if [[ `uname` != 'Darwin' ]]; then
     alias open='xdg-open'
