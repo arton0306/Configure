@@ -14,5 +14,6 @@ git config --global color.ui true
 git config --global core.editor "vim"
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.autocrlf false
+git config --global pull.ff only
 git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 git config --global diff.tool tkdiff
