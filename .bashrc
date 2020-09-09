@@ -198,6 +198,7 @@ alias syspipon='export PIP_REQUIRE_VIRTUALENV=true'
 alias syspipoff='export PIP_REQUIRE_VIRTUALENV=false'
 
 # autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 if [ -f /usr/share/autojump/autojump.sh ]; then
     . /usr/share/autojump/autojump.sh
 fi
