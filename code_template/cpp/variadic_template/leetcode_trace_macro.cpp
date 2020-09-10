@@ -18,8 +18,9 @@ void __f(const char* names, Arg1&& arg1, Args&&... args) {
 }
 
 int main() {
-    int a = 5;
+    int x = 5;
     double pi = 3.14;
-    trace(a,pi);
+    char c = 'z';
+    trace(x,pi,c);
     return 0;
 }
