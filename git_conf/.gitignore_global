@@ -10,3 +10,9 @@
 *.vim
 *.swp
 *.swo
+
+# cmake
+*.cmake
+CMakeCache.txt
+CMakeFiles
+compile_commands.json
