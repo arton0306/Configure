@@ -2,6 +2,7 @@
 * print tree: `git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"`
 * list untracked files: `git ls-files --others --exclude-standard`
 * use difftool: `git difftool myfile`
+* check current config: `git config --list`
 
 ## submodule
 the concept of submodule is that the main repo just store the hash of submodule's head
