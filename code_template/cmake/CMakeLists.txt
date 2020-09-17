@@ -7,4 +7,4 @@ message("COMPILER: generate compile_commands.json")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # add the executable
-add_executable(ArtonTest ArtonTest.cpp)
+add_executable(a.out a.cpp)
