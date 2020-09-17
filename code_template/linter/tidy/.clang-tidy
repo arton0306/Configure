@@ -21,6 +21,10 @@ CheckOptions:
     value:           CamelCase
   - key:             readability-identifier-naming.ConstantMemberCase
     value:           CamelCase
+  - key:             readability-identifier-naming.TemplateParameterCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.TemplateParameterSuffix
+    value:           _T
 
   - key:             readability-identifier-naming.FunctionCase
     value:           camelBack
