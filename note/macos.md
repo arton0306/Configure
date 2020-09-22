@@ -30,6 +30,7 @@
 
 * maximize window without fullscreen : click green window button when `option` pressed
 * move file: copy with `cmd+c`, paste with `cmd+option+v`
+* select a path: `cmd + shift + double click`
 
 ## homebrew
 
