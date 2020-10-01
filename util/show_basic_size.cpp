@@ -1,3 +1,4 @@
+#include <array>
 #include <chrono>
 #include <iostream>
 #include <map>
@@ -18,6 +19,7 @@ int main() {
     cout << "size_t: " << sizeof(size_t) << endl;
     cout << "void*: " << sizeof(void*) << endl;
     cout << "-----" << endl;
+    cout << "array<int,10>: " << sizeof(array<int,10>) << endl;
     cout << "vector<int>: " << sizeof(vector<int>) << endl;
     cout << "vector<bool>: " << sizeof(vector<bool>) << endl;
     cout << "map<int,int>: " << sizeof(map<int,int>) << endl;
