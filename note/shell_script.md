@@ -70,6 +70,12 @@
    *  lowercase words are user customized var
 10. use "unset" to delete the content of a var
 
+## find a function
+https://superuser.com/questions/144772/finding-the-definition-of-a-bash-function
+1. shopt -s extdebug
+2. declare -F foo
+3. shopt -u extdebug
+
 ## misc
 *  sh -x ./myscript => -x debug( show all command ), or as below
 *  #!/bin/bash -x => debug, 1st line
