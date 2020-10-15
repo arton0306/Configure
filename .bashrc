@@ -189,6 +189,11 @@ add_auth() {
     cat ~/.ssh/id_rsa.pub | ssh "$user@$hostname" 'cat >> .ssh/authorized_keys'
 }
 
+add_ssh_agent() {
+    eval $(ssh-agent)
+    ssh-add
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
