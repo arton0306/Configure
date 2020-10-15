@@ -48,6 +48,9 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
     print(completed_proc.stderr)
     print(completed_proc.stderr.decode('utf-8'))
     print(completed_proc)
+    
+    # python 3.7 uses text as a alias for universal_newlines
+    output = subprocess.run("git ls-remote . | grep HEAD | cut -c1-6", shell=True, capture_output=True, text=True).stdout.strip()
 
 ### http getter
 *  https://github.com/psf/requests is a very well-designed library comparing to `urllib/urllib2`
