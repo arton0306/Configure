@@ -29,6 +29,18 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
     import datetime
     print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
+### fstring
+
+    class DirStructure:
+        def __init__(self, base_dir):
+            self.base_dir = os.path.abspath(base_dir)
+            self.code_dir = f"{self.base_dir}/timelinecapital_code"
+            self.release_build_dir = f"{self.base_dir}/release_build"
+            self.debug_build_dir = f"{self.base_dir}/debug_build"
+        def __str__(self):
+            members = "base_dir code_dir release_build_dir debug_build_dir".split()
+            return "\n".join(f"{m:>20} : {getattr(self, m)}" for m in members)
+
 ### use argv
 
     import sys
