@@ -41,6 +41,12 @@ An environment variable `PIP_REQUIRE_VIRTUALENV` is used to check if pip is run 
             members = "base_dir code_dir release_build_dir debug_build_dir".split()
             return "\n".join(f"{m:>20} : {getattr(self, m)}" for m in members)
 
+### logging
+
+    import logging
+    logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(message)s", datefmt="%Y/%m/%d %H:%M:%S", filename='mylog.log')
+    logging.info("hello world")
+
 ### use argv
 
     import sys
