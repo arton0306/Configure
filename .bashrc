@@ -95,7 +95,7 @@ alias makecscope='findcode > cscope.files; cscope -bqu;'
 
 alias update='sudo apt-get update'
 alias install='sudo apt-get install'
-alias gt='git tree' # tree is a git alias of 'log --graph --decorate --pretty=oneline --abbrev-commit --all'
+alias gt='git tree' # tree is a git alias of 'git log --graph --decorate --pretty=oneline --abbrev-commit --all'
 alias gs='git status'
 alias gpush='git push origin master'
 alias gls='git ls-files --others --exclude-standard'
