@@ -194,6 +194,15 @@ add_ssh_agent() {
     ssh-add
 }
 
+cp_and_mkdir() {
+    # usage cp_and_mkdir a/b/c/d/my.txt dest_path
+    new_dir="$2/`dirname $1`"
+    echo "create dir: $new_dir"
+    mkdir -p $new_dir
+    echo "copy $1 to $new_dir/"
+    cp $1 "$new_dir"
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
