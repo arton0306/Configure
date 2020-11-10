@@ -54,3 +54,7 @@
 ### screen size (https://sourceware.org/gdb/onlinedocs/gdb/Screen-Size.html)
 * show pagination
 * set pagination <on/off>
+
+### remote debug
+* server side: gdbserver :1234 ./mybinary
+* client side in gdb: target remote remotehostname:1234
