@@ -5,6 +5,7 @@
 *  system preferences => sound => 調整吵死人的警告音(例如在cli中按左鍵，但游標已在最左邊，這時會發出警告音，注意如果把聲音全關掉，警告方式會變成螢幕閃一下…，所以我都調到只剩一點點聽不到的音量)
 *  defaults write -g ApplePressAndHoldEnabled -bool false => 讓keyboard按下去時repeat能正常運作
 *  Terminal 的 home 和 end 居然是 scroll 到最前/後面，到 terminal 的 preference 中選好一個 profile，然後改它的 keyboard 增加一個 home 和 end 的 key ，對應到的 action 分別為 `\033OH` `\033OF`
+*  Finder => View => Customized Toolbar => drag `Path` to tool bar
 
 ### my usage convention
 *  可調整速度的播放軟體 => IINA (不要用MPlayerX有mackeeper病毒)
