@@ -50,8 +50,6 @@ set ve=all " let ctrl + v be more convenient and powerful
 
 set ttymouse=xterm2                     " For using mouse=a with screen
 
-set fileencodings=utf-8,gb2312,utf16le
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tab related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
