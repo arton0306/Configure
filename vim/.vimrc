@@ -132,6 +132,9 @@ noremap <leader>note <ESC>:tabe ~/Configure/note/note<CR>
 noremap <leader>hex <ESC>:%!xxd<CR>
 noremap <leader>rhex <ESC>:%!xxd -r<CR>
 
+" gbk
+noremap <leader>gbk <ESC>:e ++enc=gbk<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins Key Mapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
