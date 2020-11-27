@@ -157,6 +157,7 @@ add_path_tail /usr/bin
 add_path_tail /usr/sbin
 add_path_tail /bin
 add_path_tail /sbin
+add_path_tail ~/Configure/util
 
 #-------------------------------------------
 # Custom Functions
