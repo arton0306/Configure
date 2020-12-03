@@ -82,10 +82,10 @@
 * `grep -r -i --include \*.cpp --include \*.hpp mystr .`
 
 ### find
-* find -iregex ".*[^(\.c)(\.o)(\.h)]"
-* find . -maxdepth 1 -type f -name ".*" -exec grep set {} \;
-* find . -name "*.cpp" -exec grep -n --color=auto "Slice" {} \; -print
-* find . \( -name "*.cpp" -o -name "*.h" \) -a ! -name "guSlice.*" | sort
+* `find -iregex ".*[^(\.c)(\.o)(\.h)]"`
+* `find . -maxdepth 1 -type f -name ".*" -exec grep set {} \;`
+* `find . -name "*.cpp" -exec grep -n --color=auto "Slice" {} \; -print`
+* `find . \( -name "*.cpp" -o -name "*.h" \) -a ! -name "guSlice.*" | sort`
 
 ### xargs
 * find -iname '*.a' | xargs -i ls -l {}  | grep service
