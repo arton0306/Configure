@@ -43,6 +43,10 @@
 *   `ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"`
 *   `ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"`
 
-## refences
+## misc
+
+* a screen capture tool (gif/apng/webm): https://getkap.co/
+
+## references
 
 [1]:  <https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/>
