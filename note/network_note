@@ -52,3 +52,8 @@ tcpdump
 ====================================
 # to check any packet sent to port 50091 in lo(localhost)
 tcpdump -i lo 'port 50091'
+
+====================================
+netstat
+====================================
+watch -d -n 0.2 "netstat -s -u"
