@@ -12,6 +12,7 @@ ifconfig (mac,linux) / ipconfig (windows): show interfaces
 netstat: show socket connection
 arp: Address Resolution Protocol
 ls /sys/class/net
+ip addr
 
 ====================================
 /etc/network/interfaces
@@ -45,3 +46,9 @@ iface enp0s8 inet static
 /etc/sysctl.conf
 ====================================
 net.ipv4_ip_forward
+
+====================================
+tcpdump
+====================================
+# to check any packet sent to port 50091 in lo(localhost)
+tcpdump -i lo 'port 50091'
