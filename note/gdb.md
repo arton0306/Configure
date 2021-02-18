@@ -23,6 +23,7 @@
 * set variable i = 10 => set variable i to 10, no need to modify source
 * break ... if ...
 * c/s/n <count>
+* catch throw
 
 ### gdb process interaction command
 * generate-core-file => generate core dump
