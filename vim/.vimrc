@@ -51,6 +51,13 @@ set ve=all " let ctrl + v be more convenient and powerful
 set ttymouse=xterm2                     " For using mouse=a with screen
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" for WSL 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fix starting with REPLACE mode in WSL
+" ref: https://stackoverflow.com/questions/51388353/vim-changes-into-replace-mode-on-startup
+nnoremap <esc>^[ <esc>^[
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tab related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set noexpandtab
