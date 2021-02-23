@@ -30,6 +30,8 @@
    *  `ulimit [options] [limit]`
    *  (the pipe size seems not to be the `pipe buffer size`)
    *  `k=0; while true; do dd if=/dev/zero bs=1k count=1 2>/dev/null; k=$(($k+1)); echo -en "\r$k KB" 1>&2; done | sleep 999`
+*  `set -e` to exit whenever a command fails
+*  `set -x` to trace each command executes
 
 ## IO redirection
 *  `my_prog >a 2>b` : redirect stdout to file `a`, and redirect stderr to file `b`
