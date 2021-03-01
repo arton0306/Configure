@@ -19,7 +19,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1 # used by macos catalina to disable th
 # non-color
 # PS1="\t-\u@\h:\w\$ "
 
-# 20200908 new color
 red="\[\033[0;31m\]"
 green="\[\033[0;32m\]"
 yellow="\[\033[0;33m\]"
@@ -27,9 +26,15 @@ blue="\[\033[1;34m\]"
 magenta="\[\033[1;35m\]"
 cyan="\[\033[1;36m\]"
 white="\[\033[0;37m\]"
-end="\[\033[0m\]" # This is needed at the end... :(
+end="\[\033[0m\]"
 
-PS1="${yellow}\t ${white}\u${red}@${white}\h ${blue}\w ${red}> ${end}"
+rc_tick="\u2714"
+rc_cross="\u274c"
+
+# ref: https://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
+show_rc='$(code=${?##0};echo ${code:+[rc: ${code}]\ })'
+
+PS1="${red}$show_rc${end}${yellow}\t ${white}\u${red}@${white}\h ${blue}\w ${red}> ${end}"
 
 #-------------------------------------------
 # Bash Command Configure
