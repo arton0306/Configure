@@ -23,33 +23,25 @@ syntax on
 set t_Co=256
 
 set guifont=Consolas:h12:cANSI " set font
-
 set nu " show line number
-
 set ai " auto indent
 set si " smart indent
 set wrap " wrap lines
-
 set whichwrap+=<,>,h,l
 set backspace=eol,start,indent " Set backspace config
-
 set ruler " Always show current position
 set showmode " show which mode
-
 set ignorecase "This is needed for turning on smartcase
 set smartcase  "We can also ref ':help /\c' or ':help \/C'
-
 set hlsearch "Highlight search things
 set wrapscan
-
 set noerrorbells " no sound on errors
 set novisualbell
-
 set cpoptions+=$ " add a $ sign to the end of the change destination
-
 set ve=all " let ctrl + v be more convenient and powerful
-
 set ttymouse=xterm2                     " For using mouse=a with screen
+set scrolloff=12
+set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for WSL 
