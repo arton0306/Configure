@@ -27,8 +27,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1 # used by macos catalina to disable th
 PROMPT_COMMAND=__prompt_command
 __prompt_command() {
     local rc="$?"
-    PS1=""
-
     local red="\[\033[0;31m\]"
     local green="\[\033[0;32m\]"
     local yellow="\[\033[0;33m\]"
@@ -36,7 +34,8 @@ __prompt_command() {
     local white="\[\033[0;37m\]"
     local end="\[\033[0m\]"
 
-    if [ $rc != 0 ]; then
+    PS1=""
+    if [ "$rc" != 0 ]; then
         PS1+="${red}[rc: $rc]${end}"
     else
         PS1+="${green}[rc: 0]${end}"
