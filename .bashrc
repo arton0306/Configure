@@ -14,35 +14,41 @@ export BASH_SILENCE_DEPRECATION_WARNING=1 # used by macos catalina to disable th
 # Prompt
 #-------------------------------------------
 [ -z "$PS1" ] && return        # If not running interactively, don't do anything
-
 # color
 # PS1="\[\033[35m\]\t\[\033[m\] \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h \[\033[33;1m\]\w\[\033[m\] > "
 # non-color
 # PS1="\t-\u@\h:\w\$ "
 
-# show_rc='$(code=${?##0};echo ${code:+[rc: ${code}]\ })'
-# PS1="${red}$show_rc${end}${yellow}\t ${white}\u${red}@${white}\h ${blue}\w ${red}> ${end}"
+red="\[\033[0;31m\]"
+green="\[\033[0;32m\]"
+yellow="\[\033[0;33m\]"
+blue="\[\033[1;34m\]"
+magenta="\[\033[1;35m\]"
+cyan="\[\033[1;36m\]"
+white="\[\033[0;37m\]"
+end="\[\033[0m\]"
+
+GREEN="\033[0;32m"
+RED="\033[0;31m"
+END="\033[0m"
+
+rc_tick="\u2714"
+rc_cross="\u274c"
+
+# ref: https://superuser.com/questions/301353/escape-non-printing-characters-in-a-function-for-a-bash-prompt/301355#301355
+get_rc_str() {
+    local rc="$?"
+    if [[ "$rc" == 0 ]]; then
+        printf "\001${GREEN}\002[rc:$rc]\001${END}\002"
+    else
+        printf "\001${RED}\002[rc:$rc]\001${END}\002"
+    fi
+}
+PS1="\$(get_rc_str) ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w ${red}> ${end}"
 
 # ref: https://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
-PROMPT_COMMAND=__prompt_command
-__prompt_command() {
-    local rc="$?"
-    local red="\[\033[0;31m\]"
-    local green="\[\033[0;32m\]"
-    local yellow="\[\033[0;33m\]"
-    local blue="\[\033[1;34m\]"
-    local white="\[\033[0;37m\]"
-    local end="\[\033[0m\]"
-
-    PS1=""
-    if [ "$rc" != 0 ]; then
-        PS1+="${red}[rc: $rc]${end}"
-    else
-        PS1+="${green}[rc: 0]${end}"
-    fi
-
-    PS1+=" ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w ${red}> ${end}"
-}
+# show_rc='$(code=${?##0};echo ${code:+[rc: ${code}]\ })'
+# PS1="${red}$show_rc${end}${yellow}\t ${white}\u${red}@${white}\h ${blue}\w ${red}> ${end}"
 
 #-------------------------------------------
 # Bash Command Configure
