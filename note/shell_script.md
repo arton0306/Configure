@@ -46,7 +46,8 @@
 * `for i in {00..20}; do echo $i; done` (Note that zero-padding for brace expansions was introduced in bash 4)
 
 ## testing
-*  do concate "[" or "]" with the other char
+*  do not concate "[" or "]" with the other char
+*  [ is a executable, try `which [`
 *  [ -f ] check is a file
 *  [ -e ] check exsit
 *  [ ... -a ... ] and
