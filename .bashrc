@@ -44,7 +44,13 @@ get_rc_str() {
         printf "\001${RED}\002[rc:$rc]\001${END}\002"
     fi
 }
-PS1="\$(get_rc_str) ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w${red}\$(__git_ps1) > ${end}"
+my_git_ps1() {
+    if [ ! -z "`type -t __git_ps1`" ]; then
+        echo "`__git_ps1`"
+    fi
+}
+# PS1="\$(get_rc_str) ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w${red}\$(__git_ps1) > ${end}"
+PS1="\$(get_rc_str) ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w${red}\$(my_git_ps1) > ${end}"
 
 # ref: https://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
 # show_rc='$(code=${?##0};echo ${code:+[rc: ${code}]\ })'
