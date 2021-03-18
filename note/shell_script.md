@@ -38,6 +38,8 @@
 *  `my_prog >& a` : redirect stdout&stderr to file `a`
 *  `my_prog &> a` : redirect stdout&stderr to file `a`
 *  `my_prog >a 2>a` : error, only redirect stdout fo file `a` and discard stderr
+*  `>&1 my_prog` : redirect output to stdout 
+*  `>&2 my_prog` : redirect output to stderr 
 
 ## for loop
 * `for i in $(seq -w 00 20); do echo $i; done`
@@ -77,6 +79,7 @@ https://superuser.com/questions/144772/finding-the-definition-of-a-bash-function
 1. shopt -s extdebug
 2. declare -F foo
 3. shopt -u extdebug
+4. `declare` : list all functions
 
 ## misc
 *  sh -x ./myscript => -x debug( show all command ), or as below
