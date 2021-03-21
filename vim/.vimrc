@@ -335,28 +335,18 @@ map <leader>pybs <ESC>:read ~/Configure/code_template/python/binary_search.py<CR
 map <leader>pymain <ESC>:read ~/Configure/code_template/python/main.py<CR><ESC>0ggdd
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vundle ( https://github.com/gmarik/vundle )
+" Plugins
+" https://github.com/junegunn/vim-plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype off                  " required!
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-
-filetype plugin indent on     " required
-
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" hotkey for plugins
+noremap <leader>nt <ESC>:NERDTree<CR>
