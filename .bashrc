@@ -32,9 +32,6 @@ GREEN="\033[0;32m"
 RED="\033[0;31m"
 END="\033[0m"
 
-rc_tick="\u2714"
-rc_cross="\u274c"
-
 # ref: https://superuser.com/questions/301353/escape-non-printing-characters-in-a-function-for-a-bash-prompt/301355#301355
 get_rc_str() {
     local rc="$?"
@@ -44,7 +41,7 @@ get_rc_str() {
         printf "\001${RED}\002[rc:$rc]\001${END}\002"
     fi
 }
-my_git_ps1() {
+echo_git_ps1_if_exists() {
     if [ ! -z "`type -t __git_ps1`" ]; then
         echo "`__git_ps1`"
     fi
