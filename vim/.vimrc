@@ -43,6 +43,12 @@ set ttymouse=xterm2                     " For using mouse=a with screen
 set scrolloff=12
 set cursorline
 
+if has('gui running')
+    set guifont=DejaVu\ Sans\ Mono\ 11
+endif
+
+set tags=tags;../tags
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for WSL 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -335,48 +341,16 @@ filetype off                  " required!
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-""""" call vundle#begin()
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-""""" Plugin 'VundleVim/Vundle.vim'
-
-""""" Plugin 'rust-lang/rust.vim'
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-""Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-""Plugin 'L9'
-" Git plugin not hosted on GitHub
-""Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-""Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-""Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-""Plugin 'user/L9', {'name': 'newL9'}
-
-if $isYcmOn == "YES"
-    Bundle 'Valloric/YouCompleteMe'
-    let g:ycm_global_ycm_extra_conf = '~/Configure/vim/.ycm_extra_conf.py'
-    noremap <leader>yr             :YcmDiags<CR>
-    noremap <leader>yd             :YcmShowDetailedDiagnostic<CR>
-    noremap <leader>build          :YcmForceCompileAndDiagnostics<CR>
-    noremap <leader>ycmrestart     :YcmRestartServer<CR>
-    noremap <leader>flag           :YcmDebugInfo<CR>
-    noremap <leader>rr             :YcmCompleter GoTo<CR>
-    noremap <leader>tt             :YcmCompleter GoToImprecise<CR>
-    noremap <leader>gg             :YcmCompleter GoToDefinition<CR>
-    noremap <leader>reflag         :YcmCompleter ClearCompilationFlagCache<CR>
-    noremap <leader>type           :YcmCompleter GetType<CR>
-endif
+Plugin 'VundleVim/Vundle.vim'
 
 " All of your Plugins must be added before the following line
-""""" call vundle#end()            " required
+call vundle#end()            " required
+
 filetype plugin indent on     " required
+
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -386,13 +360,3 @@ filetype plugin indent on     " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-set tags=tags;../tags
-
-
-" let g:ycm_server_use_vim_stdout = 1
-" let g:ycm_server_log_level = 'debug'
-
-if has('gui running')
-    set guifont=DejaVu\ Sans\ Mono\ 11
-endif
