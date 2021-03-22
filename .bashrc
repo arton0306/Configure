@@ -47,7 +47,7 @@ echo_git_ps1_if_exists() {
     fi
 }
 # PS1="\$(get_rc_str) ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w${red}\$(__git_ps1) > ${end}"
-PS1="\$(get_rc_str) ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w${red}\$(my_git_ps1) > ${end}"
+PS1="\$(get_rc_str) ${yellow}\t ${white}\u${red}@${white}\h ${blue}\w${red}\$(echo_git_ps1_if_exists) > ${end}"
 
 # ref: https://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
 # show_rc='$(code=${?##0};echo ${code:+[rc: ${code}]\ })'
