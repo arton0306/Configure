@@ -71,7 +71,7 @@ int main() {
     flag = fcntl(client_fd, F_GETFL, 0) | O_NONBLOCK;
     fcntl(client_fd, F_SETFL, flag);
 
-    char *buffer = new char[1024];
+    unsigned char *buffer = new unsigned char[1024];
     while (true) {
         int recv_len = read(client_fd, buffer, 1024);
         if (recv_len < 0) {
@@ -87,6 +87,9 @@ int main() {
         } else {
             const int v = *(int *)buffer;
             printf("recv_len=%d(should be 4) value=%d, send back to client\n", recv_len, v);
+            for (int i = 0; i < recv_len; ++i) {
+                printf("%dth byte:%u\n", i+1, (unsigned int)*(buffer+i));
+            }
             write(client_fd, &v, sizeof(v));
         }
     }
