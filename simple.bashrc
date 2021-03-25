@@ -50,3 +50,8 @@ alias ...='cd ../..'
 alias vim='vim -S ~/personal_utils/arton.vimrc '
 alias gs='git status'
 alias gt='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
+
+#-------------------------------------------
+# Git
+#-------------------------------------------
+git config --global color.ui true
