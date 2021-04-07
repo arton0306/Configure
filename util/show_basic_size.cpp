@@ -1,4 +1,5 @@
 #include <array>
+#include <atomic>
 #include <chrono>
 #include <functional>
 #include <iostream>
@@ -76,6 +77,9 @@ int main() {
     cout << "-----" << endl;
     cout << "mutex: " << sizeof(mutex) << endl;
     cout << "recursive_mutex: " << sizeof(recursive_mutex) << endl;
+    cout << "atomic<bool>: " << sizeof(atomic<bool>) << endl;
+    cout << "atomic<int>: " << sizeof(atomic<int>) << endl;
+    cout << "atomic<double>: " << sizeof(atomic<double>) << endl;
 
     return 0;
 }
