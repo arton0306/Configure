@@ -40,6 +40,7 @@ set novisualbell
 set cpoptions+=$ " add a $ sign to the end of the change destination
 set ve=all " let ctrl + v be more convenient and powerful
 set ttymouse=xterm2                     " For using mouse=a with screen
+set mouse=a
 set scrolloff=12
 set cursorline
 
