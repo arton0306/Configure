@@ -226,6 +226,18 @@ cp_and_mkdir() {
     cp $1 "$new_dir"
 }
 
+push_personal_env_config() {
+    host="$1"
+    if [ ! -z $host ]; then
+        my_target_folder="personal_env_config/arton"
+        ssh $host mkdir -p $my_target_folder
+        rsync -av ~/Configure/simple.bashrc $host:$my_target_folder
+        rsync -av ~/Configure/simple.vimrc $host:$my_target_folder
+    else
+        echo "usage: push_personal_env_config <host>"
+    fi
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------

@@ -47,11 +47,13 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias vim='vim -S ~/personal_utils/arton.vimrc '
+alias vim='vim -S ~/personal_env_config/arton/simple.vimrc '
 alias gs='git status'
 alias gt='git log --graph --decorate --pretty=oneline --abbrev-commit --all'
 
 #-------------------------------------------
 # Git
 #-------------------------------------------
-git config --global color.ui true
+if [ ! -z "`type -t git`" ]; then
+    git config --global color.ui true
+fi
