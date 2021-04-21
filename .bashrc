@@ -226,6 +226,11 @@ cp_and_mkdir() {
     cp $1 "$new_dir"
 }
 
+waitfor_pid() {
+    # https://stackoverflow.com/questions/1058047/wait-for-a-process-to-finish
+    tail --pid=$1 -f /dev/null
+}
+
 push_personal_env_config() {
     host="$1"
     if [ ! -z $host ]; then
