@@ -61,4 +61,4 @@ watch -d -n 0.2 "netstat -s -u"
 ====================================
 misc
 ====================================
-trace -f -e trace=network -s 10000 PROCESS ARGUMENTS // https://askubuntu.com/questions/11709/how-can-i-capture-network-traffic-of-a-single-process
+strace -f -e trace=network -s 10000 PROCESS ARGUMENTS // https://askubuntu.com/questions/11709/how-can-i-capture-network-traffic-of-a-single-process
