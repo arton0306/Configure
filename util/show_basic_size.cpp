@@ -12,9 +12,17 @@
 #include <unordered_set>
 #include <vector>
 
+#include <unistd.h>
+
 using namespace std;
 
 int main() {
+    cout << "============================" << endl;
+    cout << "Util - show size in bytes :)" << endl;
+    cout << "============================" << endl;
+    cout << "pege size: " << sysconf(_SC_PAGESIZE) << endl;
+    cout << "cache line size: " << sysconf(_SC_LEVEL1_DCACHE_LINESIZE) << endl;
+    cout << "-----" << endl;
     cout << "char: " << sizeof(char) << endl;
     cout << "short: " << sizeof(short) << endl;
     cout << "int: " << sizeof(int) << endl;
