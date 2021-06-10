@@ -10,7 +10,7 @@
 * `quota -s`, `du -sh *`
 
 ### some shell built-in
-* bash: type
+* bash: type, var BASH_SOURCE
 * csh, tcsh: rehash,unhash,hashstat
 * bash/csh/tcsh support: temporarily disable an alias
    -  https://www.cyberciti.biz/faq/bash-shell-temporarily-disable-an-alias/
