@@ -1,7 +1,8 @@
 ## access issue
 * from 2021/8/13, git forces the users to use token or ssh key authentication
-* we hve to use remote with `git remote set-url origin git@github.com:<username>/<project>.git`
+* we have to set remote origin with `git remote set-url origin git@github.com:<username>/<project>.git`
 * using https with username/password is not allowed
+* after adding key in github website, we can use `ssh -T git@github.com` to test
 
 ## cookbook
 * print tree: `git config --global alias.tree "log --graph --decorate --pretty=oneline --abbrev-commit --all"`
