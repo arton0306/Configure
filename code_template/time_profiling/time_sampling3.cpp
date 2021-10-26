@@ -83,7 +83,7 @@ void profiling_wrapper(uint64_t sample_count, uint64_t (*func_under_test)(), con
         (out2.tv_sec - out1.tv_sec) * 1000000000 +
         out2.tv_nsec - out1.tv_nsec;
     uint64_t resolution_in_ns = get_resolution_in_ns(func_under_test);
-    printf("%-30s reso_ns:%7llu %10llu ns for %8llu calls, %6.2lf ns per one call in average, max_diff = %6llu, min_diff = %3llu, max_i = %u, min_i = %u\n",
+    printf("%-30s reso_ns:%7llu %10llu ns for %8llu calls, avg %6.2lf ns per one call, max_diff = %6llu, min_diff = %3llu, max_i = %6u, min_i = %6u\n",
            title ? title : "",
            resolution_in_ns,
            elapsed_ns,
