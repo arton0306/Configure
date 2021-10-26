@@ -20,8 +20,12 @@ int main() {
     cout << "============================" << endl;
     cout << "Util - show size in bytes :)" << endl;
     cout << "============================" << endl;
+#ifdef _SC_PAGESIZE
     cout << "pege size: " << sysconf(_SC_PAGESIZE) << endl;
+#endif
+#ifdef _SC_LEVEL1_DCACHE_LINESIZE
     cout << "cache line size: " << sysconf(_SC_LEVEL1_DCACHE_LINESIZE) << endl;
+#endif
     cout << "-----" << endl;
     cout << "char: " << sizeof(char) << endl;
     cout << "short: " << sizeof(short) << endl;
@@ -46,34 +50,47 @@ int main() {
     cout << "string_view: " << sizeof(string_view) << endl;
     cout << "-----" << endl;
     cout << "std function: " << sizeof(function<void()>) << endl;
+    // new comment for the line below: c++2a still not work (Apple clang version 12.0.0 (clang-1200.0.32.27))
     // cout << "empty inline lambda: " << sizeof([](){}) << endl; // c++2a
     {
         auto f = [](){};
-        cout << "empty f lambda: " << sizeof(f) << endl;
+        cout << "empty lambda (store by auto): " << sizeof(f) << endl;
     }
     {
         int x;
         auto f = [x](int y){return y;};
-        cout << "capture int lambda: " << sizeof(f) << endl;
+        cout << "capture int lambda (store by auto): " << sizeof(f) << endl;
     }
     {
         int x,y,z;
         auto f = [x,y,z](){};
-        cout << "capture int,int,int lambda: " << sizeof(f) << endl;
+        cout << "capture int,int,int lambda (store by auto): " << sizeof(f) << endl;
     }
     {
         short x;
         int y;
         short z;
         auto f = [x,y,z](){};
-        cout << "capture short,int,short lambda: " << sizeof(f) << endl;
+        cout << "capture short,int,short lambda (store by auto): " << sizeof(f) << endl;
     }
     {
         short x;
         short y;
         int z;
         auto f = [x,y,z](){};
-        cout << "capture short,short,int lambda: " << sizeof(f) << endl;
+        cout << "capture short,short,int lambda (store by auto): " << sizeof(f) << endl;
+    }
+    {
+        int *p1, *p2, *p3, *p4, *p5;
+        auto f = [p1,p2,p3,p4,p5](){};
+        cout << "capture 5 pointers lambda (store by auto): " << sizeof(f) << endl;
+    }
+    {
+        int *p1, *p2, *p3, *p4, *p5;
+        int *p1b, *p2b, *p3b, *p4b, *p5b;
+        auto f = [p1,p2,p3,p4,p5,p1b,p2b,p3b,p4b,p5b](){};
+        // cout << "capture 10 pointers lambda (store by auto): " << sizeof([p1,p2,p3,p4,p5,p1b,p2b,p3b,p4b,p5b](){}) << endl;
+        cout << "capture 10 pointers lambda (store by auto): " << sizeof(f) << endl;
     }
     cout << "-----" << endl;
     cout << "unique_ptr<int>: " << sizeof(unique_ptr<int>) << endl;
