@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <chrono>
 #include <iostream>
+#include <inttypes.h>
 
 using namespace std;
 
@@ -56,16 +57,10 @@ void profiling_wrapper(uint64_t sample_count, uint64_t (*func_under_test)(), con
         uint64_t prev_ns = func_under_test();
         for (unsigned i = 1; i < sample_count; ++i) {
             const uint64_t cur_ns = func_under_test();
-            // printf("%llu\n", cur_ns);
             const uint64_t diff =
                 cur_ns >= prev_ns ?
                     cur_ns - prev_ns :
                     1000000000 + cur_ns - prev_ns;
-            /*
-            if (diff == 0) {
-                printf("detect 0 diff - prev_ns:%9llu cur_ns:%9llu\n", prev_ns, cur_ns);
-            }
-            */
             if (max_diff <= diff) {
                 max_diff = diff;
                 max_i = i;
@@ -83,7 +78,8 @@ void profiling_wrapper(uint64_t sample_count, uint64_t (*func_under_test)(), con
         (out2.tv_sec - out1.tv_sec) * 1000000000 +
         out2.tv_nsec - out1.tv_nsec;
     uint64_t resolution_in_ns = get_resolution_in_ns(func_under_test);
-    printf("%-30s reso_ns:%7llu %10llu ns for %8llu calls, avg %6.2lf ns per one call, max_diff = %6llu, min_diff = %3llu, max_i = %6u, min_i = %6u\n",
+    // printf("%-30s reso_ns:%7llu %10llu ns for %8llu calls, avg %6.2lf ns per one call, max_diff = %6llu, min_diff = %3llu, max_i = %6u, min_i = %6u\n",
+    printf("%-30s reso_ns:%7" PRIu64 " %10" PRIu64 " ns for %8" PRIu64 " calls, avg %6.2lf ns per one call, max_diff = %6" PRIu64 ", min_diff = %3" PRIu64 ", max_i = %6u, min_i = %6u\n",
            title ? title : "",
            resolution_in_ns,
            elapsed_ns,
