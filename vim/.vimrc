@@ -133,8 +133,11 @@ noremap <leader>ctags <ESC>:!ctags -R --fields=+iaS --extra=+q .<CR>
 " note
 noremap <leader>note <ESC>:tabe ~/Configure/note/note<CR>
 
-" hex mode (https://vi.stackexchange.com/questions/2232/how-can-i-use-vim-as-a-hex-editor)
-noremap <leader>hex <ESC>:%!xxd<CR>
+" hex mode
+" ref1: (https://vi.stackexchange.com/questions/2232/how-can-i-use-vim-as-a-hex-editor)
+" ref2:
+" (https://vi.stackexchange.com/questions/343/how-to-edit-binary-files-with-vim)
+noremap <leader>hex <ESC>:set binary<CR> :%!xxd<CR> :set filetype=xxd<CR>
 noremap <leader>rhex <ESC>:%!xxd -r<CR>
 
 " encoding
