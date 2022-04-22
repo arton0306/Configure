@@ -194,7 +194,9 @@ set lcs=tab:>-,trail:.
 hi SpecialKey ctermbg=red ctermfg=white guibg=red guifg=white
 " use :set list! to toggle specails charactor show
 noremap <F2> <ESC>:set list!<CR>
-set nolist
+" set nolist
+set listchars=tab:>-
+set list
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => a function to search multiple line ( by: ptt - bootleq )
