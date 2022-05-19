@@ -55,7 +55,7 @@ void profiling_wrapper(uint64_t sample_count, uint64_t (*func_under_test)(), con
     unsigned max_i = 0;
     {
         uint64_t prev_ns = func_under_test();
-        for (unsigned i = 1; i < sample_count; ++i) {
+        for (uint64_t i = 1; i < sample_count; ++i) {
             const uint64_t cur_ns = func_under_test();
             const uint64_t diff =
                 cur_ns >= prev_ns ?
