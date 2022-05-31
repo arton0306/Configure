@@ -59,3 +59,6 @@
 ### remote debug
 * server side: gdbserver :1234 ./mybinary
 * client side in gdb: target remote remotehostname:1234
+
+### special settings
+* show disable-randomization, set disable-randomization on/off (https://visualgdb.com/gdbreference/commands/set_disable-randomization)
