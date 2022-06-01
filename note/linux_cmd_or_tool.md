@@ -8,6 +8,7 @@
 * stty -a : ( setting tty ) list hotkey and tty info
 * lsb_release
 * `quota -s`, `du -sh *`
+* iotop : monitor i/o usage for all processes
 
 ### some shell built-in
 * bash: type, var BASH_SOURCE
