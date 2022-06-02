@@ -33,6 +33,7 @@
 
 ### for user
 * crontab -e : every user can set their own cron jobs
+* `/var/spool/mail/<user>` : check message of crontab, etc
 
 ### date
 * date +%Y%m%d_%H%M%S `20191027_194021`
