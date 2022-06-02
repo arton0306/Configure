@@ -33,7 +33,7 @@
 
 ### for user
 * crontab -e : every user can set their own cron jobs
-* `/var/spool/mail/<user>` : check message of crontab, etc
+* `/var/spool/mail/<user>` : check message of crontab, etc <https://stackoverflow.com/questions/1486088/cron-fails-on-single-apostrophe>
 
 ### date
 * date +%Y%m%d_%H%M%S `20191027_194021`
