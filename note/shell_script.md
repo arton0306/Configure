@@ -82,6 +82,11 @@ https://superuser.com/questions/144772/finding-the-definition-of-a-bash-function
 3. shopt -u extdebug
 4. `declare` : list all functions
 
+## add/remove trailing slash in path if needed
+*  add: `STR="${STR%/}/"`
+*  remove: `STR="${STR%/}"`
+*  Refs: <https://gist.github.com/luciomartinez/c322327605d40f86ee0c>
+
 ## misc
 *  sh -x ./myscript => -x debug( show all command ), or as below
 *  #!/bin/bash -x => debug, 1st line
