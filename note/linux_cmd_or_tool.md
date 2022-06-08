@@ -25,7 +25,7 @@
 *  crtl+e: move to end
 
 #### path
-*  `$PATH` and `$path` are both available in `csh`
+*  `$PATH` and `$path` are both avavilable in `csh`
    -  the format of `$PATH` is `path1:path2:...:pathn` 
    -  the format of `$path` is `path1 path2 ... pathn` 
    -  test this behavior with redhat 6
