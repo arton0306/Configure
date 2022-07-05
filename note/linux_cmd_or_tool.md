@@ -90,6 +90,8 @@
 * `find . \( -name "*.cpp" -o -name "*.h" \) -a ! -name "guSlice.*" | sort`
 * `find -L "$BASE_RUN" -maxdepth 1 -mtime +2 -type f -delete`
 * `find -L "$BASE_DATA" -mtime "+$CLEANUP_PERIOD" -type d -exec rm -rf {} \;`
+* `find -L /home/arton/webservice/log -maxdepth 1 -mtime +0 -type d -exec mv -t /home/arton/bak/log {} +`
+    - <https://unix.stackexchange.com/questions/154818/how-to-integrate-mv-command-after-find-command>
 
 ### xargs
 * find -iname '*.a' | xargs -i ls -l {}  | grep service
