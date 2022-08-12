@@ -110,9 +110,9 @@ alias dirs='dirs -v'
 alias vim='TERM=xterm vim'
 alias vims='TERM=screen-256color \vim'
 alias vimx='TERM=xterm-256color \vim'
-alias pstree='ps xjf'
+alias pstree='ps xjf '
+alias psid='ps xao pid,ppid,pgid,sid,cmd "
 
-alias arggdb='gdb --args '
 alias makecscope='findcode > cscope.files; cscope -bqu;'
 
 alias update='sudo apt-get update'
