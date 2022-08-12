@@ -111,7 +111,7 @@ alias vim='TERM=xterm vim'
 alias vims='TERM=screen-256color \vim'
 alias vimx='TERM=xterm-256color \vim'
 alias pstree='ps xjf '
-alias psid='ps xao pid,ppid,pgid,sid,cmd "
+alias psid='ps xao pid,ppid,pgid,sid,cmd '
 
 alias makecscope='findcode > cscope.files; cscope -bqu;'
 
