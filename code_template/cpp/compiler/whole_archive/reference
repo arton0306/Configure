@@ -1,0 +1,16 @@
+http://litaotju.github.io/c++/2020/07/24/Whole-Archive-in-static-lib/
+
+g++ -c -o a.o a.cpp
+g++ -c -o b.o b.cpp
+ar rcs libX.a a.o b.o
+g++ -fPIC -shared -o libX.so a.cpp b.cpp
+
+g++ main.cpp libX.a -o main
+# execute ./main and check what it prints
+
+g++ main.cpp -Wl,--whole-archive libX.a -Wl,--no-whole-archive -o main-whole-archive
+# execute ./main-whole-archive and check what it prints
+
+g++ main.cpp libX.so -o main-dynamic
+LD_LIBRARY_PATH=. ./main-dynamic
+# execute ./main-dynamic and check what it prints
