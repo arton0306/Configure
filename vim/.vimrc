@@ -9,6 +9,7 @@ set history=500 " Sets how many lines of history VIM has to rememberset
 set noswapfile
 set nocompatible
 set noswapfile
+set nofixendofline
 "set autochdir
 
 if system('uname -s') == "Darwin\n"
