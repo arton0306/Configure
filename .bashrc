@@ -110,6 +110,7 @@ alias dirs='dirs -v'
 alias vim='TERM=xterm vim'
 alias vims='TERM=screen-256color \vim'
 alias vimx='TERM=xterm-256color \vim'
+alias vimcron='VISUAL="/usr/bin/vim" VIMINIT="au VimEnter * set syntax=text" crontab -e'
 alias pstree='ps xjf '
 alias psid='ps xao pid,ppid,pgid,sid,cmd '
 
