@@ -244,6 +244,35 @@ push_personal_env_config() {
     fi
 }
 
+# example
+# add_line_numbers yourfile.txt
+# add_line_numbers yourfile.txt 4
+add_line_numbers() {
+    if [ $# -lt 1 ]; then
+        echo "Usage: add_line_numbers file_path [num_zeros]"
+        return 1
+    fi
+
+    local file_path="$1"
+    local num_zeros="${2:-0}"
+    local line_count=$(wc -l < "$file_path")
+    local max_zeros=7
+
+    if [ $# -gt 1 ]; then
+        if ! [[ "$num_zeros" =~ ^[0-9]+$ ]] || [ "$num_zeros" -lt 1 ] || [ "$num_zeros" -gt $max_zeros ]; then
+            echo "The second parameter (num_zeros) must be a number between 1 and $max_zeros."
+            return 1
+        fi
+    else
+        while [ $line_count -gt 0 ]; do
+            ((num_zeros++))
+            line_count=$((line_count / 10))
+        done
+    fi
+
+    awk -v zeros="$num_zeros" '{printf("%0" zeros "d %s\n", NR, $0)}' "$file_path"
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
