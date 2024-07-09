@@ -168,6 +168,7 @@ set statusline+=%1*\ %f%m%r%h\ %w
 set statusline+=%=
 set statusline+=%3*%{CurDir()}
 set statusline+=%2*\ [Row:%4.l/%4.L\ Col:%3.c\]\ %*
+set statusline+=%{tabpagenr()}
 
 highlight User1 term=underline cterm=underline ctermfg=white ctermbg=darkblue guifg=white guibg=darkblue
 highlight User2 term=underline cterm=underline ctermfg=yellow ctermbg=darkblue guifg=yellow guibg=darkblue
@@ -196,7 +197,7 @@ hi SpecialKey ctermbg=red ctermfg=white guibg=red guifg=white
 " use :set list! to toggle specails charactor show
 noremap <F2> <ESC>:set list!<CR>
 " set nolist
-set listchars=tab:>-
+set listchars=tab:>-,trail:.
 set list
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -217,6 +218,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabpage command
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabpagemax=20
 set showtabline=2
 set tabline=%!SetTabLine()
 
