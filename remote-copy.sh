@@ -1,7 +1,11 @@
 #!/bin/bash
-# 文件名：remote-copy.sh
 
-# OSC 52 複製函數
+# 使用範例：
+#    - 從文件中複製內容：
+#      ./remote-copy.sh filename.txt
+#    - 從標準輸入複製內容：
+#      echo "Hello, World!" | ./remote-copy.sh
+
 osc52_copy() {
     local encoded
     encoded=$(printf "%s" "$1" | base64 | tr -d '\n')
@@ -12,20 +16,15 @@ osc52_copy() {
     printf "$esc"
 }
 
-# 從標準輸入或文件讀取內容
 if [ $# -eq 0 ]; then
     input=$(cat)
 else
     input=$(cat "$1")
 fi
 
-# 確保所有內容都被讀取
-input=$(printf "%s" "$input")
-
-# 複製到剪貼板
 osc52_copy "$input"
 echo "Content copied to clipboard"
 
-# 顯示複製的內容（用於調試）
 echo "Copied content:"
 echo "$input"
+
