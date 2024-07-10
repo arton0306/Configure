@@ -2,9 +2,9 @@
 
 # 使用範例：
 #    - 從文件中複製內容：
-#      ./remote-copy.sh filename.txt
+#      ./copy_to_clipboard.sh filename.txt
 #    - 從標準輸入複製內容：
-#      echo "Hello, World!" | ./remote-copy.sh
+#      echo "Hello, World!" | ./copy_to_clipboard.sh
 
 osc52_copy() {
     local encoded
