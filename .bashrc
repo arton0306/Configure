@@ -273,6 +273,18 @@ add_line_numbers() {
     awk -v zeros="$num_zeros" '{printf("%0" zeros "d %s\n", NR, $0)}' "$file_path"
 }
 
+print_files_with_names() {
+    for file in "$@"; do
+        if [ -f "$file" ]; then
+            echo "===== $file ====="
+            cat "$file"
+            echo ""
+        else
+            echo "File $file does not exist."
+        fi
+    done
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
