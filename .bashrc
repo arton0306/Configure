@@ -285,6 +285,55 @@ print_files_with_names() {
     done
 }
 
+printcode() {
+    local files=()
+    local arg
+
+    # 將所有傳入的參數都視為檔案或目錄
+    for arg in "$@"; do
+        files+=("$arg")
+    done
+
+    if command -v tree >/dev/null 2>&1; then
+        local tmpdir
+        tmpdir=$(mktemp -d)
+        local file
+        # 根據傳入的檔案/目錄建立模擬的目錄樹（檔案以空檔案表示）
+        for file in "${files[@]}"; do
+            # 去掉可能的 "./" 前綴
+            file="${file#./}"
+            if [ -d "$file" ]; then
+                mkdir -p "$tmpdir/$file"
+            else
+                mkdir -p "$(dirname "$tmpdir/$file")"
+                touch "$tmpdir/$file"
+            fi
+        done
+        echo "===== Tree Structure ====="
+        # 將暫存目錄路徑替換成 "."（轉義 tmpdir 中的特殊字元）
+        tree "$tmpdir" | sed "s|^$(printf '%s' "$tmpdir" | sed 's/[\/&]/\\&/g')|.|"
+        echo ""
+        rm -rf "$tmpdir"
+    else
+        echo "===== Tree Structure ====="
+        echo "The 'tree' command is not available. Please install it for a better tree view."
+        echo ""
+    fi
+
+    # 印出檔案內容；如果是目錄則僅顯示提示訊息
+    for file in "${files[@]}"; do
+        if [ -f "$file" ]; then
+            echo "===== $file ====="
+            cat "$file"
+            echo ""
+        elif [ -d "$file" ]; then
+            echo "Directory $file (content not printed)."
+        else
+            echo "File $file does not exist."
+        fi
+    done
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
