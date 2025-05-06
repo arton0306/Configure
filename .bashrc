@@ -334,6 +334,36 @@ printcode() {
     done
 }
 
+first_diff_line() {
+    if [[ $# -ne 2 ]]; then
+        echo "Usage: first_diff_line <file1> <file2>"
+        return 1
+    fi
+
+    awk -v f1="$1" -v f2="$2" '
+    BEGIN {
+        lineno = 0
+        while ((getline line1 < f1) > 0 && (getline line2 < f2) > 0) {
+            lineno++
+            if (line1 != line2) {
+                print "First difference at line", lineno
+                print f1 ": " line1
+                print f2 ": " line2
+                exit
+            }
+        }
+        if ((getline line1 < f1) > 0) {
+            print f2 " ends early at line", lineno
+            exit
+        } else if ((getline line2 < f2) > 0) {
+            print f1 " ends early at line", lineno
+            exit
+        } else {
+            print "No difference found in common lines."
+        }
+    }'
+}
+
 #-------------------------------------------
 # Favorite Tools
 #-------------------------------------------
